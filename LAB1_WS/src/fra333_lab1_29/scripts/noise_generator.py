@@ -4,6 +4,7 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64
+from lab1_interfaces.srv import SetNoise
 import sys
 
 class NoiseGenerator(Node):
@@ -15,11 +16,11 @@ class NoiseGenerator(Node):
         else:
             self.rate = 5.0
         # add codes here
-
+        self.msg_publisher = self.create_publisher(Float64, '/noise',10)
 
         # additional attributes
-        self.mean = 0.0
-        self.variance = 1.0
+        self.mean = 1.0
+        self.variance = 0.1
         self.get_logger().info(f'Starting {self.get_namespace()}/{self.get_name()} with the default parameter. mean: {self.mean}, variance: {self.variance}')
     
     def set_noise_callback(self,request:SetNoise.Request,response:SetNoise.Response):
@@ -31,8 +32,11 @@ class NoiseGenerator(Node):
         pass
 
 def main(args=None):
-    # remove pass and add codes here
-    pass
+    rclpy.init(args=args)
+    scheduler = NoiseGenerator()
+    rclpy.spin(scheduler)
+    scheduler.destroy_node()
+    rclpy.shutdown()
 
 if __name__=='__main__':
     main()

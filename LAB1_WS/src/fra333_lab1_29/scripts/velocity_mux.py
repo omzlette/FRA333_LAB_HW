@@ -15,6 +15,11 @@ class VelocityMux(Node):
         else:
             self.rate = 5.0
         # add codes here
+        self.subscription = self.create_subscription(
+            Float64,
+            '/noise',
+            self.linear_vel_sub_callback,
+            10)
 
         # additional attributes
         self.cmd_vel = Twist()

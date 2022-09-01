@@ -8,22 +8,31 @@ def generate_launch_description():
     launch_description = LaunchDescription()
 
     ### Example for adding launch argument ###
-    # v_max = LaunchConfiguration('v_max')
-    # v_max_launch_arg = DeclareLaunchArgument('v_max',default_value='1.0')
-    # launch_description.add_action(v_max_launch_arg)
+    rate = LaunchConfiguration('rate')
+    rate_launch_arg = DeclareLaunchArgument('rate',default_value='5.0')
+    launch_description.add_action(rate_launch_arg)
     
     ### Example for adding a node ###
-    # node = Node(
-    #     package='my_package',
-    #     executable='my_executable',
-    #     namespace= 'this_namespace',
-    #     arguments=[v_max],
-    #     remappings=[
-    #         ('/topic_1','/topic_a'),
-    #         ('/topic_2','/topic_b'),
-    #     ]
+    linearNode = Node(
+        package='fra333_lab1_29',
+        executable='noise_generator.py',
+        namespace= 'linear',
+        # arguments=[rate],
+        # remappings=[
+        #     ('/topic_1','/topic_a'),
+        #     ('/topic_2','/topic_b'),
+        # ]
+    )
+    
+    # angularNode = Node(
+    #     package='fra333_lab1_29',
+    #     executable='noise_generator.py',
+    #     namespace= 'angular',
+    #     # arguments=[rate],
     # )
-    # launch_description.add_action(node)
+
+    launch_description.add_action(linearNode)
+    # launch_description.add_action(angularNode)
 
     ### Example for execute a shell command in python script ###
     # vx = 1.0
