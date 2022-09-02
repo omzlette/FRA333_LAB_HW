@@ -26,9 +26,13 @@ class NoiseGenerator(Node):
 
         self.set_noise_service = self.create_service(SetNoise, f'{self.get_namespace()}/set_noise', self.set_noise_callback)
 
-        # additional attributes
-        self.mean = 1.0
-        self.variance = 0.1
+        # default mean and variance for linear and angular
+        if self.get_namespace() == '/linear':
+            self.mean = 1.0
+            self.variance = 0.1
+        elif self.get_namespace() == '/angular':
+            self.mean = 0.0
+            self.variance = 3.0
     
     def set_noise_callback(self,request:SetNoise.Request,response:SetNoise.Response):
         self.mean = request.mean.data
@@ -41,7 +45,7 @@ class NoiseGenerator(Node):
         self.noise_pub.publish(noise)
         # self.get_logger().info(f'Starting {self.get_namespace()}/{self.get_name()} with the default parameter. mean: {self.mean}, variance: {self.variance}')
         # self.get_logger().info('Publishing: "%s"' % noise.data)
-        self.get_logger().info(f'Arguments: {sys.argv}')
+        self.get_logger().info(f'{self.get_namespace()} Mean: {self.mean}, {self.get_namespace()} Variance: {self.variance}\n\n\n')
 
 def main(args=None):
     rclpy.init(args=args)
