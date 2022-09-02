@@ -3,7 +3,7 @@ from re import L
 from launch import LaunchDescription
 from launch.actions import ExecuteProcess,DeclareLaunchArgument
 from launch_ros.actions import Node
-from launch.substitutions import LaunchConfiguration
+from launch.substitutions import LaunchConfiguration, FindExecutable
 def generate_launch_description():
     # create a place holder for launch description
     launch_description = LaunchDescription()
@@ -43,10 +43,6 @@ def generate_launch_description():
         executable='velocity_mux.py',
         arguments=[rate],
     )
-
-    nodeToRun = [turtleNode, linearNode, angularNode, velocityMuxNode]
-    for i in nodeToRun:
-        launch_description.add_action(i)
     
     # launch_description.add_action(turtleNode)
     # launch_description.add_action(linearNode)
@@ -61,15 +57,32 @@ def generate_launch_description():
     #     shell=True
     # )
     # launch_description.add_action(pub_cmd_vel)
-    # linearMean = 5.0
-    # linearVar = 0.3
-    # angularMean = 2.0
-    # angularVar = 4.0
-    # pub_linear_noise = ExecuteProcess(cmd=['ros2', 'service', 'call', '/linear/set_noise', 'lab1_interfaces/srv/SetNoise', f'mean:\^J\ \ data:\ {linearMean}\^J', f'variance:\^J\ \data:\ {linearVar}\\'], shell=True)
+    
+    linearMean = 5.0
+    linearVar = 0.3
+    angularMean = 2.0
+    angularVar = 4.0
+
+    srv_linear_noise = ExecuteProcess(
+        cmd=[[
+            f'ros2 service call /linear/set_noise lab1_interfaces/srv/SetNoise \"{{mean: {{data: {linearMean}}}, variance: {{data: {linearVar}}}}}\"'
+        ]],
+        shell=True
+    )
+    srv_angular_noise = ExecuteProcess(
+        cmd=[[
+            f'ros2 service call /angular/set_noise lab1_interfaces/srv/SetNoise \"{{mean: {{data: {angularMean}}}, variance: {{data: {angularVar}}}}}\"'
+        ]],
+        shell=True
+    )
     
     # launch_description.add_action(pub_linear_noise)
     # launch_description.add_action(pub_angular_noise)
     
+    processToRun = [turtleNode, linearNode, angularNode, velocityMuxNode, srv_linear_noise, srv_angular_noise]
+    for i in processToRun:
+        launch_description.add_action(i)
+
     return launch_description
 
     
