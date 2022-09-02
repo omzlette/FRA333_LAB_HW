@@ -18,10 +18,6 @@ def generate_launch_description():
         executable='noise_generator.py',
         namespace= 'linear',
         arguments=[rate],
-        # remappings=[
-        #     ('/topic_1','/topic_a'),
-        #     ('/topic_2','/topic_b'),
-        # ]
     )
     
     angularNode = Node(
@@ -31,8 +27,15 @@ def generate_launch_description():
         arguments=[rate],
     )
 
+    velocityMuxNode = Node(
+        package='fra333_lab1_29',
+        executable='velocity_mux.py',
+        arguments=[rate],
+    )
+
     launch_description.add_action(linearNode)
     launch_description.add_action(angularNode)
+    launch_description.add_action(velocityMuxNode)
 
     ### Example for execute a shell command in python script ###
     # vx = 1.0

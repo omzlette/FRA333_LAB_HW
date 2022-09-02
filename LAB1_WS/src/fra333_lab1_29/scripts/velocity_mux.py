@@ -11,16 +11,30 @@ class VelocityMux(Node):
     def __init__(self):
         # get the rate from argument or default
         super().__init__('velocity_multiplexer')
-        if sys.argv[1] > 2:
+        if len(sys.argv) > 2:
             self.rate = float(sys.argv[1])
+            # self.rate = 5.0
         else:
             self.rate = 5.0
         # add codes here
-        self.subscription = self.create_subscription(
+        self.linear_sub = self.create_subscription(
             Float64,
-            '/noise',
+            '/linear/noise',
             self.linear_vel_sub_callback,
             10)
+
+        self.angular_sub = self.create_subscription(
+            Float64,
+            '/angular/noise',
+            self.angular_vel_sub_callback,
+            10)
+
+        self.vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.timer = self.create_timer(1/self.rate, self.timer_callback)
+
+        # additional attributes
+        self.linear_vel = 0.0
+        self.angular_vel = 0.0
 
         # additional attributes
         self.cmd_vel = Twist()
@@ -28,15 +42,17 @@ class VelocityMux(Node):
 
     def linear_vel_sub_callback(self,msg:Float64):
         self.cmd_vel.linear.x = msg.data
-        print(self.cmd_vel)
+        self.get_logger().info(f'This is linear;;;cmd_vel: {self.cmd_vel}, msg: {msg.data}\n\n')
     
     def angular_vel_sub_callback(self,msg:Float64):
-        # remove pass and add codes here
-        pass
+        self.cmd_vel.angular.z = msg.data
+        self.get_logger().info(f'This is angular;;;cmd_vel: {self.cmd_vel}, msg: {msg.data}\n\n')
     
     def timer_callback(self):
-        # remove pass and add codes here
-        pass
+        msg = Twist()
+        msg.linear.x = self.cmd_vel.linear.x
+        msg.angular.z = self.cmd_vel.angular.z
+        self.vel_pub.publish(msg)
 
 def main(args=None):
     rclpy.init(args=args)
