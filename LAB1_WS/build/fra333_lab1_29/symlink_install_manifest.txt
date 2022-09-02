@@ -1,6 +1,9 @@
 /home/omzlette/gitRos/LAB1_WS/install/fra333_lab1_29/share/fra333_lab1_29/environment/pythonpath.sh
 /home/omzlette/gitRos/LAB1_WS/install/fra333_lab1_29/share/fra333_lab1_29/environment/pythonpath.dsv
 /home/omzlette/gitRos/LAB1_WS/install/fra333_lab1_29/lib/python3.8/site-packages/fra333_lab1_29/__init__.py
+/home/omzlette/gitRos/LAB1_WS/install/fra333_lab1_29/lib/fra333_lab1_29/noise_generator.py
+/home/omzlette/gitRos/LAB1_WS/install/fra333_lab1_29/lib/fra333_lab1_29/velocity_mux.py
+/home/omzlette/gitRos/LAB1_WS/install/fra333_lab1_29/share/fra333_lab1_29/launch/random_walk.launch.py
 /home/omzlette/gitRos/LAB1_WS/install/fra333_lab1_29/share/ament_index/resource_index/package_run_dependencies/fra333_lab1_29
 /home/omzlette/gitRos/LAB1_WS/install/fra333_lab1_29/share/ament_index/resource_index/parent_prefix_path/fra333_lab1_29
 /home/omzlette/gitRos/LAB1_WS/install/fra333_lab1_29/share/fra333_lab1_29/environment/ament_prefix_path.sh

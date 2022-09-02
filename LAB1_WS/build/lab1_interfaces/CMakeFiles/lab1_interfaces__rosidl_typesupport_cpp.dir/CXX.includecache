@@ -104,6 +104,22 @@ rosidl_typesupport_cpp/visibility_control.h
 
 /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
 
+/opt/ros/foxy/include/std_msgs/msg/detail/float64__struct.hpp
+rosidl_runtime_cpp/bounded_vector.hpp
+-
+rosidl_runtime_cpp/message_initialization.hpp
+-
+algorithm
+-
+array
+-
+memory
+-
+string
+-
+vector
+-
+
 rosidl_generator_cpp/lab1_interfaces/srv/detail/set_noise__struct.hpp
 rosidl_runtime_cpp/bounded_vector.hpp
 -
@@ -119,4 +135,6 @@ string
 -
 vector
 -
+std_msgs/msg/detail/float64__struct.hpp
+rosidl_generator_cpp/lab1_interfaces/srv/detail/std_msgs/msg/detail/float64__struct.hpp
 

@@ -10,7 +10,8 @@ import sys
 class VelocityMux(Node):
     def __init__(self):
         # get the rate from argument or default
-        if sys.argv[1]:
+        super().__init__('velocity_multiplexer')
+        if sys.argv[1] > 2:
             self.rate = float(sys.argv[1])
         else:
             self.rate = 5.0
@@ -26,8 +27,8 @@ class VelocityMux(Node):
         self.get_logger().info(f'Starting {self.get_name()}')
 
     def linear_vel_sub_callback(self,msg:Float64):
-        # remove pass and add codes here
-        pass
+        self.cmd_vel.linear.x = msg.data
+        print(self.cmd_vel)
     
     def angular_vel_sub_callback(self,msg:Float64):
         # remove pass and add codes here
@@ -38,8 +39,11 @@ class VelocityMux(Node):
         pass
 
 def main(args=None):
-    # remove pass and add codes here
-    pass
+    rclpy.init(args=args)
+    velMux = VelocityMux()
+    rclpy.spin(velMux)
+    velMux.destroy_node()
+    rclpy.shutdown()
 
 if __name__=='__main__':
     main()

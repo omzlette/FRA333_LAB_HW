@@ -17,22 +17,22 @@ def generate_launch_description():
         package='fra333_lab1_29',
         executable='noise_generator.py',
         namespace= 'linear',
-        # arguments=[rate],
+        arguments=[rate],
         # remappings=[
         #     ('/topic_1','/topic_a'),
         #     ('/topic_2','/topic_b'),
         # ]
     )
     
-    # angularNode = Node(
-    #     package='fra333_lab1_29',
-    #     executable='noise_generator.py',
-    #     namespace= 'angular',
-    #     # arguments=[rate],
-    # )
+    angularNode = Node(
+        package='fra333_lab1_29',
+        executable='noise_generator.py',
+        namespace= 'angular',
+        arguments=[rate],
+    )
 
     launch_description.add_action(linearNode)
-    # launch_description.add_action(angularNode)
+    launch_description.add_action(angularNode)
 
     ### Example for execute a shell command in python script ###
     # vx = 1.0

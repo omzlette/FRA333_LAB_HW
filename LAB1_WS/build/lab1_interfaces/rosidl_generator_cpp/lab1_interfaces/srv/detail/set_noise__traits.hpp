@@ -10,6 +10,11 @@
 #include <stdint.h>
 #include <type_traits>
 
+// Include directives for member types
+// Member 'mean'
+// Member 'variance'
+#include "std_msgs/msg/detail/float64__traits.hpp"
+
 namespace rosidl_generator_traits
 {
 
@@ -27,11 +32,11 @@ inline const char * name<lab1_interfaces::srv::SetNoise_Request>()
 
 template<>
 struct has_fixed_size<lab1_interfaces::srv::SetNoise_Request>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_fixed_size<std_msgs::msg::Float64>::value> {};
 
 template<>
 struct has_bounded_size<lab1_interfaces::srv::SetNoise_Request>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_bounded_size<std_msgs::msg::Float64>::value> {};
 
 template<>
 struct is_message<lab1_interfaces::srv::SetNoise_Request>

@@ -14,6 +14,11 @@
 #include <vector>
 
 
+// Include directives for member types
+// Member 'mean'
+// Member 'variance'
+#include "std_msgs/msg/detail/float64__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__lab1_interfaces__srv__SetNoise_Request __attribute__((deprecated))
 #else
@@ -33,29 +38,40 @@ struct SetNoise_Request_
   using Type = SetNoise_Request_<ContainerAllocator>;
 
   explicit SetNoise_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : mean(_init),
+    variance(_init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->structure_needs_at_least_one_member = 0;
-    }
+    (void)_init;
   }
 
   explicit SetNoise_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : mean(_alloc, _init),
+    variance(_alloc, _init)
   {
-    (void)_alloc;
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->structure_needs_at_least_one_member = 0;
-    }
+    (void)_init;
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _mean_type =
+    std_msgs::msg::Float64_<ContainerAllocator>;
+  _mean_type mean;
+  using _variance_type =
+    std_msgs::msg::Float64_<ContainerAllocator>;
+  _variance_type variance;
 
+  // setters for named parameter idiom
+  Type & set__mean(
+    const std_msgs::msg::Float64_<ContainerAllocator> & _arg)
+  {
+    this->mean = _arg;
+    return *this;
+  }
+  Type & set__variance(
+    const std_msgs::msg::Float64_<ContainerAllocator> & _arg)
+  {
+    this->variance = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -99,7 +115,10 @@ struct SetNoise_Request_
   // comparison operators
   bool operator==(const SetNoise_Request_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->mean != other.mean) {
+      return false;
+    }
+    if (this->variance != other.variance) {
       return false;
     }
     return true;

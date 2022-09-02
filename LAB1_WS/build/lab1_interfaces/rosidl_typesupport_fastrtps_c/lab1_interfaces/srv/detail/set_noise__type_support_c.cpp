@@ -34,8 +34,22 @@ extern "C"
 {
 #endif
 
+#include "std_msgs/msg/detail/float64__functions.h"  // mean, variance
 
 // forward declare type support functions
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_lab1_interfaces
+size_t get_serialized_size_std_msgs__msg__Float64(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_lab1_interfaces
+size_t max_serialized_size_std_msgs__msg__Float64(
+  bool & full_bounded,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_lab1_interfaces
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, std_msgs, msg, Float64)();
 
 
 using _SetNoise_Request__ros_msg_type = lab1_interfaces__srv__SetNoise_Request;
@@ -49,9 +63,32 @@ static bool _SetNoise_Request__cdr_serialize(
     return false;
   }
   const _SetNoise_Request__ros_msg_type * ros_message = static_cast<const _SetNoise_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: mean
   {
-    cdr << ros_message->structure_needs_at_least_one_member;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, std_msgs, msg, Float64
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->mean, cdr))
+    {
+      return false;
+    }
+  }
+
+  // Field name: variance
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, std_msgs, msg, Float64
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->variance, cdr))
+    {
+      return false;
+    }
   }
 
   return true;
@@ -66,9 +103,32 @@ static bool _SetNoise_Request__cdr_deserialize(
     return false;
   }
   _SetNoise_Request__ros_msg_type * ros_message = static_cast<_SetNoise_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: mean
   {
-    cdr >> ros_message->structure_needs_at_least_one_member;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, std_msgs, msg, Float64
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->mean))
+    {
+      return false;
+    }
+  }
+
+  // Field name: variance
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, std_msgs, msg, Float64
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->variance))
+    {
+      return false;
+    }
   }
 
   return true;
@@ -88,12 +148,14 @@ size_t get_serialized_size_lab1_interfaces__srv__SetNoise_Request(
   (void)padding;
   (void)wchar_size;
 
-  // field.name structure_needs_at_least_one_member
-  {
-    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // field.name mean
+
+  current_alignment += get_serialized_size_std_msgs__msg__Float64(
+    &(ros_message->mean), current_alignment);
+  // field.name variance
+
+  current_alignment += get_serialized_size_std_msgs__msg__Float64(
+    &(ros_message->variance), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -118,11 +180,27 @@ size_t max_serialized_size_lab1_interfaces__srv__SetNoise_Request(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: structure_needs_at_least_one_member
+  // member: mean
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        max_serialized_size_std_msgs__msg__Float64(
+        full_bounded, current_alignment);
+    }
+  }
+  // member: variance
+  {
+    size_t array_size = 1;
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        max_serialized_size_std_msgs__msg__Float64(
+        full_bounded, current_alignment);
+    }
   }
 
   return current_alignment - initial_alignment;

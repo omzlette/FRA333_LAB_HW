@@ -1,0 +1,1 @@
+Invoking command in '/home/omzlette/gitRos/LAB1_WS/build/lab1_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitRos/LAB1_WS/src/lab1_interfaces -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitRos/LAB1_WS/install/lab1_interfaces

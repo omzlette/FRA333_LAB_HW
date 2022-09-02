@@ -8,13 +8,27 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Include directives for member types
+// Member `mean`
+// Member `variance`
+#include "std_msgs/msg/detail/float64__functions.h"
+
 bool
 lab1_interfaces__srv__SetNoise_Request__init(lab1_interfaces__srv__SetNoise_Request * msg)
 {
   if (!msg) {
     return false;
   }
-  // structure_needs_at_least_one_member
+  // mean
+  if (!std_msgs__msg__Float64__init(&msg->mean)) {
+    lab1_interfaces__srv__SetNoise_Request__fini(msg);
+    return false;
+  }
+  // variance
+  if (!std_msgs__msg__Float64__init(&msg->variance)) {
+    lab1_interfaces__srv__SetNoise_Request__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -24,7 +38,10 @@ lab1_interfaces__srv__SetNoise_Request__fini(lab1_interfaces__srv__SetNoise_Requ
   if (!msg) {
     return;
   }
-  // structure_needs_at_least_one_member
+  // mean
+  std_msgs__msg__Float64__fini(&msg->mean);
+  // variance
+  std_msgs__msg__Float64__fini(&msg->variance);
 }
 
 lab1_interfaces__srv__SetNoise_Request *

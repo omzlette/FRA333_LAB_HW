@@ -37,16 +37,31 @@ void SetNoise_Request_fini_function(void * message_memory)
   typed_message->~SetNoise_Request();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember SetNoise_Request_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember SetNoise_Request_message_member_array[2] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    "mean",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Float64>(),  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(lab1_interfaces::srv::SetNoise_Request, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(lab1_interfaces::srv::SetNoise_Request, mean),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "variance",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Float64>(),  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(lab1_interfaces::srv::SetNoise_Request, variance),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -58,7 +73,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember SetNoise_Requ
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers SetNoise_Request_message_members = {
   "lab1_interfaces::srv",  // message namespace
   "SetNoise_Request",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(lab1_interfaces::srv::SetNoise_Request),
   SetNoise_Request_message_member_array,  // message members
   SetNoise_Request_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -1,0 +1,4 @@
+Invoking command in '/home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29 -- -j12 -l12
+Invoked command in '/home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29 -- -j12 -l12
+Invoking command in '/home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29
+Invoked command in '/home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29

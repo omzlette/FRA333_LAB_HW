@@ -22,6 +22,14 @@ lab1_interfaces/srv/detail/set_noise__functions.h
 
 /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 
+/opt/ros/foxy/include/std_msgs/msg/detail/float64__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
 /usr/include/python3.8/Python.h
 patchlevel.h
 /usr/include/python3.8/patchlevel.h
@@ -615,4 +623,6 @@ stddef.h
 -
 stdint.h
 -
+std_msgs/msg/detail/float64__struct.h
+rosidl_generator_c/lab1_interfaces/srv/detail/std_msgs/msg/detail/float64__struct.h
 

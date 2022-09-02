@@ -319,11 +319,11 @@ ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB1_WS/src/fra333_lab1
 # install(DIRECTORY "/home/omzlette/gitRos/LAB1_WS/src/fra333_lab1_29/fra333_lab1_29/" "DESTINATION" "lib/python3.8/site-packages/fra333_lab1_29" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB1_WS/src/fra333_lab1_29" DIRECTORY "/home/omzlette/gitRos/LAB1_WS/src/fra333_lab1_29/fra333_lab1_29/" "DESTINATION" "lib/python3.8/site-packages/fra333_lab1_29" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install(PROGRAMS "DESTINATION" "lib/fra333_lab1_29")
-ament_cmake_symlink_install_programs("/home/omzlette/gitRos/LAB1_WS/src/fra333_lab1_29" PROGRAMS "DESTINATION" "lib/fra333_lab1_29")
+# install(PROGRAMS "scripts/noise_generator.py" "scripts/velocity_mux.py" "DESTINATION" "lib/fra333_lab1_29")
+ament_cmake_symlink_install_programs("/home/omzlette/gitRos/LAB1_WS/src/fra333_lab1_29" PROGRAMS "scripts/noise_generator.py" "scripts/velocity_mux.py" "DESTINATION" "lib/fra333_lab1_29")
 
-# install(DIRECTORY "DESTINATION" "share/fra333_lab1_29")
-ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB1_WS/src/fra333_lab1_29" DIRECTORY "DESTINATION" "share/fra333_lab1_29")
+# install(DIRECTORY "launch" "DESTINATION" "share/fra333_lab1_29")
+ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB1_WS/src/fra333_lab1_29" DIRECTORY "launch" "DESTINATION" "share/fra333_lab1_29")
 
 # install(FILES "/home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/fra333_lab1_29" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB1_WS/src/fra333_lab1_29" FILES "/home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/fra333_lab1_29" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

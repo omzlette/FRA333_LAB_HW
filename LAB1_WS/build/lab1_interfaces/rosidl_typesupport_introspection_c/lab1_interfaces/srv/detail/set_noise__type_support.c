@@ -12,6 +12,14 @@
 #include "lab1_interfaces/srv/detail/set_noise__struct.h"
 
 
+// Include directives for member types
+// Member `mean`
+// Member `variance`
+#include "std_msgs/msg/float64.h"
+// Member `mean`
+// Member `variance`
+#include "std_msgs/msg/detail/float64__rosidl_typesupport_introspection_c.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -31,16 +39,31 @@ void SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_fini
   lab1_interfaces__srv__SetNoise_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_message_member_array[2] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    "mean",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(lab1_interfaces__srv__SetNoise_Request, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(lab1_interfaces__srv__SetNoise_Request, mean),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "variance",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(lab1_interfaces__srv__SetNoise_Request, variance),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -52,7 +75,7 @@ static rosidl_typesupport_introspection_c__MessageMember SetNoise_Request__rosid
 static const rosidl_typesupport_introspection_c__MessageMembers SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_message_members = {
   "lab1_interfaces__srv",  // message namespace
   "SetNoise_Request",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(lab1_interfaces__srv__SetNoise_Request),
   SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_message_member_array,  // message members
   SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -70,6 +93,10 @@ static rosidl_message_type_support_t SetNoise_Request__rosidl_typesupport_intros
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_lab1_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, lab1_interfaces, srv, SetNoise_Request)() {
+  SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Float64)();
+  SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_message_member_array[1].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Float64)();
   if (!SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_message_type_support_handle.typesupport_identifier) {
     SetNoise_Request__rosidl_typesupport_introspection_c__SetNoise_Request_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

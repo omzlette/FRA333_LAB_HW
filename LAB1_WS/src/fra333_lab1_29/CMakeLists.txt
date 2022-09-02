@@ -28,7 +28,8 @@ ament_python_install_package(${PROJECT_NAME})
 # Install Python executables
 install(PROGRAMS
   # add your scripts here
-  # scripts/dummy.py
+  scripts/noise_generator.py
+  scripts/velocity_mux.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
@@ -36,6 +37,7 @@ install(PROGRAMS
 install(DIRECTORY
   # add directories other than scripts,lab1 here
   # in other words, add launch folder here
+  launch
   DESTINATION share/${PROJECT_NAME})
 
 ament_package()

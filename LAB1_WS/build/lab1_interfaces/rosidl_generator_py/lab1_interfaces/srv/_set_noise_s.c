@@ -16,6 +16,14 @@
 #include "lab1_interfaces/srv/detail/set_noise__struct.h"
 #include "lab1_interfaces/srv/detail/set_noise__functions.h"
 
+ROSIDL_GENERATOR_C_IMPORT
+bool std_msgs__msg__float64__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * std_msgs__msg__float64__convert_to_py(void * raw_ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+bool std_msgs__msg__float64__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * std_msgs__msg__float64__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool lab1_interfaces__srv__set_noise__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -50,7 +58,28 @@ bool lab1_interfaces__srv__set_noise__request__convert_from_py(PyObject * _pymsg
     assert(strncmp("lab1_interfaces.srv._set_noise.SetNoise_Request", full_classname_dest, 47) == 0);
   }
   lab1_interfaces__srv__SetNoise_Request * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // mean
+    PyObject * field = PyObject_GetAttrString(_pymsg, "mean");
+    if (!field) {
+      return false;
+    }
+    if (!std_msgs__msg__float64__convert_from_py(field, &ros_message->mean)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // variance
+    PyObject * field = PyObject_GetAttrString(_pymsg, "variance");
+    if (!field) {
+      return false;
+    }
+    if (!std_msgs__msg__float64__convert_from_py(field, &ros_message->variance)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -72,7 +101,35 @@ PyObject * lab1_interfaces__srv__set_noise__request__convert_to_py(void * raw_ro
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  lab1_interfaces__srv__SetNoise_Request * ros_message = (lab1_interfaces__srv__SetNoise_Request *)raw_ros_message;
+  {  // mean
+    PyObject * field = NULL;
+    field = std_msgs__msg__float64__convert_to_py(&ros_message->mean);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "mean", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // variance
+    PyObject * field = NULL;
+    field = std_msgs__msg__float64__convert_to_py(&ros_message->variance);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "variance", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

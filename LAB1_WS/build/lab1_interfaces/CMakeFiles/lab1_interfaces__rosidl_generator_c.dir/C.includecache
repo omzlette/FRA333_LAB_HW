@@ -17,8 +17,32 @@ stdlib.h
 -
 string.h
 -
+std_msgs/msg/detail/float64__functions.h
+/home/omzlette/gitRos/LAB1_WS/build/lab1_interfaces/rosidl_generator_c/lab1_interfaces/srv/detail/std_msgs/msg/detail/float64__functions.h
 
 /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
+
+/opt/ros/foxy/include/std_msgs/msg/detail/float64__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+/opt/ros/foxy/include/std_msgs/msg/detail/rosidl_runtime_c/visibility_control.h
+std_msgs/msg/rosidl_generator_c__visibility_control.h
+/opt/ros/foxy/include/std_msgs/msg/detail/std_msgs/msg/rosidl_generator_c__visibility_control.h
+std_msgs/msg/detail/float64__struct.h
+/opt/ros/foxy/include/std_msgs/msg/detail/std_msgs/msg/detail/float64__struct.h
+
+/opt/ros/foxy/include/std_msgs/msg/detail/float64__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+/opt/ros/foxy/include/std_msgs/msg/rosidl_generator_c__visibility_control.h
 
 rosidl_generator_c/lab1_interfaces/msg/rosidl_generator_c__visibility_control.h
 
@@ -41,4 +65,6 @@ stddef.h
 -
 stdint.h
 -
+std_msgs/msg/detail/float64__struct.h
+rosidl_generator_c/lab1_interfaces/srv/detail/std_msgs/msg/detail/float64__struct.h
 

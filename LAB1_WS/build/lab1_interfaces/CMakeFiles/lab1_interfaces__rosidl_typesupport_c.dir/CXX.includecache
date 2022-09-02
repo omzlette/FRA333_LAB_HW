@@ -68,6 +68,14 @@ cstddef
 
 /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
 
+/opt/ros/foxy/include/std_msgs/msg/detail/float64__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
 rosidl_generator_c/lab1_interfaces/srv/detail/set_noise__struct.h
 stdbool.h
 -
@@ -75,6 +83,8 @@ stddef.h
 -
 stdint.h
 -
+std_msgs/msg/detail/float64__struct.h
+rosidl_generator_c/lab1_interfaces/srv/detail/std_msgs/msg/detail/float64__struct.h
 
 rosidl_typesupport_c/lab1_interfaces/msg/rosidl_typesupport_c__visibility_control.h
 

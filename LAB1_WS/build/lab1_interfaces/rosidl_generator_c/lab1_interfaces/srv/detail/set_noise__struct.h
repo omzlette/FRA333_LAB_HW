@@ -17,10 +17,16 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'mean'
+// Member 'variance'
+#include "std_msgs/msg/detail/float64__struct.h"
+
 // Struct defined in srv/SetNoise in the package lab1_interfaces.
 typedef struct lab1_interfaces__srv__SetNoise_Request
 {
-  uint8_t structure_needs_at_least_one_member;
+  std_msgs__msg__Float64 mean;
+  std_msgs__msg__Float64 variance;
 } lab1_interfaces__srv__SetNoise_Request;
 
 // Struct for a sequence of lab1_interfaces__srv__SetNoise_Request.
