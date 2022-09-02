@@ -3,7 +3,7 @@ from re import L
 from launch import LaunchDescription
 from launch.actions import ExecuteProcess,DeclareLaunchArgument
 from launch_ros.actions import Node
-from launch.substitutions import LaunchConfiguration,FindExecutable
+from launch.substitutions import LaunchConfiguration
 def generate_launch_description():
     # create a place holder for launch description
     launch_description = LaunchDescription()
@@ -44,10 +44,14 @@ def generate_launch_description():
         arguments=[rate],
     )
 
-    launch_description.add_action(turtleNode)
-    launch_description.add_action(linearNode)
-    launch_description.add_action(angularNode)
-    launch_description.add_action(velocityMuxNode)
+    nodeToRun = [turtleNode, linearNode, angularNode, velocityMuxNode]
+    for i in nodeToRun:
+        launch_description.add_action(i)
+    
+    # launch_description.add_action(turtleNode)
+    # launch_description.add_action(linearNode)
+    # launch_description.add_action(angularNode)
+    # launch_description.add_action(velocityMuxNode)
     
     ### Example for execute a shell command in python script ###
     # vx = 1.0
