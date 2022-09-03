@@ -1,5 +1,6 @@
 #!usr/bin/python3
 from re import L
+from tkinter import N
 from launch import LaunchDescription
 from launch.actions import ExecuteProcess,DeclareLaunchArgument
 from launch_ros.actions import Node
@@ -11,14 +12,19 @@ def generate_launch_description():
     rate_launch_arg = DeclareLaunchArgument('rate',default_value='5.0')
     launch_description.add_action(rate_launch_arg)
     
+    turtlename = LaunchConfiguration('turtle')
+    turtlename_launch_arg = DeclareLaunchArgument('turtle',default_value='turtle1')
+    launch_description.add_action(turtlename_launch_arg)
+    
     turtleNode = Node(
         package='turtlesim',
         executable='turtlesim_node',
+        # name='test',
         parameters=[
             {'background_b':0},
             {'background_g':0},
             {'background_r':0},
-        ]
+        ],
     )
     
     linearNode = Node(
@@ -39,6 +45,9 @@ def generate_launch_description():
         package='fra333_lab1_29',
         executable='velocity_mux.py',
         arguments=[rate],
+        parameters=[
+            {'turtlename':turtlename},
+        ],
     )
     
     linearMean = 5.0
