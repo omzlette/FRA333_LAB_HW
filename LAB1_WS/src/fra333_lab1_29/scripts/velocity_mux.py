@@ -10,9 +10,6 @@ import sys
 class VelocityMux(Node):
     def __init__(self):
         super().__init__('velocity_multiplexer')
-        self.declare_parameter('turtlename','turtle')
-        self.turtlename = self.get_parameter(
-            'turtlename').get_parameter_value().string_value
         if len(sys.argv) > 2:
             self.rate = float(sys.argv[1])
         else:
@@ -30,7 +27,7 @@ class VelocityMux(Node):
             self.angular_vel_sub_callback,
             10)
 
-        self.vel_pub = self.create_publisher(Twist, f'/{self.turtlename}/cmd_vel', 10)
+        self.vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
         self.timer = self.create_timer(1/self.rate, self.timer_callback)
 
         self.linear_vel = 0.0
@@ -49,7 +46,7 @@ class VelocityMux(Node):
         msg.linear.x = self.cmd_vel.linear.x
         msg.angular.z = self.cmd_vel.angular.z
         self.vel_pub.publish(msg)
-        self.get_logger().info(f'Turtle Name: {self.turtlename} Linear: {msg.linear.x}, Angular: {msg.angular.z}')
+        self.get_logger().info(f'Linear: {msg.linear.x}, Angular: {msg.angular.z}')
 
 def main(args=None):
     rclpy.init(args=args)
