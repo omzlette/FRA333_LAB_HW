@@ -32,9 +32,17 @@ class NoiseGenerator(Node):
         self.timer = self.create_timer(1/self.rate, self.timer_callback)
 
         # additional attributes
-        # Set Mean and Variance
-        self.mean = 0.0
-        self.variance = 1.0
+        # Set Mean and Variance (From Question)
+        # self.mean = 0.0
+        # self.variance = 1.0
+
+        # Set Mean and Variance (From Picture)
+        if self.get_namespace() == '/linear':
+            self.mean = 1.0
+            self.variance = 0.1
+        elif self.get_namespace() == '/angular':
+            self.mean = 0.0
+            self.variance = 3.0
 
         self.get_logger().info(f'Starting {self.get_namespace()}/{self.get_name()} with the default parameter. mean: {self.mean}, variance: {self.variance}')
     
@@ -46,7 +54,7 @@ class NoiseGenerator(Node):
     def timer_callback(self):
         msg = Float64()
         # Adding Random Generator
-        msg.data = np.random.normalize(self.mean, np.sqrt(self.variance))
+        msg.data = np.random.normal(self.mean, np.sqrt(self.variance))
         self.publisher.publish(msg)
 
 def main(args=None):

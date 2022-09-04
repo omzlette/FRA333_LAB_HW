@@ -37,6 +37,7 @@ install(PROGRAMS
 install(DIRECTORY
   # add directories other than scripts,lab1 here
   # in other words, add launch folder here
+  launch
   DESTINATION share/${PROJECT_NAME})
 
 ament_package()
