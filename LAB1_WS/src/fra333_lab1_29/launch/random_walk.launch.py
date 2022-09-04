@@ -64,9 +64,6 @@ def generate_launch_description():
     )
     
     processToRun = [turtleNode, linearNode, angularNode, velocityMuxNode, srv_linear_noise, srv_angular_noise]
-    for i in processToRun:
-        launch_description.add_action(i)
+    for i in processToRun: launch_description.add_action(i)
 
     return launch_description
-
-    
