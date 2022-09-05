@@ -24,12 +24,8 @@ class NoiseGenerator(Node):
         self.set_noise_service = self.create_service(SetNoise, f'{self.get_namespace()}/set_noise', self.set_noise_callback)
 
         # default mean and variance for linear and angular
-        if self.get_namespace() == '/linear':
-            self.mean = 1.0
-            self.variance = 0.1
-        elif self.get_namespace() == '/angular':
-            self.mean = 0.0
-            self.variance = 3.0
+        self.mean = 0.0
+        self.variance = 1.0
     
     def set_noise_callback(self,request:SetNoise.Request,response:SetNoise.Response):
         self.mean = request.mean.data

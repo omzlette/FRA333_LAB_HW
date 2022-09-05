@@ -45,10 +45,10 @@ def generate_launch_description():
         ]
     )
     
-    linearMean = 5.0
-    linearVar = 0.3
-    angularMean = 2.0
-    angularVar = 4.0
+    linearMean = 1.0
+    linearVar = 0.1
+    angularMean = 0.0
+    angularVar = 3.0
 
     srv_linear_noise = ExecuteProcess(
         cmd=[[
