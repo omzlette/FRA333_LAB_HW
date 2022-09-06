@@ -27,7 +27,7 @@ class VelocityMux(Node):
             self.angular_vel_sub_callback,
             10)
 
-        self.vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.vel_pub = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
         self.timer = self.create_timer(1/self.rate, self.timer_callback)
 
         self.cmd_vel = Twist()

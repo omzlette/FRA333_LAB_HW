@@ -35,9 +35,6 @@ def generate_launch_description():
         package='fra333_lab1_29',
         executable='velocity_mux.py',
         arguments=[rate],
-        remappings=[
-            ('/cmd_vel','/turtle1/cmd_vel'),
-        ]
     )
     
     linearMean = 1.0
