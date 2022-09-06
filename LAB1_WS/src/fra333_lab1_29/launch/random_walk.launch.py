@@ -1,16 +1,11 @@
 #!usr/bin/python3
-from re import L
-from tkinter import N
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess,DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch.substitutions import LaunchConfiguration, FindExecutable
+from launch.actions import ExecuteProcess, DeclareLaunchArgument
 def generate_launch_description():
-    launch_description = LaunchDescription()
-
     rate = LaunchConfiguration('rate')
     rate_launch_arg = DeclareLaunchArgument('rate',default_value='5.0')
-    launch_description.add_action(rate_launch_arg)
     
     turtleNode = Node(
         package='turtlesim',
@@ -63,7 +58,5 @@ def generate_launch_description():
         shell=True
     )
     
-    processToRun = [turtleNode, linearNode, angularNode, velocityMuxNode, srv_linear_noise, srv_angular_noise]
-    for i in processToRun: launch_description.add_action(i)
-
-    return launch_description
+    processToRun = [rate_launch_arg, turtleNode, linearNode, angularNode, velocityMuxNode, srv_linear_noise, srv_angular_noise]
+    return LaunchDescription(processToRun)

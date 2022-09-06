@@ -30,9 +30,6 @@ class VelocityMux(Node):
         self.vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
         self.timer = self.create_timer(1/self.rate, self.timer_callback)
 
-        self.linear_vel = 0.0
-        self.angular_vel = 0.0
-
         self.cmd_vel = Twist()
 
     def linear_vel_sub_callback(self,msg:Float64):
@@ -42,11 +39,8 @@ class VelocityMux(Node):
         self.cmd_vel.angular.z = msg.data
     
     def timer_callback(self):
-        msg = Twist()
-        msg.linear.x = self.cmd_vel.linear.x
-        msg.angular.z = self.cmd_vel.angular.z
-        self.vel_pub.publish(msg)
-        self.get_logger().info(f'Linear: {msg.linear.x}, Angular: {msg.angular.z}')
+        self.vel_pub.publish(self.cmd_vel)
+        self.get_logger().info(f'Linear: {self.cmd_vel.linear.x}, Angular: {self.cmd_vel.angular.z}')
 
 def main(args=None):
     rclpy.init(args=args)
