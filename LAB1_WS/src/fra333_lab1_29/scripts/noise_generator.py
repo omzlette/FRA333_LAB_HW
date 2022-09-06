@@ -12,7 +12,6 @@ import sys
 class NoiseGenerator(Node):
     def __init__(self):
         super().__init__('noise_generator')
-        self.declare_parameters(namespace='',parameters=[('None','None')])
         if len(sys.argv)>2: 
             self.rate = float(sys.argv[1])
         else:
