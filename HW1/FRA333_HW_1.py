@@ -20,7 +20,6 @@ class MyBeeBot(BeeBot):
     
     def wallCollision(self, W, pos):
         if any((self.pos2idx(pos).reshape(1,2) == W).all(1)):
-            print("Wall Collision")
             return True
         return False
     
