@@ -145,3 +145,19 @@ W = np.array([[1,2],
               [4,5]])
 print(any((arrTest == W).all(1)))
 print('-'*10)
+
+A = np.array([[1],[4]])
+print(A)
+print('-'*10)
+
+B = np.array([[1,4],[3,6],[7,8]]).T
+print(B)
+print('-'*10)
+
+m = any((A == B).all(1))
+print(m)
+print('-'*10)
+
+com = '13322432430331402441344321344124034332440312031321040223421323134024043020301410324214112200423440124'
+com = com.replace('0','')
+print(com)
