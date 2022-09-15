@@ -18,7 +18,7 @@ class BeeBot():
         x = [np.cos(math.pi/3*np.array(range(6)))+center[0]]
         y = [np.sin(math.pi/3*np.array(range(6)))+center[1]]
         xy = np.concatenate((x,y),0)
-        return Polygon(xy.T,closed=True,edgeColor='k',faceColor=faceColor)
+        return Polygon(xy.T,closed=True,edgecolor='k',facecolor=faceColor)
     # check if obstacle is given
     def plot_trackBeeBot(self,A,max,plot,W=None):
         if W is not None:
