@@ -20,6 +20,7 @@ class MyBeeBot(BeeBot):
     
     def wallCollision(self, W, pos):
         if any((self.pos2idx(pos).reshape(1,2) == W).all(1)):
+            print("Wall Collision")
             return True
         return False
     
@@ -57,14 +58,3 @@ class MyBeeBot(BeeBot):
     # a_i is initial position
     # com is command {'0'->stop, '1'->forward, '2'->backward, '3'->turn right, '4'->turn left}
     # W is wall
-    
-testBot = MyBeeBot([-5, -4])
-C = '13322432430331402441344321344124034332440312031321040223421323134024043020301410324214112200423440124'
-# C = '1'
-W = np.array([[-1, 0, -2, 0, 4, 3, 5, -3, 3, 4, 1, 5, 3, -5], [1, 0, -1, 5, -5, -1, 5, -4, 0, -1, 3, 0, 0, -4]])
-# W = np.array([[],[]])
-A, P = testBot.trackBeeBot(C, W)
-print(A)
-print('----------------')
-print(P)
-print('----------------')
