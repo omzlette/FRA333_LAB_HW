@@ -72,6 +72,7 @@ class MyBeeBot(BeeBot):
             elif i == '3':
                 stepMatrix = np.matmul(self.rotateMat(self.thetaL), stepMatrix)
                 print("left")
+                print(stepMatrix)
             elif i == '4':
                 stepMatrix = np.matmul(self.rotateMat(self.thetaR), stepMatrix)
                 print("right")
@@ -88,4 +89,4 @@ class MyBeeBot(BeeBot):
     # add your code here
 testBot = MyBeeBot([-4, -1])
 P = testBot.trackBeeBot('3', [])
-print(P)
+# print(P)

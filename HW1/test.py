@@ -36,7 +36,16 @@ def idx2pos(i,j):
   b = np.array([-3/2,np.math.sqrt(3)/2])*d*(j-1)
   return a+b+np.array([0,np.math.sqrt(3)])
 
-testArr = idx2pos(2,2).reshape(2,1)
+def pos2idx(x,y):
+  d = 1
+  a = np.array([1/3,-1/3])*d*x
+  b = np.array([1/np.sqrt(3),1/np.sqrt(3)])*d*y
+  return (a+b).reshape(2,1)
+
+testArr = idx2pos(0,-1).reshape(2,1)
+print(testArr)
+
+testArr = pos2idx(testArr[0], testArr[1])
 
 print(testArr)
 # # print([i for i in COM if i != '0'])
