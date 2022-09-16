@@ -161,3 +161,15 @@ print('-'*10)
 com = '13322432430331402441344321344124034332440312031321040223421323134024043020301410324214112200423440124'
 com = com.replace('0','')
 print(com)
+print('-'*10)
+
+arrTest2 = np.array([[-1.50000000e+00, -1.50000000e+00,  2.22044605e-16,  1.50000000e+00, 3.00000000e+00],
+                    [-7.79422863e+00, -6.06217783e+00, -5.19615242e+00, -4.33012702e+00, -3.46410162e+00]])
+
+def pos2idx(pos):
+    linearTrans = np.array([[1/3, np.sqrt(3)/3],
+                            [-1/3, np.sqrt(3)/3]])
+    a = np.matmul(linearTrans, pos)
+    return np.vectorize(round)(a)
+
+print(pos2idx(arrTest2))
