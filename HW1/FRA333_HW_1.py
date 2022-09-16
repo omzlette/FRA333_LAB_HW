@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 from trackbeebot import BeeBot
-import matplotlib.pyplot as plt 
-from matplotlib.patches import Polygon
 import numpy as np
-import math
-import json
 
 class MyBeeBot(BeeBot):
     def __init__(self,a_i):
@@ -27,14 +23,12 @@ class MyBeeBot(BeeBot):
     def trackBeeBot(self, com, W):
         stepMatrix = self.idx2pos(1,1).reshape(2,1)  
         for i in com.replace('0',''):
-            if i == '1':
-                if not self.wallCollision(W.T, self.currentPos+stepMatrix):
-                    self.currentPos = self.currentPos + stepMatrix
-                    self.walkedPos = np.concatenate((self.walkedPos, self.currentPos), axis=1)
-            elif i == '2':
-                if not self.wallCollision(W.T, self.currentPos-stepMatrix):
-                    self.currentPos = self.currentPos - stepMatrix
-                    self.walkedPos = np.concatenate((self.walkedPos, self.currentPos), axis=1)
+            if i == '1' and not self.wallCollision(W.T, self.currentPos + stepMatrix):
+                self.currentPos = self.currentPos + stepMatrix
+                self.walkedPos = np.concatenate((self.walkedPos, self.currentPos), axis=1)
+            elif i == '2' and not self.wallCollision(W.T, self.currentPos-stepMatrix):
+                self.currentPos = self.currentPos - stepMatrix
+                self.walkedPos = np.concatenate((self.walkedPos, self.currentPos), axis=1)
             elif i == '3':
                 stepMatrix = np.matmul(self.rotateMat(self.theta), stepMatrix)
             elif i == '4':
