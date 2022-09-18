@@ -7,7 +7,7 @@ class MyBeeBot(BeeBot):
         super().__init__(a_i)
         # Get the initial position (a_i) of the BeeBot on "Hexagonal Coordinate" 
         # and change it to "Cartesian Coordinate"
-        self.walkedPos = self.currentPos = self.idx2pos(np.array([a_i]).reshape(2,1))
+        self.walkedPos = self.currentPos = self.idx2pos_new(np.array([a_i]).reshape(2,1))
         # Declare the angle of rotation in radian, in this case we use 60 degrees
         # because the hexagonal grid is 60 degrees rotated
         self.theta = (60*np.pi)/180
@@ -35,7 +35,7 @@ class MyBeeBot(BeeBot):
         # Note: This function checks the position in the hexagonal coordinate.
         return True if any((self.pos2idx(pos).reshape(1,2) == W).all(1)) else False
     
-    def idx2pos(self, pos):
+    def idx2pos_new(self, pos):
         # This function is for changing hexagonal coordinate to cartesian coordinate
         # ----------------------------------------------
         # "pos" is the position of the BeeBot in the form of [[i], [j]].
@@ -77,7 +77,7 @@ class MyBeeBot(BeeBot):
         # ----------------------------------------------
         # Note: Both the forward and backward command will be ignored if the next position is 
         # going to collide with the wall.
-        stepMatrix = self.idx2pos(np.array([[1],[1]]))
+        stepMatrix = self.idx2pos_new(np.array([[1],[1]]))
         for i in com.replace('0',''):
             if i == '1' and not self.wallCollision(W.T, self.currentPos + stepMatrix):
                 self.currentPos = self.currentPos + stepMatrix
