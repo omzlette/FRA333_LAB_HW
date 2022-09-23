@@ -7,7 +7,7 @@ class MyBeeBot(BeeBot):
         super().__init__(a_i)
         # Get the initial position (a_i) of the BeeBot on "Hexagonal Coordinate" 
         # and change it to "Cartesian Coordinate"
-        self.walkedPos = self.currentPos = self.idx2pos(a_i[0],a_i[1]).reshape(2,1)
+        self.walkedPos = self.currentPos = self.idx2pos_new(np.array([a_i]).reshape(2,1))
         # Declare the angle of rotation in radian, in this case we use 60 degrees
         # because the hexagonal grid is 60 degrees rotated
         self.theta = (60*np.pi)/180
@@ -35,16 +35,29 @@ class MyBeeBot(BeeBot):
         # Note: This function checks the position in the hexagonal coordinate.
         return True if any((self.pos2idx(pos).reshape(1,2) == W).all(1)) else False
     
+    def idx2pos_new(self, pos):
+        # This function is for changing hexagonal coordinate to cartesian coordinate
+        # ----------------------------------------------
+        # "pos" is the hexagonal position that you want to change, in the form of [[i], [j]].
+        # ----------------------------------------------
+        # The way this function works is by using linear transformation matrix to change
+        # the position of the BeeBot from hexagonal coordinate to cartesian coordinate.
+        linearTrans = np.array([[3/2, -3/2],
+                                [np.sqrt(3)/2, np.sqrt(3)/2]])
+        return np.matmul(linearTrans, pos)
+    
     def pos2idx(self,pos):
         # This function is for changing cartesian coordinate to hexagonal coordinate
         # ----------------------------------------------
-        # "pos" is the position of the BeeBot in the form of [[x], [y]].
+        # "pos" is the cartesian position that you want to change, in the form of [[x], [y]].
         # ----------------------------------------------
         # The way this function works is by using linear transformation matrix to change
         # the position of the BeeBot from cartesian coordinate to hexagonal coordinate.
         linearTrans = np.array([[1/3, np.sqrt(3)/3],
                                 [-1/3, np.sqrt(3)/3]])
         return np.vectorize(round)(np.matmul(linearTrans, pos))
+    
+    # The function 'idx2pos_new' and 'pos2idx' calculations are proven in the file: 'HW1\doc\FRA333_HW1_29_Calculation.pdf'
     
     def trackBeeBot(self, com, W):
         # This function is for tracking the BeeBot
@@ -64,7 +77,7 @@ class MyBeeBot(BeeBot):
         # ----------------------------------------------
         # Note: Both the forward and backward command will be ignored if the next position is 
         # going to collide with the wall.
-        stepMatrix = self.idx2pos(1,1).reshape(2,1)  
+        stepMatrix = self.idx2pos_new(np.array([[1],[1]]))
         for i in com.replace('0',''):
             if i == '1' and not self.wallCollision(W.T, self.currentPos + stepMatrix):
                 self.currentPos = self.currentPos + stepMatrix
