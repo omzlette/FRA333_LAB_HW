@@ -38,7 +38,7 @@ class MyBeeBot(BeeBot):
     def idx2pos_new(self, pos):
         # This function is for changing hexagonal coordinate to cartesian coordinate
         # ----------------------------------------------
-        # "pos" is the position of the BeeBot in the form of [[i], [j]].
+        # "pos" is the hexagonal position that you want to change, in the form of [[i], [j]].
         # ----------------------------------------------
         # The way this function works is by using linear transformation matrix to change
         # the position of the BeeBot from hexagonal coordinate to cartesian coordinate.
@@ -49,7 +49,7 @@ class MyBeeBot(BeeBot):
     def pos2idx(self,pos):
         # This function is for changing cartesian coordinate to hexagonal coordinate
         # ----------------------------------------------
-        # "pos" is the position of the BeeBot in the form of [[x], [y]].
+        # "pos" is the cartesian position that you want to change, in the form of [[x], [y]].
         # ----------------------------------------------
         # The way this function works is by using linear transformation matrix to change
         # the position of the BeeBot from cartesian coordinate to hexagonal coordinate.
@@ -57,7 +57,7 @@ class MyBeeBot(BeeBot):
                                 [-1/3, np.sqrt(3)/3]])
         return np.vectorize(round)(np.matmul(linearTrans, pos))
     
-    # The function 'idx2pos' and 'pos2idx' calculations are proven in the file: 'HW1\doc\FRA333_HW1_29_Calculation.pdf'
+    # The function 'idx2pos_new' and 'pos2idx' calculations are proven in the file: 'HW1\doc\FRA333_HW1_29_Calculation.pdf'
     
     def trackBeeBot(self, com, W):
         # This function is for tracking the BeeBot
