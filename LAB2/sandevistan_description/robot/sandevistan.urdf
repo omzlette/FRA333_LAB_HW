@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="sandevistan">
+    <!-- add more codes -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://sandevistan_description/meshes/base_link.dae" />
+            </geometry>
+        </visual>
+    </link>
+
+    <link name="link_0">
+        <visual>
+            <geometry>
+                <mesh filename="package://sandevistan_description/meshes/link_0.stl" />
+            </geometry>
+
+</robot>

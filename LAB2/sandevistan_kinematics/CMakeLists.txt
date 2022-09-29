@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(dummy_kinematics)
+project(sandevistan_kinematics)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)

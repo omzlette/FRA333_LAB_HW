@@ -3,7 +3,7 @@
 import sys
 import rclpy
 from rclpy.node import Node
-from dummy_kinematics.dummy_module import dummy_function, dummy_var
+from LAB2.sandevistan_kinematics.sandevistan_kinematics.robot_module import dummy_function, dummy_var
 
 class DummyNode(Node):
     def __init__(self):
