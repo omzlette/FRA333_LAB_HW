@@ -2,17 +2,58 @@
 <robot name="sandevistan">
     <!-- add more codes -->
     <link name="base_link">
+    </link>
+
+    <joint name="joint_base" type="fixed">
+        <parent link="base_link"/>
+        <child link="link_0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="link_0">
         <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://sandevistan_description/meshes/base_link.dae" />
+                <mesh filename="package://sandevistan_description/meshes/link_0.stl" />
             </geometry>
         </visual>
     </link>
 
-    <link name="link_0">
+    <link name="link_1">
         <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://sandevistan_description/meshes/link_0.stl" />
+                <mesh filename="package://sandevistan_description/meshes/link_1.stl" />
             </geometry>
+        </visual>
+    </link>
+
+    <link name="link_2">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://sandevistan_description/meshes/link_2.stl" />
+            </geometry>
+        </visual>
+    </link>
+
+    <link name="link_3">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://sandevistan_description/meshes/link_3.stl" />
+            </geometry>
+        </visual>
+    </link>
+
+    <link name="link_4">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://sandevistan_description/meshes/link_4.stl" />
+            </geometry>
+        </visual>
+    </link>
 
 </robot>
