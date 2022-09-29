@@ -1,0 +1,1 @@
+/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_typesupport_introspection_cpp/sandevistan_kinematics_interfaces/srv/detail/solve_ik__rosidl_typesupport_introspection_cpp.hpp

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/libsandevistan_kinematics_interfaces__python.so" "TARGETS" "sandevistan_kinematics_interfaces__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

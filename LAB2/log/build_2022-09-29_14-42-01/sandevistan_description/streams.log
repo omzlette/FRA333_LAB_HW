@@ -1,0 +1,71 @@
+[0.033s] Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitRos/LAB2/src/sandevistan_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitRos/LAB2/install/sandevistan_description
+[0.072s] -- The C compiler identification is GNU 9.4.0
+[0.111s] -- The CXX compiler identification is GNU 9.4.0
+[0.114s] -- Check for working C compiler: /usr/bin/cc
+[0.163s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.163s] -- Detecting C compiler ABI info
+[0.211s] -- Detecting C compiler ABI info - done
+[0.220s] -- Detecting C compile features
+[0.220s] -- Detecting C compile features - done
+[0.222s] -- Check for working CXX compiler: /usr/bin/c++
+[0.278s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.279s] -- Detecting CXX compiler ABI info
+[0.336s] -- Detecting CXX compiler ABI info - done
+[0.348s] -- Detecting CXX compile features
+[0.349s] -- Detecting CXX compile features - done
+[0.351s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.371s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.371s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.516s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.540s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.573s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.578s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.637s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.662s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.744s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.788s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.789s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.789s] -- Looking for pthread.h
+[0.842s] -- Looking for pthread.h - found
+[0.842s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.895s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.896s] -- Looking for pthread_create in pthreads
+[0.937s] -- Looking for pthread_create in pthreads - not found
+[0.937s] -- Looking for pthread_create in pthread
+[0.987s] -- Looking for pthread_create in pthread - found
+[0.989s] -- Found Threads: TRUE  
+[1.135s] -- Found rclpy: 1.0.10 (/opt/ros/foxy/share/rclpy/cmake)
+[1.208s] -- Configuring done
+[1.209s] -- Generating done
+[1.210s] -- Build files have been written to: /home/omzlette/gitRos/LAB2/build/sandevistan_description
+[1.216s] Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitRos/LAB2/src/sandevistan_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitRos/LAB2/install/sandevistan_description
+[1.218s] Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_description -- -j12 -l12
+[1.247s] Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_description -- -j12 -l12
+[1.262s] Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_description
+[1.268s] -- Install configuration: ""
+[1.269s] -- Execute custom install script
+[1.269s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/environment/pythonpath.sh
+[1.275s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/environment/pythonpath.dsv
+[1.282s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description/__init__.py
+[1.288s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description/robot_module.py
+[1.295s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/sandevistan_description/robot_script.py
+[1.301s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/config/sandevistan_kinematics.rviz
+[1.307s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/ament_index/resource_index/package_run_dependencies/sandevistan_description
+[1.314s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/ament_index/resource_index/parent_prefix_path/sandevistan_description
+[1.320s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/environment/ament_prefix_path.sh
+[1.327s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/environment/ament_prefix_path.dsv
+[1.333s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/environment/path.sh
+[1.339s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/environment/path.dsv
+[1.346s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/local_setup.bash
+[1.353s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/local_setup.sh
+[1.360s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/local_setup.zsh
+[1.366s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/local_setup.dsv
+[1.373s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.dsv
+[1.382s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/ament_index/resource_index/packages/sandevistan_description
+[1.389s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/cmake/sandevistan_descriptionConfig.cmake
+[1.395s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/cmake/sandevistan_descriptionConfig-version.cmake
+[1.400s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.xml
+[1.429s] Listing '/home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description'...
+[1.429s] Compiling '/home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description/__init__.py'...
+[1.429s] Compiling '/home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description/robot_module.py'...
+[1.436s] Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_description

@@ -1,0 +1,1 @@
+/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics/launch/display_with_kinematics_srv.launch.py

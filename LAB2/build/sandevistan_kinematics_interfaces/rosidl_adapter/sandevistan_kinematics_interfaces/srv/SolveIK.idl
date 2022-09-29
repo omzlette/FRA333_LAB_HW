@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from sandevistan_kinematics_interfaces/srv/SolveIK.srv
+// generated code does not contain a copyright notice
+
+
+module sandevistan_kinematics_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      " add resquest")
+    struct SolveIK_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      " add response")
+    struct SolveIK_Response {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

@@ -1,0 +1,1 @@
+/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_typesupport_fastrtps_cpp/sandevistan_kinematics_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h

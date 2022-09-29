@@ -1,0 +1,1 @@
+/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics/ament_cmake_core/sandevistan_kinematicsConfig-version.cmake

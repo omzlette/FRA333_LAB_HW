@@ -1,0 +1,1 @@
+/home/omzlette/gitRos/LAB2/src/sandevistan_description/scripts/robot_script.py

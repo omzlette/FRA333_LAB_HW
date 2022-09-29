@@ -1,0 +1,1 @@
+/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_cmake/srv/GetPosition_Response.msg

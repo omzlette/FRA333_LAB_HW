@@ -1,0 +1,1 @@
+/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_core/sandevistan_descriptionConfig.cmake
