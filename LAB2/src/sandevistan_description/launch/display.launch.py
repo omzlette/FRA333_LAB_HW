@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+from re import sub
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
@@ -21,35 +22,50 @@ def generate_launch_description():
     ## You must build the custom package before. Otherwise, these codes will not find the file
     # in "install" directory
 
+    package_path = get_package_share_directory('sandevistan_description')
+    rviz_file_path = os.path.join(package_path, 'config', 'sandevistan_kinematics.rviz')
+    robot_desc_path = os.path.join(package_path, 'robot', 'sandevistan.urdf')
+    
     ### How to run rviz2 ###
     #
     ## With -d rviz_file_path, you can load the previous setting of rviz
     #
-    # rviz = Node(
-    #    package='rviz2',
-    #    executable='rviz2',
-    #    name='rviz',
-    #    arguments=['-d', rviz_file_path],
-    #    output='screen')
+    rviz = Node(
+       package='rviz2',
+       executable='rviz2',
+       name='rviz',
+       arguments=['-d', rviz_file_path],
+       output='screen')
     
     ### How to read URDF file ###
     #
-    # Assume that you have the correct path [robot_description_path]
-    # with open(robot_description_path, 'r') as infp:
-    #     robot_description = infp.read()
+    # Assume that you have the correct path [robot_desc_path]
+    with open(robot_desc_path, 'r') as infp:
+        robot_description = infp.read()
     
     ### How to run robot_state_publisher ###
     #
     # You must have a valid robot_description
     #
-    # robot_state_publisher = Node(package='robot_state_publisher',
-    #                               executable='robot_state_publisher',
-    #                               output='screen',
-    #                               parameters=[
-    #                                 {'use_sim_time': 'false'},
-    #                                 {'robot_description': robot_description}
-    #                               ]
-    # )
+    robot_state_publisher = Node(package='robot_state_publisher',
+                                  executable='robot_state_publisher',
+                                  output='screen',
+                                  parameters=[
+                                    {'use_sim_time': 'false'},
+                                    {'robot_description': robot_description}
+                                  ]
+    )
+
+    # Joint State Publisher & GUI (for debugging)
+    joint_state_publisher = Node(package='joint_state_publisher',
+                                    executable='joint_state_publisher',
+                                    name='joint_state_publisher'
+    )
+    joint_state_publisher_gui = Node(package='joint_state_publisher_gui',
+                                        executable='joint_state_publisher_gui',
+                                        name='joint_state_publisher_gui'
+    )
+
 
     ### How to add actions to launch description ###
     #
@@ -57,9 +73,10 @@ def generate_launch_description():
     # and add actions one by one
     #
     # Launch Description
-    # launch_description = LaunchDescription()
-    # launch_description.add_action(rviz)
-    # launch_description.add_action(robot_state_publisher)
+    launch_description = LaunchDescription()
+    toAddAction = [rviz, robot_state_publisher, joint_state_publisher, joint_state_publisher_gui]
+    for i in toAddAction:
+        launch_description.add_action(i)
     
     return launch_description
 

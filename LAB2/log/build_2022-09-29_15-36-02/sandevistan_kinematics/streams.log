@@ -1,0 +1,43 @@
+[0.026s] Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics
+[0.037s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.056s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.221s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.227s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.255s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.258s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.381s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.424s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.425s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.552s] -- Found rclpy: 1.0.10 (/opt/ros/foxy/share/rclpy/cmake)
+[0.608s] -- Configuring done
+[0.609s] -- Generating done
+[0.610s] -- Build files have been written to: /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics
+[0.614s] Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics
+[0.617s] Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics -- -j12 -l12
+[0.647s] Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics -- -j12 -l12
+[0.665s] Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics
+[0.670s] -- Install configuration: ""
+[0.671s] -- Execute custom install script
+[0.671s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/pythonpath.sh
+[0.671s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/pythonpath.dsv
+[0.671s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics/__init__.py
+[0.672s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics/robot_module.py
+[0.672s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/sandevistan_kinematics/robot_script.py
+[0.672s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/launch/display_with_kinematics_srv.launch.py
+[0.672s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/ament_index/resource_index/package_run_dependencies/sandevistan_kinematics
+[0.673s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/ament_index/resource_index/parent_prefix_path/sandevistan_kinematics
+[0.673s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/ament_prefix_path.sh
+[0.673s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/ament_prefix_path.dsv
+[0.673s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/path.sh
+[0.673s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/path.dsv
+[0.674s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/local_setup.bash
+[0.674s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/local_setup.sh
+[0.674s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/local_setup.zsh
+[0.674s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/local_setup.dsv
+[0.674s] -- Symlinking: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.dsv
+[0.682s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/ament_index/resource_index/packages/sandevistan_kinematics
+[0.682s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/cmake/sandevistan_kinematicsConfig.cmake
+[0.682s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/cmake/sandevistan_kinematicsConfig-version.cmake
+[0.682s] -- Up-to-date symlink: /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.xml
+[0.709s] Listing '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics'...
+[0.717s] Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics

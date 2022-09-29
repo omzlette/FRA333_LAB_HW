@@ -4,6 +4,13 @@
 /home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description/robot_module.py
 /home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/sandevistan_description/robot_script.py
 /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/config/sandevistan_kinematics.rviz
+/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/launch/display.launch.py
+/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/robot/sandevistan.urdf
+/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/meshes/link_0.STL
+/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/meshes/link_1.STL
+/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/meshes/link_2.STL
+/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/meshes/link_3.STL
+/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/meshes/link_4.STL
 /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/ament_index/resource_index/package_run_dependencies/sandevistan_description
 /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/ament_index/resource_index/parent_prefix_path/sandevistan_description
 /home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/environment/ament_prefix_path.sh

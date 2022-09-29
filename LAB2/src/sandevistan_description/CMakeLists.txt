@@ -35,7 +35,10 @@ install(PROGRAMS
 ################ INSTALL LAUNCH, ETC #################
 install(DIRECTORY
   # add directories here
-  config 
+  config
+  launch
+  robot
+  meshes
   DESTINATION share/${PROJECT_NAME})
 
 ament_package()

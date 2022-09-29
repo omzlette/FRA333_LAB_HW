@@ -322,8 +322,8 @@ ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB2/src/sandevista
 # install(PROGRAMS "scripts/robot_script.py" "DESTINATION" "lib/sandevistan_description")
 ament_cmake_symlink_install_programs("/home/omzlette/gitRos/LAB2/src/sandevistan_description" PROGRAMS "scripts/robot_script.py" "DESTINATION" "lib/sandevistan_description")
 
-# install(DIRECTORY "config" "DESTINATION" "share/sandevistan_description")
-ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB2/src/sandevistan_description" DIRECTORY "config" "DESTINATION" "share/sandevistan_description")
+# install(DIRECTORY "config" "launch" "robot" "meshes" "DESTINATION" "share/sandevistan_description")
+ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB2/src/sandevistan_description" DIRECTORY "config" "launch" "robot" "meshes" "DESTINATION" "share/sandevistan_description")
 
 # install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

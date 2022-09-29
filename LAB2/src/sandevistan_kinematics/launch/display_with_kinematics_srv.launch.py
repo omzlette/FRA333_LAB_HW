@@ -15,21 +15,21 @@ def generate_launch_description():
     #
     # You must specify the package, folder, and the name
     #
-    # display = IncludeLaunchDescription(
-    #
-    #      PythonLaunchDescriptionSource([
-    #         PathJoinSubstitution([
-    #             FindPackageShare('package_name'),
-    #             'folder_name',
-    #             'launch_file.launch.py'
-    #         ])
-    #     ])
-    # )
+    display = IncludeLaunchDescription(
+    
+         PythonLaunchDescriptionSource([
+            PathJoinSubstitution([
+                FindPackageShare('sandevistan_description'),
+                'launch',
+                'display.launch.py'
+            ])
+        ])
+    )
     
     # Launch Description
     launch_description = LaunchDescription()
     launch_description.add_action(display)
-    launch_description.add_action(kinematics_server)
+    # launch_description.add_action(kinematics_server)
 
     return launch_description
 

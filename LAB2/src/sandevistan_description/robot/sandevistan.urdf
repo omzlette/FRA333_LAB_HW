@@ -1,6 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot name="sandevistan">
     <!-- add more codes -->
+
+    <material name="Grey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+    </material>
+
+    <material name="White">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+
+    <material name="Pink">
+    <color rgba="1.0 0.85 0.92 1.0"/>
+    </material>
+
     <link name="base_link">
     </link>
 
@@ -15,45 +28,91 @@
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://sandevistan_description/meshes/link_0.stl" />
+                <mesh filename="package://sandevistan_description/meshes/link_0.STL" />
             </geometry>
+            <material name="Grey"/>
         </visual>
     </link>
+
+    <joint name="joint_0" type="revolute">
+        <parent link="link_0"/>
+        <child link="link_1"/>
+        <origin xyz="0 0 0.4" rpy="0 0 -1.57"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="0.5" velocity="0.5"/>
+    </joint>
 
     <link name="link_1">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://sandevistan_description/meshes/link_1.stl" />
+                <mesh filename="package://sandevistan_description/meshes/link_1.STL" />
             </geometry>
+            <material name="White"/>
         </visual>
     </link>
+
+    <joint name="joint_1" type="revolute">
+        <parent link="link_1"/>
+        <child link="link_2"/>
+        <origin xyz="0 0 0" rpy="-1.57 -1.57 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="0.5" velocity="0.5"/>
+    </joint>
 
     <link name="link_2">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://sandevistan_description/meshes/link_2.stl" />
+                <mesh filename="package://sandevistan_description/meshes/link_2.STL" />
             </geometry>
+            <material name="Grey"/>
         </visual>
     </link>
+
+    <joint name="joint_2" type="revolute">
+        <parent link="link_2"/>
+        <child link="link_3"/>
+        <origin xyz="0 -0.15 0" rpy="1.57 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-3.14" upper="3.14" effort="0.5" velocity="0.5"/>
+    </joint>
 
     <link name="link_3">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://sandevistan_description/meshes/link_3.stl" />
+                <mesh filename="package://sandevistan_description/meshes/link_3.STL" />
             </geometry>
+            <material name="White"/>
         </visual>
     </link>
+    
+    <joint name="joint_3" type="prismatic">
+        <parent link="link_3"/>
+        <child link="link_4"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="0" upper="0.1" effort="0.5" velocity="0.5"/>
+    </joint>
 
     <link name="link_4">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://sandevistan_description/meshes/link_4.stl" />
+                <mesh filename="package://sandevistan_description/meshes/link_4.STL" />
             </geometry>
+            <material name="Pink"/>
         </visual>
     </link>
 
+    <joint name="joint_neff" type="fixed">
+        <parent link="link_4"/>
+        <child link="end_effector"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="0 0 0"/>
+    </joint>
+
+    <link name="end_effector">
+    </link>
 </robot>
