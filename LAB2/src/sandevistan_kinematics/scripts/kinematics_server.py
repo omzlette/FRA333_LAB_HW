@@ -22,7 +22,7 @@ class SandeStatePub(Node):
         self.jointPubTimer = self.create_timer(1/rate, self.jointPubTimerCallback)
         
         self.jointState = JointState()
-        self.jointState.position = [0., 0., 0., 0., 0., 0.]
+        self.jointState.position = [0., 0., 0., 0.]
         
         self.linkLengths = [0.4, 0.15, 0.2]
         self.degree = np.pi / 180.0
@@ -34,14 +34,14 @@ class SandeStatePub(Node):
         
     def jointPubTimerCallback(self):
         self.jointState.header.stamp = self.get_clock().now().to_msg()
-        self.jointState.name = ['joint_base_0', 'joint_0_1', 'joint_1_2',
-                                'joint_2_3', 'joint_3_4', 'joint_4_neff']
+        self.jointState.name = ['joint_0_1', 'joint_1_2',
+                                'joint_2_3', 'joint_3_4']
         self.jointPub.publish(self.jointState)
     
     def setJointCallback(self, request:GetPosition.Request, response:GetPosition.Response):
         [q1, q2, q3, q4] = request.joint.position[0:4]
         [q1, q2, q3] = [i*self.degree for i in [q1, q2, q3]]
-        self.jointState.position = [0., q1, q2, q3, q4, 0.]
+        self.jointState.position = [q1, q2, q3, q4]
         self.get_logger().info('Incoming request\nPosition: ' + str(request.joint.position[0:4]))
         positionMat = np.array([[(-self.linkLengths[1] - self.linkLengths[2] - q4)*np.sin(q1)*np.cos(q2)],
                                 [(self.linkLengths[1] + self.linkLengths[2] + q4)*np.cos(q1)*np.cos(q2)],
@@ -62,8 +62,7 @@ class SandeStatePub(Node):
                          [-self.linkLengths[1] - self.linkLengths[2] + (np.sqrt(((z-self.linkLengths[0])**2)+x**2+y**2))]])
         jointConfig = [IKEq[0, 0], IKEq[1, 0], q3, IKEq[2, 0]]
         IKSuccess = response.success = self.checkIK(pos)
-        response.joint.position = jointConfig if IKSuccess else [0., 0., 0., 0.]
-        self.jointState.position = [0., jointConfig[0], jointConfig[1], jointConfig[2], jointConfig[3], 0.] if IKSuccess else [0., 0., 0., 0., 0., 0.]
+        self.jointState.position = response.joint.position = jointConfig if IKSuccess else [0., 0., 0., 0.]
         self.get_logger().info('Joint 1: %.3f\nJoint 2: %.3f\nJoint 3: %.3f\nJoint 4: %.3f' % (IKEq[0, 0], IKEq[1, 0], q3, IKEq[2, 0]))
         return response
     
