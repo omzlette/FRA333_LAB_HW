@@ -3,6 +3,7 @@
 
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sandevistan_kinematics_interfaces/srv/detail/get_position__type_support_c.cpp.o
  /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_typesupport_fastrtps_c/sandevistan_kinematics_interfaces/srv/detail/get_position__type_support_c.cpp
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h
  /opt/ros/foxy/include/fastcdr/Cdr.h
  /opt/ros/foxy/include/fastcdr/FastBuffer.h
  /opt/ros/foxy/include/fastcdr/config.h
@@ -10,6 +11,9 @@ CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c.dir/
  /opt/ros/foxy/include/fastcdr/exceptions/Exception.h
  /opt/ros/foxy/include/fastcdr/exceptions/NotEnoughMemoryException.h
  /opt/ros/foxy/include/fastcdr/fastcdr_dll.h
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/point__functions.h
+ /opt/ros/foxy/include/geometry_msgs/msg/detail/point__struct.h
+ /opt/ros/foxy/include/geometry_msgs/msg/rosidl_generator_c__visibility_control.h
  /opt/ros/foxy/include/rcutils/allocator.h
  /opt/ros/foxy/include/rcutils/error_handling.h
  /opt/ros/foxy/include/rcutils/logging.h
@@ -41,6 +45,7 @@ CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c.dir/
  /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
  /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
  /opt/ros/foxy/include/rosidl_runtime_c/service_type_support_struct.h
+ /opt/ros/foxy/include/rosidl_runtime_c/string.h
  /opt/ros/foxy/include/rosidl_runtime_c/u16string.h
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
  /opt/ros/foxy/include/rosidl_typesupport_cpp/service_type_support.hpp
@@ -50,6 +55,10 @@ CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c.dir/
  /opt/ros/foxy/include/rosidl_typesupport_fastrtps_cpp/message_type_support.h
  /opt/ros/foxy/include/rosidl_typesupport_fastrtps_cpp/service_type_support.h
  /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
+ /opt/ros/foxy/include/sensor_msgs/msg/detail/joint_state__functions.h
+ /opt/ros/foxy/include/sensor_msgs/msg/detail/joint_state__struct.h
+ /opt/ros/foxy/include/sensor_msgs/msg/rosidl_generator_c__visibility_control.h
+ /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.h
  rosidl_generator_c/sandevistan_kinematics_interfaces/msg/rosidl_generator_c__visibility_control.h
  rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.h
  rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__struct.h

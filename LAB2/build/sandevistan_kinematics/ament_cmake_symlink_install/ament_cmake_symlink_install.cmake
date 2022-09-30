@@ -319,8 +319,8 @@ ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_ki
 # install(DIRECTORY "/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics/sandevistan_kinematics/" "DESTINATION" "lib/python3.8/site-packages/sandevistan_kinematics" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics" DIRECTORY "/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics/sandevistan_kinematics/" "DESTINATION" "lib/python3.8/site-packages/sandevistan_kinematics" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install(PROGRAMS "scripts/robot_script.py" "DESTINATION" "lib/sandevistan_kinematics")
-ament_cmake_symlink_install_programs("/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics" PROGRAMS "scripts/robot_script.py" "DESTINATION" "lib/sandevistan_kinematics")
+# install(PROGRAMS "scripts/kinematics_server.py" "DESTINATION" "lib/sandevistan_kinematics")
+ament_cmake_symlink_install_programs("/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics" PROGRAMS "scripts/kinematics_server.py" "DESTINATION" "lib/sandevistan_kinematics")
 
 # install(DIRECTORY "launch" "DESTINATION" "share/sandevistan_kinematics")
 ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics" DIRECTORY "launch" "DESTINATION" "share/sandevistan_kinematics")

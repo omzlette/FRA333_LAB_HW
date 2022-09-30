@@ -2,18 +2,16 @@
 // with input from sandevistan_kinematics_interfaces/srv/GetPosition.srv
 // generated code does not contain a copyright notice
 
+#include "geometry_msgs/msg/Point.idl"
+#include "sensor_msgs/msg/JointState.idl"
 
 module sandevistan_kinematics_interfaces {
   module srv {
-    @verbatim (language="comment", text=
-      " add resquest")
     struct GetPosition_Request {
-      uint8 structure_needs_at_least_one_member;
+      sensor_msgs::msg::JointState joint;
     };
-    @verbatim (language="comment", text=
-      " add response")
     struct GetPosition_Response {
-      uint8 structure_needs_at_least_one_member;
+      geometry_msgs::msg::Point position;
     };
   };
 };

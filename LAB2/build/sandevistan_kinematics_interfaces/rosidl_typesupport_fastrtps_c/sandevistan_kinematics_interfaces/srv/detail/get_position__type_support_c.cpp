@@ -34,8 +34,22 @@ extern "C"
 {
 #endif
 
+#include "sensor_msgs/msg/detail/joint_state__functions.h"  // joint
 
 // forward declare type support functions
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_sandevistan_kinematics_interfaces
+size_t get_serialized_size_sensor_msgs__msg__JointState(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_sandevistan_kinematics_interfaces
+size_t max_serialized_size_sensor_msgs__msg__JointState(
+  bool & full_bounded,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_sandevistan_kinematics_interfaces
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, sensor_msgs, msg, JointState)();
 
 
 using _GetPosition_Request__ros_msg_type = sandevistan_kinematics_interfaces__srv__GetPosition_Request;
@@ -49,9 +63,18 @@ static bool _GetPosition_Request__cdr_serialize(
     return false;
   }
   const _GetPosition_Request__ros_msg_type * ros_message = static_cast<const _GetPosition_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: joint
   {
-    cdr << ros_message->structure_needs_at_least_one_member;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, sensor_msgs, msg, JointState
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->joint, cdr))
+    {
+      return false;
+    }
   }
 
   return true;
@@ -66,9 +89,18 @@ static bool _GetPosition_Request__cdr_deserialize(
     return false;
   }
   _GetPosition_Request__ros_msg_type * ros_message = static_cast<_GetPosition_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: joint
   {
-    cdr >> ros_message->structure_needs_at_least_one_member;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, sensor_msgs, msg, JointState
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->joint))
+    {
+      return false;
+    }
   }
 
   return true;
@@ -88,12 +120,10 @@ size_t get_serialized_size_sandevistan_kinematics_interfaces__srv__GetPosition_R
   (void)padding;
   (void)wchar_size;
 
-  // field.name structure_needs_at_least_one_member
-  {
-    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // field.name joint
+
+  current_alignment += get_serialized_size_sensor_msgs__msg__JointState(
+    &(ros_message->joint), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -118,11 +148,16 @@ size_t max_serialized_size_sandevistan_kinematics_interfaces__srv__GetPosition_R
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: structure_needs_at_least_one_member
+  // member: joint
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        max_serialized_size_sensor_msgs__msg__JointState(
+        full_bounded, current_alignment);
+    }
   }
 
   return current_alignment - initial_alignment;
@@ -199,8 +234,22 @@ extern "C"
 {
 #endif
 
+#include "geometry_msgs/msg/detail/point__functions.h"  // position
 
 // forward declare type support functions
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_sandevistan_kinematics_interfaces
+size_t get_serialized_size_geometry_msgs__msg__Point(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_sandevistan_kinematics_interfaces
+size_t max_serialized_size_geometry_msgs__msg__Point(
+  bool & full_bounded,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_sandevistan_kinematics_interfaces
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, geometry_msgs, msg, Point)();
 
 
 using _GetPosition_Response__ros_msg_type = sandevistan_kinematics_interfaces__srv__GetPosition_Response;
@@ -214,9 +263,18 @@ static bool _GetPosition_Response__cdr_serialize(
     return false;
   }
   const _GetPosition_Response__ros_msg_type * ros_message = static_cast<const _GetPosition_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: position
   {
-    cdr << ros_message->structure_needs_at_least_one_member;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, Point
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->position, cdr))
+    {
+      return false;
+    }
   }
 
   return true;
@@ -231,9 +289,18 @@ static bool _GetPosition_Response__cdr_deserialize(
     return false;
   }
   _GetPosition_Response__ros_msg_type * ros_message = static_cast<_GetPosition_Response__ros_msg_type *>(untyped_ros_message);
-  // Field name: structure_needs_at_least_one_member
+  // Field name: position
   {
-    cdr >> ros_message->structure_needs_at_least_one_member;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, Point
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->position))
+    {
+      return false;
+    }
   }
 
   return true;
@@ -253,12 +320,10 @@ size_t get_serialized_size_sandevistan_kinematics_interfaces__srv__GetPosition_R
   (void)padding;
   (void)wchar_size;
 
-  // field.name structure_needs_at_least_one_member
-  {
-    size_t item_size = sizeof(ros_message->structure_needs_at_least_one_member);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
+  // field.name position
+
+  current_alignment += get_serialized_size_geometry_msgs__msg__Point(
+    &(ros_message->position), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -283,11 +348,16 @@ size_t max_serialized_size_sandevistan_kinematics_interfaces__srv__GetPosition_R
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: structure_needs_at_least_one_member
+  // member: position
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        max_serialized_size_geometry_msgs__msg__Point(
+        full_bounded, current_alignment);
+    }
   }
 
   return current_alignment - initial_alignment;

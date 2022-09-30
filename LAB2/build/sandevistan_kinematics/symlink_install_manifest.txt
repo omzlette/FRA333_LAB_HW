@@ -2,7 +2,7 @@
 /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/pythonpath.dsv
 /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics/__init__.py
 /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics/robot_module.py
-/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/sandevistan_kinematics/robot_script.py
+/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/sandevistan_kinematics/kinematics_server.py
 /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/launch/display_with_kinematics_srv.launch.py
 /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/ament_index/resource_index/package_run_dependencies/sandevistan_kinematics
 /home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/ament_index/resource_index/parent_prefix_path/sandevistan_kinematics

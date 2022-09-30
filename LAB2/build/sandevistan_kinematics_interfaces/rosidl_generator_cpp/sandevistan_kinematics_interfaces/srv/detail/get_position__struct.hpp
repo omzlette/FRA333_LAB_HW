@@ -14,6 +14,10 @@
 #include <vector>
 
 
+// Include directives for member types
+// Member 'joint'
+#include "sensor_msgs/msg/detail/joint_state__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__sandevistan_kinematics_interfaces__srv__GetPosition_Request __attribute__((deprecated))
 #else
@@ -33,29 +37,29 @@ struct GetPosition_Request_
   using Type = GetPosition_Request_<ContainerAllocator>;
 
   explicit GetPosition_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : joint(_init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->structure_needs_at_least_one_member = 0;
-    }
+    (void)_init;
   }
 
   explicit GetPosition_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : joint(_alloc, _init)
   {
-    (void)_alloc;
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->structure_needs_at_least_one_member = 0;
-    }
+    (void)_init;
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _joint_type =
+    sensor_msgs::msg::JointState_<ContainerAllocator>;
+  _joint_type joint;
 
+  // setters for named parameter idiom
+  Type & set__joint(
+    const sensor_msgs::msg::JointState_<ContainerAllocator> & _arg)
+  {
+    this->joint = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -99,7 +103,7 @@ struct GetPosition_Request_
   // comparison operators
   bool operator==(const GetPosition_Request_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->joint != other.joint) {
       return false;
     }
     return true;
@@ -121,6 +125,10 @@ using GetPosition_Request =
 }  // namespace sandevistan_kinematics_interfaces
 
 
+// Include directives for member types
+// Member 'position'
+#include "geometry_msgs/msg/detail/point__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__sandevistan_kinematics_interfaces__srv__GetPosition_Response __attribute__((deprecated))
 #else
@@ -140,29 +148,29 @@ struct GetPosition_Response_
   using Type = GetPosition_Response_<ContainerAllocator>;
 
   explicit GetPosition_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : position(_init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->structure_needs_at_least_one_member = 0;
-    }
+    (void)_init;
   }
 
   explicit GetPosition_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : position(_alloc, _init)
   {
-    (void)_alloc;
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->structure_needs_at_least_one_member = 0;
-    }
+    (void)_init;
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _position_type =
+    geometry_msgs::msg::Point_<ContainerAllocator>;
+  _position_type position;
 
+  // setters for named parameter idiom
+  Type & set__position(
+    const geometry_msgs::msg::Point_<ContainerAllocator> & _arg)
+  {
+    this->position = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -206,7 +214,7 @@ struct GetPosition_Response_
   // comparison operators
   bool operator==(const GetPosition_Response_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->position != other.position) {
       return false;
     }
     return true;

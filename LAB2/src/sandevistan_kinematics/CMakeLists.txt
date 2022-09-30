@@ -27,7 +27,7 @@ ament_python_install_package(${PROJECT_NAME})
 
 # Install Python executables
 install(PROGRAMS
-  scripts/robot_script.py
+  scripts/kinematics_server.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -26,10 +26,14 @@ def generate_launch_description():
         ])
     )
     
+    kinematics_server = Node(package='sandevistan_kinematics',
+                             executable='kinematics_server.py',)
+                             
+    
     # Launch Description
     launch_description = LaunchDescription()
     launch_description.add_action(display)
-    # launch_description.add_action(kinematics_server)
+    launch_description.add_action(kinematics_server)
 
     return launch_description
 

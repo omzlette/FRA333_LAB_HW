@@ -12,6 +12,12 @@
 #include "sandevistan_kinematics_interfaces/srv/detail/get_position__struct.h"
 
 
+// Include directives for member types
+// Member `joint`
+#include "sensor_msgs/msg/joint_state.h"
+// Member `joint`
+#include "sensor_msgs/msg/detail/joint_state__rosidl_typesupport_introspection_c.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -33,14 +39,14 @@ void GetPosition_Request__rosidl_typesupport_introspection_c__GetPosition_Reques
 
 static rosidl_typesupport_introspection_c__MessageMember GetPosition_Request__rosidl_typesupport_introspection_c__GetPosition_Request_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    "joint",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(sandevistan_kinematics_interfaces__srv__GetPosition_Request, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(sandevistan_kinematics_interfaces__srv__GetPosition_Request, joint),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -70,6 +76,8 @@ static rosidl_message_type_support_t GetPosition_Request__rosidl_typesupport_int
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_sandevistan_kinematics_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, sandevistan_kinematics_interfaces, srv, GetPosition_Request)() {
+  GetPosition_Request__rosidl_typesupport_introspection_c__GetPosition_Request_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, sensor_msgs, msg, JointState)();
   if (!GetPosition_Request__rosidl_typesupport_introspection_c__GetPosition_Request_message_type_support_handle.typesupport_identifier) {
     GetPosition_Request__rosidl_typesupport_introspection_c__GetPosition_Request_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
@@ -98,6 +106,12 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 // #include "sandevistan_kinematics_interfaces/srv/detail/get_position__struct.h"
 
 
+// Include directives for member types
+// Member `position`
+#include "geometry_msgs/msg/point.h"
+// Member `position`
+#include "geometry_msgs/msg/detail/point__rosidl_typesupport_introspection_c.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -119,14 +133,14 @@ void GetPosition_Response__rosidl_typesupport_introspection_c__GetPosition_Respo
 
 static rosidl_typesupport_introspection_c__MessageMember GetPosition_Response__rosidl_typesupport_introspection_c__GetPosition_Response_message_member_array[1] = {
   {
-    "structure_needs_at_least_one_member",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    "position",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(sandevistan_kinematics_interfaces__srv__GetPosition_Response, structure_needs_at_least_one_member),  // bytes offset in struct
+    offsetof(sandevistan_kinematics_interfaces__srv__GetPosition_Response, position),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -156,6 +170,8 @@ static rosidl_message_type_support_t GetPosition_Response__rosidl_typesupport_in
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_sandevistan_kinematics_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, sandevistan_kinematics_interfaces, srv, GetPosition_Response)() {
+  GetPosition_Response__rosidl_typesupport_introspection_c__GetPosition_Response_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, Point)();
   if (!GetPosition_Response__rosidl_typesupport_introspection_c__GetPosition_Response_message_type_support_handle.typesupport_identifier) {
     GetPosition_Response__rosidl_typesupport_introspection_c__GetPosition_Response_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
