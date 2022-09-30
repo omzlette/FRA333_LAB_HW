@@ -39,8 +39,6 @@ class SandeStatePub(Node):
         self.jointPub.publish(self.jointState)
     
     def setJointCallback(self, request:GetPosition.Request, response:GetPosition.Response):
-        # request.joint.header.stamp = self.get_clock().now().to_msg()
-        request.joint.name = self.jointState.name
         [q1, q2, q3, q4] = request.joint.position[0:4]
         [q1, q2, q3] = [i*self.degree for i in [q1, q2, q3]]
         self.jointState.position = [0., q1, q2, q3, q4, 0.]
@@ -55,7 +53,6 @@ class SandeStatePub(Node):
         return response
     
     def solveIKCallback(self, request:SolveIK.Request, response:SolveIK.Response):
-        # request.position.header.stamp = self.get_clock().now().to_msg()
         pos = [x, y, z] = [request.position.x, request.position.y, request.position.z]
         gamma = request.armconfig
         q3 = request.jointconfig*self.degree
@@ -64,13 +61,9 @@ class SandeStatePub(Node):
                          [np.arcsin(np.sqrt(1-((x**2+y**2)/((np.sqrt(((z-self.linkLengths[0])**2)+x**2+y**2))**2))))],
                          [-self.linkLengths[1] - self.linkLengths[2] + (np.sqrt(((z-self.linkLengths[0])**2)+x**2+y**2))]])
         jointConfig = [IKEq[0, 0], IKEq[1, 0], q3, IKEq[2, 0]]
-        response.joint.name = self.jointState.name
         IKSuccess = response.success = self.checkIK(pos)
         response.joint.position = jointConfig if IKSuccess else [0., 0., 0., 0.]
         self.jointState.position = [0., jointConfig[0], jointConfig[1], jointConfig[2], jointConfig[3], 0.] if IKSuccess else [0., 0., 0., 0., 0., 0.]
-        # response.joint.name = self.jointState.name
-        # response.joint.position = [IKEq[0, 0], IKEq[1, 0], q3, IKEq[2, 0]]
-        # self.jointState.position = [0., IKEq[0, 0], IKEq[1, 0], q3, IKEq[2, 0], 0.]
         self.get_logger().info('Joint 1: %.3f\nJoint 2: %.3f\nJoint 3: %.3f\nJoint 4: %.3f' % (IKEq[0, 0], IKEq[1, 0], q3, IKEq[2, 0]))
         return response
     
