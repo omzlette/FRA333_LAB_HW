@@ -27,8 +27,7 @@ def generate_launch_description():
                                   parameters=[
                                     {'use_sim_time': 'false'},
                                     {'robot_description': robot_description}
-                                  ]
-    )
+                                  ])
 
     # Launch Description
     launch_description = LaunchDescription()

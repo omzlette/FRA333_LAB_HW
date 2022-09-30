@@ -10,6 +10,7 @@ module sandevistan_kinematics_interfaces {
     struct SolveIK_Request {
       geometry_msgs::msg::Point position;
 
+      @default (value=1)
       int32 armconfig;
 
       double jointconfig;

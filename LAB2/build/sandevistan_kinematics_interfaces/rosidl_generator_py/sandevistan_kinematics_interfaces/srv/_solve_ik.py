@@ -50,7 +50,13 @@ class Metaclass_SolveIK_Request(type):
         # the message class under "Data and other attributes defined here:"
         # as well as populate each message instance
         return {
+            'ARMCONFIG__DEFAULT': 1,
         }
+
+    @property
+    def ARMCONFIG__DEFAULT(cls):
+        """Return default value for message field 'armconfig'."""
+        return 1
 
 
 class SolveIK_Request(metaclass=Metaclass_SolveIK_Request):
@@ -80,7 +86,8 @@ class SolveIK_Request(metaclass=Metaclass_SolveIK_Request):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from geometry_msgs.msg import Point
         self.position = kwargs.get('position', Point())
-        self.armconfig = kwargs.get('armconfig', int())
+        self.armconfig = kwargs.get(
+            'armconfig', SolveIK_Request.ARMCONFIG__DEFAULT)
         self.jointconfig = kwargs.get('jointconfig', float())
 
     def __repr__(self):

@@ -26,6 +26,7 @@ sandevistan_kinematics_interfaces__srv__SolveIK_Request__init(sandevistan_kinema
     return false;
   }
   // armconfig
+  msg->armconfig = 1l;
   // jointconfig
   return true;
 }

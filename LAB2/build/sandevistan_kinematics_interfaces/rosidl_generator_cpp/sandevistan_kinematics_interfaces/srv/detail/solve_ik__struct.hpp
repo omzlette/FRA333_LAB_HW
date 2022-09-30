@@ -40,9 +40,16 @@ struct SolveIK_Request_
   : position(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
+    {
+      this->armconfig = 1l;
+    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
+      this->armconfig = 0l;
+      this->jointconfig = 0.0;
+    }
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->armconfig = 0l;
       this->jointconfig = 0.0;
     }
   }
@@ -51,9 +58,16 @@ struct SolveIK_Request_
   : position(_alloc, _init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
+    {
+      this->armconfig = 1l;
+    } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
+      this->armconfig = 0l;
+      this->jointconfig = 0.0;
+    }
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->armconfig = 0l;
       this->jointconfig = 0.0;
     }
   }

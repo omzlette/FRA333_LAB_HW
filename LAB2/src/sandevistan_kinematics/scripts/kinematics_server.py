@@ -5,7 +5,6 @@ import numpy as np
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
-from geometry_msgs.msg import Point
 from sensor_msgs.msg import JointState
 from sandevistan_kinematics.robot_module import dummy_function, dummy_var
 

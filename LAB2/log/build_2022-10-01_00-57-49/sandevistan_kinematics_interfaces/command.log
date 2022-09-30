@@ -1,0 +1,2 @@
+Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces -- -j12 -l12
+Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces -- -j12 -l12
