@@ -1,0 +1,346 @@
+[0.139s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.139s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ff445f70a60>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ff445f70a60>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ff445f7b040>)
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.161s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/omzlette/gitRos/LAB2'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extensions ['ignore', 'ignore_ament_install']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extension 'ignore'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extension 'ignore_ament_install'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extensions ['colcon_pkg']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extension 'colcon_pkg'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extensions ['colcon_meta']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extensions ['ros']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extension 'ros'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extensions ['cmake', 'python']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extension 'cmake'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extension 'python'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extensions ['python_setup_py']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/CAD) by extension 'python_setup_py'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'ignore_ament_install'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['colcon_pkg']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'colcon_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['colcon_meta']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'colcon_meta'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'ros'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['cmake', 'python']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'cmake'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'python'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['python_setup_py']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'python_setup_py'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'ros'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['cmake', 'python']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'cmake'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'python'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['python_setup_py']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'python_setup_py'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_description) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_description) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_description) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_description) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_description) by extension 'colcon_pkg'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_description) by extensions ['colcon_meta']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_description) by extension 'colcon_meta'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_description) by extensions ['ros']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_description) by extension 'ros'
+[0.183s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sandevistan_description' with type 'ros.ament_cmake' and name 'sandevistan_description'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics) by extensions ['ignore', 'ignore_ament_install']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics) by extension 'ignore'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics) by extension 'ignore_ament_install'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics) by extensions ['colcon_pkg']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics) by extension 'colcon_pkg'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics) by extensions ['colcon_meta']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics) by extension 'colcon_meta'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics) by extensions ['ros']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics) by extension 'ros'
+[0.184s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sandevistan_kinematics' with type 'ros.ament_cmake' and name 'sandevistan_kinematics'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics_interfaces) by extension 'ignore'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics_interfaces) by extension 'ignore_ament_install'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics_interfaces) by extensions ['colcon_pkg']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics_interfaces) by extension 'colcon_pkg'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics_interfaces) by extensions ['colcon_meta']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics_interfaces) by extension 'colcon_meta'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics_interfaces) by extensions ['ros']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(src/sandevistan_kinematics_interfaces) by extension 'ros'
+[0.185s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sandevistan_kinematics_interfaces' with type 'ros.ament_cmake' and name 'sandevistan_kinematics_interfaces'
+[0.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.185s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.204s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.205s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.207s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/omzlette/gitRos/LAB2/install
+[0.208s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/omzlette/gitRos/LAB1_WS/install
+[0.209s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/omzlette/ROS2Dir/FRA333_WS/install
+[0.211s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/omzlette/ROS2Dir/estella_ws/install
+[0.212s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 265 installed packages in /opt/ros/foxy
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_description' build argument 'cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_description' build argument 'cmake_target' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.277s] DEBUG:colcon.colcon_core.verb:Building package 'sandevistan_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/omzlette/gitRos/LAB2/build/sandevistan_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/omzlette/gitRos/LAB2/install/sandevistan_description', 'merge_install': False, 'path': '/home/omzlette/gitRos/LAB2/src/sandevistan_description', 'symlink_install': False, 'test_result_base': None}
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics' build argument 'cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics' build argument 'cmake_target' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics' build argument 'cmake_clean_cache' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics' build argument 'cmake_clean_first' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics' build argument 'cmake_force_configure' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics' build argument 'ament_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics' build argument 'catkin_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.278s] DEBUG:colcon.colcon_core.verb:Building package 'sandevistan_kinematics' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics', 'merge_install': False, 'path': '/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics', 'symlink_install': False, 'test_result_base': None}
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.280s] Level 5:colcon.colcon_core.verb:set package 'sandevistan_kinematics_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.280s] DEBUG:colcon.colcon_core.verb:Building package 'sandevistan_kinematics_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces', 'merge_install': False, 'path': '/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.281s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.287s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.287s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/omzlette/gitRos/LAB2/src/sandevistan_description' with build type 'ament_cmake'
+[0.287s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/omzlette/gitRos/LAB2/src/sandevistan_description'
+[0.292s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.292s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.292s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.301s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics' with build type 'ament_cmake'
+[0.301s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics'
+[0.303s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.303s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.312s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces' with build type 'ament_cmake'
+[0.312s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces'
+[0.315s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.315s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.328s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_description -- -j12 -l12
+[0.334s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics -- -j12 -l12
+[0.338s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces -- -j12 -l12
+[0.361s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_description -- -j12 -l12
+[0.364s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics -- -j12 -l12
+[0.387s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_description
+[0.390s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics
+[0.446s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sandevistan_description)
+[0.447s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_description
+[0.454s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description' for CMake module files
+[0.455s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description' for CMake config files
+[0.455s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_description', 'cmake_prefix_path')
+[0.458s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/cmake_prefix_path.ps1'
+[0.458s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/cmake_prefix_path.dsv'
+[0.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/cmake_prefix_path.sh'
+[0.460s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/lib'
+[0.460s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/bin'
+[0.460s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/pkgconfig/sandevistan_description.pc'
+[0.460s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/python3.8/site-packages'
+[0.461s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_description', 'pythonpath')
+[0.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/pythonpath.ps1'
+[0.464s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/pythonpath.dsv'
+[0.464s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/pythonpath.sh'
+[0.464s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/bin'
+[0.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.ps1'
+[0.468s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.dsv'
+[0.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.sh'
+[0.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.bash'
+[0.470s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.zsh'
+[0.471s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/colcon-core/packages/sandevistan_description)
+[0.474s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sandevistan_kinematics)
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics' for CMake module files
+[0.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics
+[0.478s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics' for CMake config files
+[0.479s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics', 'cmake_prefix_path')
+[0.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/cmake_prefix_path.ps1'
+[0.482s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/cmake_prefix_path.dsv'
+[0.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/cmake_prefix_path.sh'
+[0.483s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib'
+[0.483s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/bin'
+[0.483s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/pkgconfig/sandevistan_kinematics.pc'
+[0.483s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages'
+[0.483s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics', 'pythonpath')
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/pythonpath.ps1'
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/pythonpath.dsv'
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/pythonpath.sh'
+[0.487s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/bin'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.ps1'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.dsv'
+[0.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.sh'
+[0.491s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.bash'
+[0.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.zsh'
+[0.492s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/colcon-core/packages/sandevistan_kinematics)
+[0.498s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sandevistan_description)
+[0.501s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description' for CMake module files
+[0.502s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description' for CMake config files
+[0.502s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_description', 'cmake_prefix_path')
+[0.505s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/cmake_prefix_path.ps1'
+[0.505s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/cmake_prefix_path.dsv'
+[0.505s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/cmake_prefix_path.sh'
+[0.506s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/lib'
+[0.506s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/bin'
+[0.506s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/pkgconfig/sandevistan_description.pc'
+[0.506s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/lib/python3.8/site-packages'
+[0.506s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_description', 'pythonpath')
+[0.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/pythonpath.ps1'
+[0.509s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/pythonpath.dsv'
+[0.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/hook/pythonpath.sh'
+[0.510s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_description/bin'
+[0.512s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.ps1'
+[0.513s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.dsv'
+[0.513s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.sh'
+[0.514s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.bash'
+[0.514s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/sandevistan_description/package.zsh'
+[0.514s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitRos/LAB2/install/sandevistan_description/share/colcon-core/packages/sandevistan_description)
+[0.518s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sandevistan_kinematics)
+[0.522s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics' for CMake module files
+[0.523s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics' for CMake config files
+[0.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics', 'cmake_prefix_path')
+[0.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/cmake_prefix_path.ps1'
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/cmake_prefix_path.dsv'
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/cmake_prefix_path.sh'
+[0.527s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib'
+[0.527s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/bin'
+[0.527s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/pkgconfig/sandevistan_kinematics.pc'
+[0.527s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages'
+[0.527s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics', 'pythonpath')
+[0.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/pythonpath.ps1'
+[0.530s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/pythonpath.dsv'
+[0.530s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/hook/pythonpath.sh'
+[0.531s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/bin'
+[0.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.ps1'
+[0.534s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.dsv'
+[0.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.sh'
+[0.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.bash'
+[0.535s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.zsh'
+[0.535s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/share/colcon-core/packages/sandevistan_kinematics)
+[5.463s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces -- -j12 -l12
+[5.514s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces
+[5.596s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sandevistan_kinematics_interfaces)
+[5.600s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces' for CMake module files
+[5.600s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces
+[5.601s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces' for CMake config files
+[5.602s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics_interfaces', 'cmake_prefix_path')
+[5.604s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/cmake_prefix_path.ps1'
+[5.605s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/cmake_prefix_path.dsv'
+[5.605s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/cmake_prefix_path.sh'
+[5.605s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/lib'
+[5.606s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics_interfaces', 'ld_library_path_lib')
+[5.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/ld_library_path_lib.ps1'
+[5.608s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/ld_library_path_lib.dsv'
+[5.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/ld_library_path_lib.sh'
+[5.609s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/bin'
+[5.609s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/lib/pkgconfig/sandevistan_kinematics_interfaces.pc'
+[5.609s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages'
+[5.609s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics_interfaces', 'pythonpath')
+[5.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/pythonpath.ps1'
+[5.612s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/pythonpath.dsv'
+[5.612s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/pythonpath.sh'
+[5.613s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/bin'
+[5.616s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.ps1'
+[5.617s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.dsv'
+[5.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.sh'
+[5.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.bash'
+[5.619s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.zsh'
+[5.619s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/colcon-core/packages/sandevistan_kinematics_interfaces)
+[5.670s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sandevistan_kinematics_interfaces)
+[5.674s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces' for CMake module files
+[5.674s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces' for CMake config files
+[5.675s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics_interfaces', 'cmake_prefix_path')
+[5.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/cmake_prefix_path.ps1'
+[5.678s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/cmake_prefix_path.dsv'
+[5.678s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/cmake_prefix_path.sh'
+[5.679s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/lib'
+[5.679s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics_interfaces', 'ld_library_path_lib')
+[5.681s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/ld_library_path_lib.ps1'
+[5.682s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/ld_library_path_lib.dsv'
+[5.682s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/ld_library_path_lib.sh'
+[5.683s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/bin'
+[5.683s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/lib/pkgconfig/sandevistan_kinematics_interfaces.pc'
+[5.683s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages'
+[5.683s] Level 1:colcon.colcon_core.shell:create_environment_hook('sandevistan_kinematics_interfaces', 'pythonpath')
+[5.686s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/pythonpath.ps1'
+[5.686s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/pythonpath.dsv'
+[5.686s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/hook/pythonpath.sh'
+[5.687s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/bin'
+[5.689s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.ps1'
+[5.690s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.dsv'
+[5.690s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.sh'
+[5.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.bash'
+[5.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.zsh'
+[5.692s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces/share/colcon-core/packages/sandevistan_kinematics_interfaces)
+[5.692s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.692s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.692s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.692s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.704s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.704s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.705s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.724s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.727s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/omzlette/gitRos/LAB2/install/local_setup.ps1'
+[5.728s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/omzlette/gitRos/LAB2/install/_local_setup_util_ps1.py'
+[5.729s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/omzlette/gitRos/LAB2/install/setup.ps1'
+[5.731s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/omzlette/gitRos/LAB2/install/local_setup.sh'
+[5.732s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/omzlette/gitRos/LAB2/install/_local_setup_util_sh.py'
+[5.732s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/omzlette/gitRos/LAB2/install/setup.sh'
+[5.734s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/omzlette/gitRos/LAB2/install/local_setup.bash'
+[5.734s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/omzlette/gitRos/LAB2/install/setup.bash'
+[5.736s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/omzlette/gitRos/LAB2/install/local_setup.zsh'
+[5.736s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/omzlette/gitRos/LAB2/install/setup.zsh'

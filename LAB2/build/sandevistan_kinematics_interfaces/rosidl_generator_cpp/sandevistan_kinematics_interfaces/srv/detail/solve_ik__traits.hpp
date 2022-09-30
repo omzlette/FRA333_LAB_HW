@@ -10,6 +10,10 @@
 #include <stdint.h>
 #include <type_traits>
 
+// Include directives for member types
+// Member 'position'
+#include "geometry_msgs/msg/detail/point__traits.hpp"
+
 namespace rosidl_generator_traits
 {
 
@@ -27,17 +31,21 @@ inline const char * name<sandevistan_kinematics_interfaces::srv::SolveIK_Request
 
 template<>
 struct has_fixed_size<sandevistan_kinematics_interfaces::srv::SolveIK_Request>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_fixed_size<geometry_msgs::msg::Point>::value> {};
 
 template<>
 struct has_bounded_size<sandevistan_kinematics_interfaces::srv::SolveIK_Request>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_bounded_size<geometry_msgs::msg::Point>::value> {};
 
 template<>
 struct is_message<sandevistan_kinematics_interfaces::srv::SolveIK_Request>
   : std::true_type {};
 
 }  // namespace rosidl_generator_traits
+
+// Include directives for member types
+// Member 'joint'
+#include "sensor_msgs/msg/detail/joint_state__traits.hpp"
 
 namespace rosidl_generator_traits
 {
@@ -56,11 +64,11 @@ inline const char * name<sandevistan_kinematics_interfaces::srv::SolveIK_Respons
 
 template<>
 struct has_fixed_size<sandevistan_kinematics_interfaces::srv::SolveIK_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_fixed_size<sensor_msgs::msg::JointState>::value> {};
 
 template<>
 struct has_bounded_size<sandevistan_kinematics_interfaces::srv::SolveIK_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, has_bounded_size<sensor_msgs::msg::JointState>::value> {};
 
 template<>
 struct is_message<sandevistan_kinematics_interfaces::srv::SolveIK_Response>

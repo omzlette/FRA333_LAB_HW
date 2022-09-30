@@ -10,13 +10,23 @@
 
 #include "rcutils/allocator.h"
 
+// Include directives for member types
+// Member `position`
+#include "geometry_msgs/msg/detail/point__functions.h"
+
 bool
 sandevistan_kinematics_interfaces__srv__SolveIK_Request__init(sandevistan_kinematics_interfaces__srv__SolveIK_Request * msg)
 {
   if (!msg) {
     return false;
   }
-  // structure_needs_at_least_one_member
+  // position
+  if (!geometry_msgs__msg__Point__init(&msg->position)) {
+    sandevistan_kinematics_interfaces__srv__SolveIK_Request__fini(msg);
+    return false;
+  }
+  // armconfig
+  // jointconfig
   return true;
 }
 
@@ -26,7 +36,10 @@ sandevistan_kinematics_interfaces__srv__SolveIK_Request__fini(sandevistan_kinema
   if (!msg) {
     return;
   }
-  // structure_needs_at_least_one_member
+  // position
+  geometry_msgs__msg__Point__fini(&msg->position);
+  // armconfig
+  // jointconfig
 }
 
 bool
@@ -35,8 +48,18 @@ sandevistan_kinematics_interfaces__srv__SolveIK_Request__are_equal(const sandevi
   if (!lhs || !rhs) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
+  // position
+  if (!geometry_msgs__msg__Point__are_equal(
+      &(lhs->position), &(rhs->position)))
+  {
+    return false;
+  }
+  // armconfig
+  if (lhs->armconfig != rhs->armconfig) {
+    return false;
+  }
+  // jointconfig
+  if (lhs->jointconfig != rhs->jointconfig) {
     return false;
   }
   return true;
@@ -50,8 +73,16 @@ sandevistan_kinematics_interfaces__srv__SolveIK_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
+  // position
+  if (!geometry_msgs__msg__Point__copy(
+      &(input->position), &(output->position)))
+  {
+    return false;
+  }
+  // armconfig
+  output->armconfig = input->armconfig;
+  // jointconfig
+  output->jointconfig = input->jointconfig;
   return true;
 }
 
@@ -230,13 +261,22 @@ sandevistan_kinematics_interfaces__srv__SolveIK_Request__Sequence__copy(
 }
 
 
+// Include directives for member types
+// Member `joint`
+#include "sensor_msgs/msg/detail/joint_state__functions.h"
+
 bool
 sandevistan_kinematics_interfaces__srv__SolveIK_Response__init(sandevistan_kinematics_interfaces__srv__SolveIK_Response * msg)
 {
   if (!msg) {
     return false;
   }
-  // structure_needs_at_least_one_member
+  // joint
+  if (!sensor_msgs__msg__JointState__init(&msg->joint)) {
+    sandevistan_kinematics_interfaces__srv__SolveIK_Response__fini(msg);
+    return false;
+  }
+  // success
   return true;
 }
 
@@ -246,7 +286,9 @@ sandevistan_kinematics_interfaces__srv__SolveIK_Response__fini(sandevistan_kinem
   if (!msg) {
     return;
   }
-  // structure_needs_at_least_one_member
+  // joint
+  sensor_msgs__msg__JointState__fini(&msg->joint);
+  // success
 }
 
 bool
@@ -255,8 +297,14 @@ sandevistan_kinematics_interfaces__srv__SolveIK_Response__are_equal(const sandev
   if (!lhs || !rhs) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  if (lhs->structure_needs_at_least_one_member != rhs->structure_needs_at_least_one_member) {
+  // joint
+  if (!sensor_msgs__msg__JointState__are_equal(
+      &(lhs->joint), &(rhs->joint)))
+  {
+    return false;
+  }
+  // success
+  if (lhs->success != rhs->success) {
     return false;
   }
   return true;
@@ -270,8 +318,14 @@ sandevistan_kinematics_interfaces__srv__SolveIK_Response__copy(
   if (!input || !output) {
     return false;
   }
-  // structure_needs_at_least_one_member
-  output->structure_needs_at_least_one_member = input->structure_needs_at_least_one_member;
+  // joint
+  if (!sensor_msgs__msg__JointState__copy(
+      &(input->joint), &(output->joint)))
+  {
+    return false;
+  }
+  // success
+  output->success = input->success;
   return true;
 }
 

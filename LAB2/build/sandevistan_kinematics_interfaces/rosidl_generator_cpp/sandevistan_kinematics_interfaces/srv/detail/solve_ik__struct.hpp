@@ -14,6 +14,10 @@
 #include <vector>
 
 
+// Include directives for member types
+// Member 'position'
+#include "geometry_msgs/msg/detail/point__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__sandevistan_kinematics_interfaces__srv__SolveIK_Request __attribute__((deprecated))
 #else
@@ -33,29 +37,57 @@ struct SolveIK_Request_
   using Type = SolveIK_Request_<ContainerAllocator>;
 
   explicit SolveIK_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : position(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->armconfig = 0l;
+      this->jointconfig = 0.0;
     }
   }
 
   explicit SolveIK_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : position(_alloc, _init)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->armconfig = 0l;
+      this->jointconfig = 0.0;
     }
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _position_type =
+    geometry_msgs::msg::Point_<ContainerAllocator>;
+  _position_type position;
+  using _armconfig_type =
+    int32_t;
+  _armconfig_type armconfig;
+  using _jointconfig_type =
+    double;
+  _jointconfig_type jointconfig;
 
+  // setters for named parameter idiom
+  Type & set__position(
+    const geometry_msgs::msg::Point_<ContainerAllocator> & _arg)
+  {
+    this->position = _arg;
+    return *this;
+  }
+  Type & set__armconfig(
+    const int32_t & _arg)
+  {
+    this->armconfig = _arg;
+    return *this;
+  }
+  Type & set__jointconfig(
+    const double & _arg)
+  {
+    this->jointconfig = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -99,7 +131,13 @@ struct SolveIK_Request_
   // comparison operators
   bool operator==(const SolveIK_Request_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->position != other.position) {
+      return false;
+    }
+    if (this->armconfig != other.armconfig) {
+      return false;
+    }
+    if (this->jointconfig != other.jointconfig) {
       return false;
     }
     return true;
@@ -121,6 +159,10 @@ using SolveIK_Request =
 }  // namespace sandevistan_kinematics_interfaces
 
 
+// Include directives for member types
+// Member 'joint'
+#include "sensor_msgs/msg/detail/joint_state__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__sandevistan_kinematics_interfaces__srv__SolveIK_Response __attribute__((deprecated))
 #else
@@ -140,29 +182,46 @@ struct SolveIK_Response_
   using Type = SolveIK_Response_<ContainerAllocator>;
 
   explicit SolveIK_Response_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : joint(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->success = false;
     }
   }
 
   explicit SolveIK_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : joint(_alloc, _init)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->success = false;
     }
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _joint_type =
+    sensor_msgs::msg::JointState_<ContainerAllocator>;
+  _joint_type joint;
+  using _success_type =
+    bool;
+  _success_type success;
 
+  // setters for named parameter idiom
+  Type & set__joint(
+    const sensor_msgs::msg::JointState_<ContainerAllocator> & _arg)
+  {
+    this->joint = _arg;
+    return *this;
+  }
+  Type & set__success(
+    const bool & _arg)
+  {
+    this->success = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -206,7 +265,10 @@ struct SolveIK_Response_
   // comparison operators
   bool operator==(const SolveIK_Response_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->joint != other.joint) {
+      return false;
+    }
+    if (this->success != other.success) {
       return false;
     }
     return true;

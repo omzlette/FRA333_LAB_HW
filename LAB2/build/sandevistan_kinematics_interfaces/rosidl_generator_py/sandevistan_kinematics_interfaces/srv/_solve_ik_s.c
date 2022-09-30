@@ -16,6 +16,10 @@
 #include "sandevistan_kinematics_interfaces/srv/detail/solve_ik__struct.h"
 #include "sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.h"
 
+ROSIDL_GENERATOR_C_IMPORT
+bool geometry_msgs__msg__point__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * geometry_msgs__msg__point__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool sandevistan_kinematics_interfaces__srv__solve_ik__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -50,7 +54,35 @@ bool sandevistan_kinematics_interfaces__srv__solve_ik__request__convert_from_py(
     assert(strncmp("sandevistan_kinematics_interfaces.srv._solve_ik.SolveIK_Request", full_classname_dest, 63) == 0);
   }
   sandevistan_kinematics_interfaces__srv__SolveIK_Request * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // position
+    PyObject * field = PyObject_GetAttrString(_pymsg, "position");
+    if (!field) {
+      return false;
+    }
+    if (!geometry_msgs__msg__point__convert_from_py(field, &ros_message->position)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // armconfig
+    PyObject * field = PyObject_GetAttrString(_pymsg, "armconfig");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->armconfig = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // jointconfig
+    PyObject * field = PyObject_GetAttrString(_pymsg, "jointconfig");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->jointconfig = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -72,7 +104,43 @@ PyObject * sandevistan_kinematics_interfaces__srv__solve_ik__request__convert_to
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  sandevistan_kinematics_interfaces__srv__SolveIK_Request * ros_message = (sandevistan_kinematics_interfaces__srv__SolveIK_Request *)raw_ros_message;
+  {  // position
+    PyObject * field = NULL;
+    field = geometry_msgs__msg__point__convert_to_py(&ros_message->position);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "position", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // armconfig
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->armconfig);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "armconfig", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // jointconfig
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->jointconfig);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "jointconfig", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;
@@ -92,6 +160,10 @@ PyObject * sandevistan_kinematics_interfaces__srv__solve_ik__request__convert_to
 // already included above
 // #include "sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.h"
 
+ROSIDL_GENERATOR_C_IMPORT
+bool sensor_msgs__msg__joint_state__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * sensor_msgs__msg__joint_state__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool sandevistan_kinematics_interfaces__srv__solve_ik__response__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -126,7 +198,26 @@ bool sandevistan_kinematics_interfaces__srv__solve_ik__response__convert_from_py
     assert(strncmp("sandevistan_kinematics_interfaces.srv._solve_ik.SolveIK_Response", full_classname_dest, 64) == 0);
   }
   sandevistan_kinematics_interfaces__srv__SolveIK_Response * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // joint
+    PyObject * field = PyObject_GetAttrString(_pymsg, "joint");
+    if (!field) {
+      return false;
+    }
+    if (!sensor_msgs__msg__joint_state__convert_from_py(field, &ros_message->joint)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // success
+    PyObject * field = PyObject_GetAttrString(_pymsg, "success");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->success = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -148,7 +239,32 @@ PyObject * sandevistan_kinematics_interfaces__srv__solve_ik__response__convert_t
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  sandevistan_kinematics_interfaces__srv__SolveIK_Response * ros_message = (sandevistan_kinematics_interfaces__srv__SolveIK_Response *)raw_ros_message;
+  {  // joint
+    PyObject * field = NULL;
+    field = sensor_msgs__msg__joint_state__convert_to_py(&ros_message->joint);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "joint", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // success
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->success ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "success", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;
