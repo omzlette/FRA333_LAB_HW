@@ -7,46 +7,20 @@ from launch_ros.actions import Node
 import sys
 
 def generate_launch_description():
-
-    ### How to get path of a file from "install" directory ###
-    #
-    ## If our custom package [package_name] consists of a folder [folder_name].
-    ## And inside that folder, there is a file name [file_name.extension].
-    ## This is how to get full path to the file (in a form of string)
-
-    # path_to_package = get_package_share_directory(package_name)
-    # sub_folder = 'folder_name'
-    # file_name = 'file_name.extension'
-    # file_path = os.path.join(path_to_package,sub_folder,file_name) 
-    
-    ## You must build the custom package before. Otherwise, these codes will not find the file
-    # in "install" directory
-
     package_path = get_package_share_directory('sandevistan_description')
     rviz_file_path = os.path.join(package_path, 'config', 'sandevistan_kinematics.rviz')
     robot_desc_path = os.path.join(package_path, 'robot', 'sandevistan.urdf')
     
-    ### How to run rviz2 ###
-    #
-    ## With -d rviz_file_path, you can load the previous setting of rviz
-    #
     rviz = Node(
        package='rviz2',
        executable='rviz2',
        name='rviz',
        arguments=['-d', rviz_file_path],
        output='screen')
-    
-    ### How to read URDF file ###
-    #
-    # Assume that you have the correct path [robot_desc_path]
+
     with open(robot_desc_path, 'r') as infp:
         robot_description = infp.read()
     
-    ### How to run robot_state_publisher ###
-    #
-    # You must have a valid robot_description
-    #
     robot_state_publisher = Node(package='robot_state_publisher',
                                   executable='robot_state_publisher',
                                   output='screen',
@@ -56,21 +30,6 @@ def generate_launch_description():
                                   ]
     )
 
-    # Joint State Publisher & GUI (for debugging)
-    # joint_state_publisher = Node(package='joint_state_publisher',
-    #                                 executable='joint_state_publisher',
-    #                                 name='joint_state_publisher'
-    # )
-    # joint_state_publisher_gui = Node(package='joint_state_publisher_gui',
-    #                                     executable='joint_state_publisher_gui',
-    #                                     name='joint_state_publisher_gui'
-    # )
-
-    ### How to add actions to launch description ###
-    #
-    # You must create an object called "LaunchDescription"
-    # and add actions one by one
-    #
     # Launch Description
     launch_description = LaunchDescription()
     toAddAction = [rviz, robot_state_publisher]
