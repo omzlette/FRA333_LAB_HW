@@ -104,17 +104,17 @@ Visualization Manager:
       Enabled: true
       Frame Timeout: 15
       Frames:
-        All Enabled: false
+        All Enabled: true
         base_link:
           Value: true
         end_effector:
           Value: true
         link_0:
-          Value: false
+          Value: true
         link_1:
           Value: true
         link_2:
-          Value: false
+          Value: true
         link_3:
           Value: true
         link_4:
@@ -178,7 +178,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 3.2862136363983154
+      Distance: 2.2831640243530273
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -193,10 +193,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5253984928131104
+      Pitch: 0.41039860248565674
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.005392906256020069
+      Yaw: 0.3703893721103668
     Saved: ~
 Window Geometry:
   Displays:
