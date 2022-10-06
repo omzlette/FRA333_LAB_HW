@@ -22,8 +22,13 @@ def IKEq(pos:list, gamma:int, link:list):
     q4 = -link[1] - link[2] + (np.sqrt(((pos[2]-link[0])**2)+pos[0]**2+pos[1]**2))
     return q1, q2, q4
 
-def checkWS(pos:list):
+def checkWSIK(pos:list):
     ptInWS = np.sqrt(pos[0]**2 + pos[1]**2 + (pos[2]-linkLengths[0])**2)
     if((0.35 <= ptInWS <= 0.45) and (0.4 <= pos[2] <= 0.85)):
+        return True
+    return False
+
+def checkWSFK(q:list):
+    if((0 <= q[1] <= np.pi) and 0 <= q[3] <= 0.1):
         return True
     return False

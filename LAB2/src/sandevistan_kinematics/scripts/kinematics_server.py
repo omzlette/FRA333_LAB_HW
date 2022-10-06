@@ -4,7 +4,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 
-from sandevistan_kinematics.robot_module import rate, defaultJointCf, linkLengths, degree, jointName, FKEq, IKEq, checkWS
+from sandevistan_kinematics.robot_module import *
 
 from sensor_msgs.msg import JointState
 from sandevistan_kinematics_interfaces.srv import GetPosition, SolveIK
@@ -18,6 +18,7 @@ class SandeStatePub(Node):
         self.jointPubTimer = self.create_timer(1/rate, self.jointPubTimerCallback)
 
         self.jointState = JointState()
+        self.jointState.name = jointName
         self.jointState.position = defaultJointCf
 
         self.setJoint = self.create_service(GetPosition, 'set_joints', self.setJointCallback)
@@ -27,7 +28,6 @@ class SandeStatePub(Node):
 
     def jointPubTimerCallback(self):
         self.jointState.header.stamp = self.get_clock().now().to_msg()
-        self.jointState.name = jointName
         self.jointPub.publish(self.jointState)
 
     def setJointCallback(self, request:GetPosition.Request, response:GetPosition.Response):
@@ -44,8 +44,9 @@ class SandeStatePub(Node):
         pos = [request.position.x, request.position.y, request.position.z]
         gamma = request.armconfig
         q3 = request.jointconfig*degree
-        q1, q2, q4 = IKEq(pos, gamma, linkLengths)
-        IKSuccess = response.success = checkWS([q1, q2, q3, q4])
+        IKSuccess = checkWSIK(pos)
+        q1, q2, q4 = IKEq(pos, gamma, linkLengths) if IKSuccess else 0, 0, 0
+        IKSuccess = response.success = checkWSFK([q1, q2, q3, q4])
         self.jointState.position = response.joint.position = [q1, q2, q3, q4] if IKSuccess else defaultJointCf
         return response
 
