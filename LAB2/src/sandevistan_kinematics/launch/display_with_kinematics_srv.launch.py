@@ -9,6 +9,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 import sys
 
 def generate_launch_description():
+    # Include the launch file from the description package (sandevistan_description)
     display = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
             PathJoinSubstitution([FindPackageShare('sandevistan_description'),
@@ -17,6 +18,7 @@ def generate_launch_description():
             ])
         )
     
+    # Create Kinematics Service Server
     kinematics_server = Node(package='sandevistan_kinematics',
                              executable='kinematics_server.py',)
     

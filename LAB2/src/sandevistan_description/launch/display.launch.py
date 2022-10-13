@@ -6,10 +6,12 @@ from launch_ros.actions import Node
 import sys
 
 def generate_launch_description():
+    # Get Package, RVIZ and URDF Paths
     package_path = get_package_share_directory('sandevistan_description')
     rviz_file_path = os.path.join(package_path, 'config', 'sandevistan_kinematics.rviz')
     robot_desc_path = os.path.join(package_path, 'robot', 'sandevistan.urdf')
     
+    # Create rviz2 node
     rviz = Node(
        package='rviz2',
        executable='rviz2',
@@ -17,9 +19,11 @@ def generate_launch_description():
        arguments=['-d', rviz_file_path],
        output='screen')
 
+    # Read URDF file
     with open(robot_desc_path, 'r') as infp:
         robot_description = infp.read()
     
+    # Create robot_state_publisher node
     robot_state_publisher = Node(package='robot_state_publisher',
                                   executable='robot_state_publisher',
                                   output='screen',
