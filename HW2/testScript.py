@@ -23,7 +23,7 @@ def import_file():
 def load_json():
     data_json = {}
     path = os.path.dirname(os.path.abspath(__file__))
-    testcasefile = os.path.join(path, "testcase.json")
+    testcasefile = os.path.join(path, "testCase.json")
     with open(testcasefile,'r') as f:
         data_json = json.load(f)
     return data_json
