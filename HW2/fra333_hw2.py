@@ -60,7 +60,12 @@ def checkSingularityHW2(q):
         q : format list 1x3 [[i_11, i_12, i_13]]
         q unit: rad
         type something here
-        
+    '''
+    endJacob = endEffectorJacobianHW2(q)[3:6,:]
+    return True if np.linalg.det(endJacob) < 0.001 else False
+
+
+    '''
         return format bool
     '''
 
