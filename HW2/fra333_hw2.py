@@ -16,7 +16,16 @@ def endEffectorJacobianHW2(q):
         q : format list 1x3 [[i_11, i_12, i_13]]
         q unit: rad
         type something here
+    '''
 
+    # R = Rotation Matrix Frame i/Frame Global [3x3x4]
+    # P = Position of Frame Frame i/Frame Global [3x4]
+    # R_e = H0_e Rotation Matrix of End Effector/Frame Global [3x3]
+    # p_e = Position Matrix of End Effector/Frame Global [1x3]
+    R,P,R_e,p_e = FKHW2(q)
+    
+
+    '''
         return format list 6x3
         [ [i_11, i_12, i_13],
           [i_21, i_22, i_23],

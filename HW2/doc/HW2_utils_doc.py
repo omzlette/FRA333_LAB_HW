@@ -88,18 +88,3 @@ def FKHW2(q):
     p_e_test = P_test[:,3]
 
     return R,P,R_e,p_e,R_test,P_test,R_e_test,p_e_test
-
-q = [0,0,0]
-R,P,R_e,p_e,R_test,P_test,R_e_test,p_e_test = FKHW2(q)
-print("R")
-print(np.round(R))
-print(R_test)
-print("------------------------")
-print("P")
-print(np.round(P,5))
-print(P_test)
-print("H_0_e")
-print(np.round(R_e,5))
-print("------------------------")
-print("p_e")
-print(p_e)
