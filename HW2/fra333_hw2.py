@@ -4,9 +4,9 @@ import math
 from HW2_utils import FKHW2
 
 '''
-    Name:   <NAME> <SURNAME> <ID>
-            <NAME> <SURNAME> <ID>
-    Date:   <DD-MM-YY>
+    Name:   Tharnarch Thoranisttakul 63340500025
+            Sirawich Lousomboon 63340500066
+    Date:   10/29/2022
     Description:
 '''
 
@@ -62,8 +62,12 @@ def checkSingularityHW2(q):
         type something here
     '''
     endJacob = endEffectorJacobianHW2(q)[3:6,:]
-    return True if np.linalg.det(endJacob) < 0.001 else False
 
+    # if np.abs(np.linalg.det(endJacob)) != (np.linalg.det(endJacob)):
+    #     print(np.abs(np.linalg.det(endJacob)))
+    #     print((np.linalg.det(endJacob)))
+    
+    return True if np.abs(np.linalg.det(endJacob)) < 0.001 else False
 
     '''
         return format bool
