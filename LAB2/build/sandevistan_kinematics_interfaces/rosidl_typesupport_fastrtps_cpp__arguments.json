@@ -1,10 +1,10 @@
 {
   "package_name": "sandevistan_kinematics_interfaces",
-  "output_dir": "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_typesupport_fastrtps_cpp/sandevistan_kinematics_interfaces",
+  "output_dir": "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_typesupport_fastrtps_cpp/sandevistan_kinematics_interfaces",
   "template_dir": "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_cpp/resource",
   "idl_tuples": [
-    "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces:srv/SolveIK.idl",
-    "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces:srv/GetPosition.idl"
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces:srv/SolveIK.idl",
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces:srv/GetPosition.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/foxy/share/geometry_msgs/msg/Accel.idl",
@@ -106,8 +106,8 @@
     "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
     "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
-    "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces/srv/SolveIK.idl",
-    "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces/srv/GetPosition.idl",
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces/srv/SolveIK.idl",
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces/srv/GetPosition.idl",
     "/opt/ros/foxy/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/foxy/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/foxy/share/geometry_msgs/msg/AccelWithCovariance.idl",

@@ -2,7 +2,7 @@
 # ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target.cmake.in
 
 function(ament_cmake_uninstall_target_remove_empty_directories path)
-  set(install_space "/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics")
+  set(install_space "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics")
   if(install_space STREQUAL "")
     message(FATAL_ERROR "The CMAKE_INSTALL_PREFIX variable must not be empty")
   endif()
@@ -29,7 +29,7 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
 endfunction()
 
 # uninstall files installed using the standard install() function
-set(install_manifest "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics/install_manifest.txt")
+set(install_manifest "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics/install_manifest.txt")
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find install manifest: ${install_manifest}")
 endif()
@@ -57,4 +57,4 @@ message(STATUS "Execute custom uninstall script")
 # begin of custom uninstall code
 
 # uninstall files installed using the symlink install functions
-include("/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+include("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

@@ -43,20 +43,20 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces
+CMAKE_SOURCE_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces
+CMAKE_BINARY_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces
 
 # Utility rule file for sandevistan_kinematics_interfaces.
 
 # Include the progress variables for this target.
 include CMakeFiles/sandevistan_kinematics_interfaces.dir/progress.make
 
-CMakeFiles/sandevistan_kinematics_interfaces: /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces/srv/SolveIK.srv
+CMakeFiles/sandevistan_kinematics_interfaces: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces/srv/SolveIK.srv
 CMakeFiles/sandevistan_kinematics_interfaces: rosidl_cmake/srv/SolveIK_Request.msg
 CMakeFiles/sandevistan_kinematics_interfaces: rosidl_cmake/srv/SolveIK_Response.msg
-CMakeFiles/sandevistan_kinematics_interfaces: /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces/srv/GetPosition.srv
+CMakeFiles/sandevistan_kinematics_interfaces: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces/srv/GetPosition.srv
 CMakeFiles/sandevistan_kinematics_interfaces: rosidl_cmake/srv/GetPosition_Request.msg
 CMakeFiles/sandevistan_kinematics_interfaces: rosidl_cmake/srv/GetPosition_Response.msg
 CMakeFiles/sandevistan_kinematics_interfaces: /opt/ros/foxy/share/geometry_msgs/msg/Accel.idl
@@ -163,6 +163,6 @@ CMakeFiles/sandevistan_kinematics_interfaces.dir/clean:
 .PHONY : CMakeFiles/sandevistan_kinematics_interfaces.dir/clean
 
 CMakeFiles/sandevistan_kinematics_interfaces.dir/depend:
-	cd /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles/sandevistan_kinematics_interfaces.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles/sandevistan_kinematics_interfaces.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sandevistan_kinematics_interfaces.dir/depend
 

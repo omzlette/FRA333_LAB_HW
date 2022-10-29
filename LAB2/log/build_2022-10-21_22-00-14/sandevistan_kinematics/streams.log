@@ -1,0 +1,71 @@
+[0.024s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics
+[0.117s] -- The C compiler identification is GNU 9.4.0
+[0.241s] -- The CXX compiler identification is GNU 9.4.0
+[0.310s] -- Check for working C compiler: /usr/bin/cc
+[0.394s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.395s] -- Detecting C compiler ABI info
+[0.506s] -- Detecting C compiler ABI info - done
+[0.518s] -- Detecting C compile features
+[0.518s] -- Detecting C compile features - done
+[0.521s] -- Check for working CXX compiler: /usr/bin/c++
+[0.624s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.625s] -- Detecting CXX compiler ABI info
+[0.726s] -- Detecting CXX compiler ABI info - done
+[0.741s] -- Detecting CXX compile features
+[0.741s] -- Detecting CXX compile features - done
+[0.743s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.765s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.765s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.931s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.959s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.073s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.079s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.504s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.966s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.036s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.087s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.088s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.089s] -- Looking for pthread.h
+[3.233s] -- Looking for pthread.h - found
+[3.233s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.343s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[3.343s] -- Looking for pthread_create in pthreads
+[3.431s] -- Looking for pthread_create in pthreads - not found
+[3.431s] -- Looking for pthread_create in pthread
+[3.555s] -- Looking for pthread_create in pthread - found
+[3.556s] -- Found Threads: TRUE  
+[3.752s] -- Found rclpy: 1.0.11 (/opt/ros/foxy/share/rclpy/cmake)
+[3.853s] -- Configuring done
+[3.857s] -- Generating done
+[3.860s] -- Build files have been written to: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics
+[3.871s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics
+[3.874s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics -- -j12 -l12
+[3.928s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics -- -j12 -l12
+[3.965s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics
+[3.975s] -- Install configuration: ""
+[3.975s] -- Execute custom install script
+[3.976s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/pythonpath.sh
+[3.988s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/pythonpath.dsv
+[3.999s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics/__init__.py
+[4.008s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics/robot_module.py
+[4.016s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/lib/sandevistan_kinematics/kinematics_server.py
+[4.024s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/launch/display_with_kinematics_srv.launch.py
+[4.033s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/ament_index/resource_index/package_run_dependencies/sandevistan_kinematics
+[4.041s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/ament_index/resource_index/parent_prefix_path/sandevistan_kinematics
+[4.051s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/ament_prefix_path.sh
+[4.059s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/ament_prefix_path.dsv
+[4.067s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/path.sh
+[4.075s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/environment/path.dsv
+[4.083s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/local_setup.bash
+[4.095s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/local_setup.sh
+[4.105s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/local_setup.zsh
+[4.116s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/local_setup.dsv
+[4.125s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.dsv
+[4.136s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/ament_index/resource_index/packages/sandevistan_kinematics
+[4.144s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/cmake/sandevistan_kinematicsConfig.cmake
+[4.151s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/cmake/sandevistan_kinematicsConfig-version.cmake
+[4.160s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/share/sandevistan_kinematics/package.xml
+[4.196s] Listing '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics'...
+[4.196s] Compiling '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics/__init__.py'...
+[4.196s] Compiling '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics/robot_module.py'...
+[4.203s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics

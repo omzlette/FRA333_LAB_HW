@@ -1,0 +1,214 @@
+[0.023s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces
+[0.111s] -- The C compiler identification is GNU 9.4.0
+[0.258s] -- The CXX compiler identification is GNU 9.4.0
+[0.324s] -- Check for working C compiler: /usr/bin/cc
+[0.430s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.431s] -- Detecting C compiler ABI info
+[0.554s] -- Detecting C compiler ABI info - done
+[0.567s] -- Detecting C compile features
+[0.568s] -- Detecting C compile features - done
+[0.571s] -- Check for working CXX compiler: /usr/bin/c++
+[0.689s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.690s] -- Detecting CXX compiler ABI info
+[0.804s] -- Detecting CXX compiler ABI info - done
+[0.818s] -- Detecting CXX compile features
+[0.818s] -- Detecting CXX compile features - done
+[0.820s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.842s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.842s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.007s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.021s] -- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.087s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.090s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.095s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.909s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.414s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.817s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.849s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[3.960s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[4.103s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[4.278s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[6.760s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.897s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.917s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[6.918s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[7.130s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[7.130s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[7.130s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[7.131s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[7.146s] -- Found PythonExtra: .so  
+[7.256s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.257s] -- Added test 'lint_cmake' to check CMake code style
+[7.258s] -- Added test 'xmllint' to check XML markup files
+[7.266s] -- Configuring done
+[7.333s] -- Generating done
+[7.336s] -- Build files have been written to: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces
+[7.345s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces
+[7.348s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces -- -j12 -l12
+[7.378s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__cpp[0m
+[7.378s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[7.387s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[7.713s] [  5%] Built target sandevistan_kinematics_interfaces__cpp
+[7.725s] [ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[7.725s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[7.725s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[7.739s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_generator_c[0m
+[7.756s] [ 17%] [32mBuilding C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.o[0m
+[7.756s] [ 17%] [32mBuilding C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.o[0m
+[7.822s] [ 20%] [32m[1mLinking C shared library libsandevistan_kinematics_interfaces__rosidl_generator_c.so[0m
+[7.910s] [ 20%] Built target sandevistan_kinematics_interfaces__rosidl_generator_c
+[7.920s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[7.920s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[7.997s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_typesupport_cpp[0m
+[8.011s] [ 30%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sandevistan_kinematics_interfaces/srv/get_position__type_support.cpp.o[0m
+[8.011s] [ 30%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sandevistan_kinematics_interfaces/srv/solve_ik__type_support.cpp.o[0m
+[8.043s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cpp[0m
+[8.062s] [ 33%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sandevistan_kinematics_interfaces/srv/detail/get_position__type_support.cpp.o[0m
+[8.063s] [ 35%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sandevistan_kinematics_interfaces/srv/detail/solve_ik__type_support.cpp.o[0m
+[8.076s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[8.098s] [ 38%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sandevistan_kinematics_interfaces/srv/detail/dds_fastrtps/get_position__type_support.cpp.o[0m
+[8.098s] [ 41%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sandevistan_kinematics_interfaces/srv/detail/dds_fastrtps/solve_ik__type_support.cpp.o[0m
+[8.258s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_typesupport_c[0m
+[8.279s] [ 43%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sandevistan_kinematics_interfaces/srv/solve_ik__type_support.cpp.o[0m
+[8.283s] [ 46%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/sandevistan_kinematics_interfaces/srv/get_position__type_support.cpp.o[0m
+[8.341s] [ 48%] [32m[1mLinking CXX shared library libsandevistan_kinematics_interfaces__rosidl_typesupport_c.so[0m
+[8.360s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c[0m
+[8.382s] [ 51%] [32mBuilding C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sandevistan_kinematics_interfaces/srv/detail/get_position__type_support.c.o[0m
+[8.382s] [ 53%] [32mBuilding C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__type_support.c.o[0m
+[8.435s] [ 56%] [32m[1mLinking C shared library libsandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c.so[0m
+[8.442s] [ 58%] [32m[1mLinking CXX shared library libsandevistan_kinematics_interfaces__rosidl_typesupport_cpp.so[0m
+[8.457s] [ 58%] Built target sandevistan_kinematics_interfaces__rosidl_typesupport_c
+[8.511s] [ 58%] Built target sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c
+[8.519s] [ 58%] Built target sandevistan_kinematics_interfaces__rosidl_typesupport_cpp
+[8.562s] [ 61%] [32m[1mLinking CXX shared library libsandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[8.668s] [ 61%] Built target sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cpp
+[8.687s] [ 64%] [32m[1mLinking CXX shared library libsandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[8.816s] [ 64%] Built target sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_cpp
+[8.825s] [ 66%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[9.109s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c[0m
+[9.127s] [ 71%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__type_support_c.cpp.o[0m
+[9.127s] [ 71%] [32mBuilding CXX object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sandevistan_kinematics_interfaces/srv/detail/get_position__type_support_c.cpp.o[0m
+[9.460s] [ 74%] [32m[1mLinking CXX shared library libsandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[9.567s] [ 74%] Built target sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c
+[9.575s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces[0m
+[9.584s] [ 74%] Built target sandevistan_kinematics_interfaces
+[9.592s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__py[0m
+[9.602s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[10.154s] [ 76%] Built target sandevistan_kinematics_interfaces__py
+[10.161s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__python[0m
+[10.177s] [ 82%] [32mBuilding C object CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.o[0m
+[10.177s] [ 82%] [32mBuilding C object CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.o[0m
+[10.262s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/sandevistan_kinematics_interfaces/libsandevistan_kinematics_interfaces__python.so[0m
+[10.336s] [ 84%] Built target sandevistan_kinematics_interfaces__python
+[10.345s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_typesupport_c__pyext[0m
+[10.345s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[10.345s] [35m[1mScanning dependencies of target sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[10.359s] [ 87%] [32mBuilding C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/_sandevistan_kinematics_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[10.361s] [ 89%] [32mBuilding C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/_sandevistan_kinematics_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[10.362s] [ 92%] [32mBuilding C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/_sandevistan_kinematics_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[10.441s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/sandevistan_kinematics_interfaces/sandevistan_kinematics_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[10.454s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/sandevistan_kinematics_interfaces/sandevistan_kinematics_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[10.460s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/sandevistan_kinematics_interfaces/sandevistan_kinematics_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[10.521s] [100%] Built target sandevistan_kinematics_interfaces__rosidl_typesupport_c__pyext
+[10.540s] [100%] Built target sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c__pyext
+[10.569s] [100%] Built target sandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[10.580s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces -- -j12 -l12
+[10.625s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces
+[10.634s] -- Install configuration: ""
+[10.635s] -- Execute custom install script
+[10.639s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/ament_index/resource_index/rosidl_interfaces/sandevistan_kinematics_interfaces
+[10.656s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/msg/rosidl_generator_c__visibility_control.h
+[10.667s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.h
+[10.680s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__struct.h
+[10.688s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__type_support.h
+[10.696s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.h
+[10.705s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__struct.h
+[10.713s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__type_support.h
+[10.721s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/get_position.h
+[10.729s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/solve_ik.h
+[10.741s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/environment/library_path.sh
+[10.749s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/environment/library_path.dsv
+[10.758s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[10.767s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_c.h
+[10.775s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__rosidl_typesupport_fastrtps_c.h
+[10.782s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_c.so
+[10.791s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[10.801s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__rosidl_typesupport_fastrtps_cpp.hpp
+[10.809s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__rosidl_typesupport_fastrtps_cpp.hpp
+[10.818s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[10.827s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[10.835s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_c.h
+[10.842s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__rosidl_typesupport_introspection_c.h
+[10.850s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__builder.hpp
+[10.859s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__struct.hpp
+[10.868s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__traits.hpp
+[10.877s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__builder.hpp
+[10.885s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__struct.hpp
+[10.893s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__traits.hpp
+[10.902s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/get_position.hpp
+[10.910s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/solve_ik.hpp
+[10.919s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/get_position__rosidl_typesupport_introspection_cpp.hpp
+[10.927s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/include/sandevistan_kinematics_interfaces/srv/detail/solve_ik__rosidl_typesupport_introspection_cpp.hpp
+[10.935s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/environment/pythonpath.sh
+[10.942s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/environment/pythonpath.dsv
+[10.950s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages/sandevistan_kinematics_interfaces/__init__.py
+[10.957s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages/sandevistan_kinematics_interfaces/srv/__init__.py
+[10.964s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages/sandevistan_kinematics_interfaces/srv/_get_position.py
+[10.971s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages/sandevistan_kinematics_interfaces/srv/_solve_ik.py
+[10.979s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages/sandevistan_kinematics_interfaces/sandevistan_kinematics_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[10.987s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages/sandevistan_kinematics_interfaces/sandevistan_kinematics_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[10.995s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages/sandevistan_kinematics_interfaces/sandevistan_kinematics_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[11.003s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__python.so
+[11.010s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/srv/SolveIK.idl
+[11.018s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/srv/GetPosition.idl
+[11.025s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/srv/SolveIK.srv
+[11.032s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/srv/SolveIK_Request.msg
+[11.040s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/srv/SolveIK_Response.msg
+[11.047s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/srv/GetPosition.srv
+[11.055s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/srv/GetPosition_Request.msg
+[11.062s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/srv/GetPosition_Response.msg
+[11.071s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/ament_index/resource_index/package_run_dependencies/sandevistan_kinematics_interfaces
+[11.078s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/ament_index/resource_index/parent_prefix_path/sandevistan_kinematics_interfaces
+[11.085s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/environment/ament_prefix_path.sh
+[11.092s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/environment/ament_prefix_path.dsv
+[11.100s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/environment/path.sh
+[11.107s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/environment/path.dsv
+[11.114s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/local_setup.bash
+[11.121s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/local_setup.sh
+[11.129s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/local_setup.zsh
+[11.137s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/local_setup.dsv
+[11.144s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.dsv
+[11.152s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/ament_index/resource_index/packages/sandevistan_kinematics_interfaces
+[11.160s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/rosidl_cmake-extras.cmake
+[11.168s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.177s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[11.186s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[11.197s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.205s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[11.213s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[11.222s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfacesConfig.cmake
+[11.232s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfacesConfig-version.cmake
+[11.240s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/package.xml
+[11.247s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_generator_c.so
+[11.247s] -- Set runtime path of "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_generator_c.so" to ""
+[11.248s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c.so
+[11.248s] -- Set runtime path of "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[11.248s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_c.so
+[11.248s] -- Set runtime path of "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_c.so" to ""
+[11.249s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cpp.so
+[11.249s] -- Set runtime path of "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[11.249s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_cpp.so
+[11.249s] -- Set runtime path of "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/libsandevistan_kinematics_interfaces__rosidl_typesupport_cpp.so" to ""
+[11.275s] Compiling '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/lib/python3.8/site-packages/sandevistan_kinematics_interfaces/__init__.py'...
+[11.279s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_generator_cExport.cmake
+[11.279s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_generator_cExport-noconfig.cmake
+[11.280s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[11.280s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[11.280s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_typesupport_cExport.cmake
+[11.280s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[11.280s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_generator_cppExport.cmake
+[11.281s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[11.281s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[11.281s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_typesupport_cppExport.cmake
+[11.281s] -- Installing: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces/share/sandevistan_kinematics_interfaces/cmake/sandevistan_kinematics_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[11.286s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces

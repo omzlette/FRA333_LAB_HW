@@ -1,1 +1,1 @@
-/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_cmake/srv/SolveIK_Request.msg
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_cmake/srv/SolveIK_Request.msg

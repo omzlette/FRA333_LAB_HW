@@ -1,7 +1,7 @@
 {
   "package_name": "sandevistan_kinematics_interfaces",
   "non_idl_tuples": [
-    "/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces:srv/SolveIK.srv",
-    "/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces:srv/GetPosition.srv"
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces:srv/SolveIK.srv",
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces:srv/GetPosition.srv"
   ]
 }
