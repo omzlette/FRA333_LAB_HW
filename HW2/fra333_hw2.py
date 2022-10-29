@@ -17,7 +17,6 @@ def endEffectorJacobianHW2(q):
         q unit: rad
         type something here
     '''
-
     # R = Rotation Matrix Frame i/Frame Global [3x3x4]
     # P = Position of Frame Frame i/Frame Global [3x4]
     # R_e = H0_e Rotation Matrix of End Effector/Frame Global [3x3]
@@ -62,10 +61,6 @@ def checkSingularityHW2(q):
         type something here
     '''
     endJacob = endEffectorJacobianHW2(q)[3:6,:]
-
-    # if np.abs(np.linalg.det(endJacob)) != (np.linalg.det(endJacob)):
-    #     print(np.abs(np.linalg.det(endJacob)))
-    #     print((np.linalg.det(endJacob)))
 
     return True if np.abs(np.linalg.det(endJacob)) < 0.001 else False
 
