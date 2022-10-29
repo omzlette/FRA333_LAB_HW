@@ -73,4 +73,33 @@ def FKHW2(q):
     R_e = R[:,:,3]
     p_e = P[:,3]
 
-    return R,P,R_e,p_e
+    R_test = np.empty((3,3,4))
+    R_test[:,:,0] = np.array([111,112,113,121,122,123,131,132,133]).reshape(3,3)
+    R_test[:,:,1] = np.array([211,212,213,221,222,223,231,232,233]).reshape(3,3)
+    R_test[:,:,2] = np.array([311,312,313,321,322,323,331,332,333]).reshape(3,3)
+    R_test[:,:,3] = np.array([411,412,413,421,422,423,431,432,433]).reshape(3,3)
+
+    P_test = np.empty((3,4));     
+    P_test[:,0] = [114,124,134]
+    P_test[:,1] = [214,224,234]
+    P_test[:,2] = [314,324,334]
+    P_test[:,3] = [414,424,434]
+    R_e_test = R_test[:,:,3]
+    p_e_test = P_test[:,3]
+
+    return R,P,R_e,p_e,R_test,P_test,R_e_test,p_e_test
+
+q = [0,0,0]
+R,P,R_e,p_e,R_test,P_test,R_e_test,p_e_test = FKHW2(q)
+print("R")
+print(np.round(R))
+print(R_test)
+print("------------------------")
+print("P")
+print(np.round(P,5))
+print(P_test)
+print("H_0_e")
+print(np.round(R_e,5))
+print("------------------------")
+print("p_e")
+print(p_e)
