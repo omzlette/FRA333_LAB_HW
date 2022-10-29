@@ -66,7 +66,7 @@ def checkSingularityHW2(q):
     # if np.abs(np.linalg.det(endJacob)) != (np.linalg.det(endJacob)):
     #     print(np.abs(np.linalg.det(endJacob)))
     #     print((np.linalg.det(endJacob)))
-    
+
     return True if np.abs(np.linalg.det(endJacob)) < 0.001 else False
 
     '''
@@ -79,7 +79,18 @@ def computeEffortHW2(q,w):
         q : format list 1x3 [[i_11, i_12, i_13]]
         q unit: rad
         type something here
+    '''
+    R,P,R_e,p_e = FKHW2(q)
+    endJacob = endEffectorJacobianHW2(q)
 
+    wt = np.transpose(w)
+    N0e = np.matmul(R_e,wt[0:3])
+    F0e = np.matmul(R_e,wt[3:6])
+    W0e = np.concatenate((N0e,F0e),axis = 0)
+
+    return np.transpose(np.matmul(np.transpose(endJacob),W0e))
+
+    '''
         return format list 1x3
         [ [i_11, i_12, i_13] ]
     '''
