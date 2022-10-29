@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/omzlette/gitRos/LAB2/install/sandevistan_description/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_description/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/omzlette/gitRos/LAB2/install/sandevistan_description/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_description/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/omzlette/gitRos/LAB2/install/sandevistan_description/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_description/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/omzlette/gitRos/LAB2/install/sandevistan_description/${destination}")
+      set(destination "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_description/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -310,59 +310,59 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/sandevistan_description/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/sandevistan_description/environment")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/sandevistan_description/environment")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/sandevistan_description/environment")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/sandevistan_description/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/sandevistan_description/environment")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/sandevistan_description/environment")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/sandevistan_description/environment")
 
-# install(DIRECTORY "/home/omzlette/gitRos/LAB2/src/sandevistan_description/sandevistan_description/" "DESTINATION" "lib/python3.8/site-packages/sandevistan_description" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB2/src/sandevistan_description" DIRECTORY "/home/omzlette/gitRos/LAB2/src/sandevistan_description/sandevistan_description/" "DESTINATION" "lib/python3.8/site-packages/sandevistan_description" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description/sandevistan_description/" "DESTINATION" "lib/python3.8/site-packages/sandevistan_description" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" DIRECTORY "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description/sandevistan_description/" "DESTINATION" "lib/python3.8/site-packages/sandevistan_description" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
 # install(PROGRAMS "scripts/robot_script.py" "DESTINATION" "lib/sandevistan_description")
-ament_cmake_symlink_install_programs("/home/omzlette/gitRos/LAB2/src/sandevistan_description" PROGRAMS "scripts/robot_script.py" "DESTINATION" "lib/sandevistan_description")
+ament_cmake_symlink_install_programs("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" PROGRAMS "scripts/robot_script.py" "DESTINATION" "lib/sandevistan_description")
 
 # install(DIRECTORY "config" "launch" "robot" "meshes" "DESTINATION" "share/sandevistan_description")
-ament_cmake_symlink_install_directory("/home/omzlette/gitRos/LAB2/src/sandevistan_description" DIRECTORY "config" "launch" "robot" "meshes" "DESTINATION" "share/sandevistan_description")
+ament_cmake_symlink_install_directory("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" DIRECTORY "config" "launch" "robot" "meshes" "DESTINATION" "share/sandevistan_description")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/sandevistan_description/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/sandevistan_description/environment")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/sandevistan_description/environment")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/sandevistan_description/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/sandevistan_description/environment")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/sandevistan_description/environment")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/sandevistan_description/environment")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/sandevistan_description/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/sandevistan_description/environment")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/sandevistan_description/environment")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/sandevistan_description/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/sandevistan_description/environment")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/sandevistan_description/environment")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/sandevistan_description/environment")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/sandevistan_description")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/sandevistan_description")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/sandevistan_description")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/sandevistan_description")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/sandevistan_description")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/sandevistan_description")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/sandevistan_description")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/sandevistan_description")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/sandevistan_description")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/sandevistan_description")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/sandevistan_description")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/sandevistan_description")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/sandevistan_description")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/sandevistan_description")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/sandevistan_description")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/sandevistan_description")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/sandevistan_description")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/sandevistan_description")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/sandevistan_description")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/sandevistan_description")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/packages/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/packages/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/packages/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_index/share/ament_index/resource_index/packages/sandevistan_description" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_core/sandevistan_descriptionConfig.cmake" "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_core/sandevistan_descriptionConfig-version.cmake" "DESTINATION" "share/sandevistan_description/cmake")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_core/sandevistan_descriptionConfig.cmake" "/home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_core/sandevistan_descriptionConfig-version.cmake" "DESTINATION" "share/sandevistan_description/cmake")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_core/sandevistan_descriptionConfig.cmake" "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_core/sandevistan_descriptionConfig-version.cmake" "DESTINATION" "share/sandevistan_description/cmake")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_core/sandevistan_descriptionConfig.cmake" "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_core/sandevistan_descriptionConfig-version.cmake" "DESTINATION" "share/sandevistan_description/cmake")
 
-# install(FILES "/home/omzlette/gitRos/LAB2/src/sandevistan_description/package.xml" "DESTINATION" "share/sandevistan_description")
-ament_cmake_symlink_install_files("/home/omzlette/gitRos/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitRos/LAB2/src/sandevistan_description/package.xml" "DESTINATION" "share/sandevistan_description")
+# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description/package.xml" "DESTINATION" "share/sandevistan_description")
+ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description/package.xml" "DESTINATION" "share/sandevistan_description")

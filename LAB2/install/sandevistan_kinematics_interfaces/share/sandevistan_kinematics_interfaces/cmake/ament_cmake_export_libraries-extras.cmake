@@ -1,1 +1,1 @@
-/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake

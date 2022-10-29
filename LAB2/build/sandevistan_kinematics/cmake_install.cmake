@@ -1,8 +1,8 @@
-# Install script for directory: /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics
+# Install script for directory: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics")
+  set(CMAKE_INSTALL_PREFIX "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,14 +38,14 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics"
+        "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics/lib/python3.8/site-packages/sandevistan_kinematics"
       )
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

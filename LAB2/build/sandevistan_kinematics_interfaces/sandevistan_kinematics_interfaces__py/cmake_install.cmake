@@ -1,8 +1,8 @@
-# Install script for directory: /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/sandevistan_kinematics_interfaces__py
+# Install script for directory: /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/sandevistan_kinematics_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/omzlette/gitRos/LAB2/install/sandevistan_kinematics_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install/sandevistan_kinematics_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

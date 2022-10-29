@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces
+CMAKE_SOURCE_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces
+CMAKE_BINARY_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sandevistan_kinematics_interfaces__python.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/sandevistan_kinematics_interfaces__python.dir/flags.make
 
 CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.o: CMakeFiles/sandevistan_kinematics_interfaces__python.dir/flags.make
 CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.o: rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.o   -c /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.o   -c /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c
 
 CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c > CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c > CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.i
 
 CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c -o CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c -o CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_solve_ik_s.c.s
 
 CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.o: CMakeFiles/sandevistan_kinematics_interfaces__python.dir/flags.make
 CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.o: rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.o   -c /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.o   -c /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c
 
 CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c > CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c > CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.i
 
 CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c -o CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c -o CMakeFiles/sandevistan_kinematics_interfaces__python.dir/rosidl_generator_py/sandevistan_kinematics_interfaces/srv/_get_position_s.c.s
 
 # Object files for target sandevistan_kinematics_interfaces__python
 sandevistan_kinematics_interfaces__python_OBJECTS = \
@@ -129,7 +129,7 @@ rosidl_generator_py/sandevistan_kinematics_interfaces/libsandevistan_kinematics_
 rosidl_generator_py/sandevistan_kinematics_interfaces/libsandevistan_kinematics_interfaces__python.so: /opt/ros/foxy/lib/librcpputils.so
 rosidl_generator_py/sandevistan_kinematics_interfaces/libsandevistan_kinematics_interfaces__python.so: /opt/ros/foxy/lib/librcutils.so
 rosidl_generator_py/sandevistan_kinematics_interfaces/libsandevistan_kinematics_interfaces__python.so: CMakeFiles/sandevistan_kinematics_interfaces__python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library rosidl_generator_py/sandevistan_kinematics_interfaces/libsandevistan_kinematics_interfaces__python.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library rosidl_generator_py/sandevistan_kinematics_interfaces/libsandevistan_kinematics_interfaces__python.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sandevistan_kinematics_interfaces__python.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -142,6 +142,6 @@ CMakeFiles/sandevistan_kinematics_interfaces__python.dir/clean:
 .PHONY : CMakeFiles/sandevistan_kinematics_interfaces__python.dir/clean
 
 CMakeFiles/sandevistan_kinematics_interfaces__python.dir/depend:
-	cd /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles/sandevistan_kinematics_interfaces__python.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles/sandevistan_kinematics_interfaces__python.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sandevistan_kinematics_interfaces__python.dir/depend
 

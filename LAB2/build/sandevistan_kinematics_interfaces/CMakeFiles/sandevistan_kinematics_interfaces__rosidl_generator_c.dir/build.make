@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces
+CMAKE_SOURCE_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces
+CMAKE_BINARY_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces
 
 # Include any dependencies generated for this target.
 include CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/depend.make
@@ -161,8 +161,8 @@ rosidl_generator_c/sandevistan_kinematics_interfaces/srv/solve_ik.h: /opt/ros/fo
 rosidl_generator_c/sandevistan_kinematics_interfaces/srv/solve_ik.h: /opt/ros/foxy/share/sensor_msgs/msg/Temperature.idl
 rosidl_generator_c/sandevistan_kinematics_interfaces/srv/solve_ik.h: /opt/ros/foxy/share/sensor_msgs/msg/TimeReference.idl
 rosidl_generator_c/sandevistan_kinematics_interfaces/srv/solve_ik.h: /opt/ros/foxy/share/sensor_msgs/srv/SetCameraInfo.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c__arguments.json
 
 rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.h: rosidl_generator_c/sandevistan_kinematics_interfaces/srv/solve_ik.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.h
@@ -193,29 +193,29 @@ rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__fu
 
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.o: CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.o: rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.o   -c /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.o   -c /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c
 
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c > CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c > CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.i
 
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c -o CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c -o CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c.s
 
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.o: CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.o: rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.o   -c /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.o   -c /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c
 
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c > CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c > CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.i
 
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c -o CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c -o CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c.s
 
 # Object files for target sandevistan_kinematics_interfaces__rosidl_generator_c
 sandevistan_kinematics_interfaces__rosidl_generator_c_OBJECTS = \
@@ -256,7 +256,7 @@ libsandevistan_kinematics_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/l
 libsandevistan_kinematics_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/librcpputils.so
 libsandevistan_kinematics_interfaces__rosidl_generator_c.so: /opt/ros/foxy/lib/librcutils.so
 libsandevistan_kinematics_interfaces__rosidl_generator_c.so: CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libsandevistan_kinematics_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libsandevistan_kinematics_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -278,6 +278,6 @@ CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/depend: ros
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__type_support.h
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/solve_ik__functions.c
 CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/sandevistan_kinematics_interfaces/srv/detail/get_position__functions.c
-	cd /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sandevistan_kinematics_interfaces__rosidl_generator_c.dir/depend
 

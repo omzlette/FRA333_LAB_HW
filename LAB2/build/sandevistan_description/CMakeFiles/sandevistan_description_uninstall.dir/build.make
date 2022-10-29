@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omzlette/gitRos/LAB2/src/sandevistan_description
+CMAKE_SOURCE_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omzlette/gitRos/LAB2/build/sandevistan_description
+CMAKE_BINARY_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description
 
 # Utility rule file for sandevistan_description_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/omzlette/gitRos/LAB2/build/sandevistan_description
 include CMakeFiles/sandevistan_description_uninstall.dir/progress.make
 
 CMakeFiles/sandevistan_description_uninstall:
-	/usr/bin/cmake -P /home/omzlette/gitRos/LAB2/build/sandevistan_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 sandevistan_description_uninstall: CMakeFiles/sandevistan_description_uninstall
 sandevistan_description_uninstall: CMakeFiles/sandevistan_description_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/sandevistan_description_uninstall.dir/clean:
 .PHONY : CMakeFiles/sandevistan_description_uninstall.dir/clean
 
 CMakeFiles/sandevistan_description_uninstall.dir/depend:
-	cd /home/omzlette/gitRos/LAB2/build/sandevistan_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omzlette/gitRos/LAB2/src/sandevistan_description /home/omzlette/gitRos/LAB2/src/sandevistan_description /home/omzlette/gitRos/LAB2/build/sandevistan_description /home/omzlette/gitRos/LAB2/build/sandevistan_description /home/omzlette/gitRos/LAB2/build/sandevistan_description/CMakeFiles/sandevistan_description_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_description /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_description/CMakeFiles/sandevistan_description_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sandevistan_description_uninstall.dir/depend
 

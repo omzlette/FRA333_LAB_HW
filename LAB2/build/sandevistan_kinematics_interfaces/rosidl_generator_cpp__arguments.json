@@ -1,10 +1,10 @@
 {
   "package_name": "sandevistan_kinematics_interfaces",
-  "output_dir": "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_cpp/sandevistan_kinematics_interfaces",
+  "output_dir": "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_generator_cpp/sandevistan_kinematics_interfaces",
   "template_dir": "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces:srv/SolveIK.idl",
-    "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces:srv/GetPosition.idl"
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces:srv/SolveIK.idl",
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces:srv/GetPosition.idl"
   ],
   "ros_interface_dependencies": [
     "geometry_msgs:/opt/ros/foxy/share/geometry_msgs/msg/Accel.idl",
@@ -113,8 +113,8 @@
     "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
     "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
-    "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces/srv/SolveIK.idl",
-    "/home/omzlette/gitRos/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces/srv/GetPosition.idl",
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces/srv/SolveIK.idl",
+    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/build/sandevistan_kinematics_interfaces/rosidl_adapter/sandevistan_kinematics_interfaces/srv/GetPosition.idl",
     "/opt/ros/foxy/share/geometry_msgs/msg/Accel.idl",
     "/opt/ros/foxy/share/geometry_msgs/msg/AccelStamped.idl",
     "/opt/ros/foxy/share/geometry_msgs/msg/AccelWithCovariance.idl",

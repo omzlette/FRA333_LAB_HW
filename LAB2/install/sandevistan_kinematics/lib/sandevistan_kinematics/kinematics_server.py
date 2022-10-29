@@ -1,1 +1,1 @@
-/home/omzlette/gitRos/LAB2/src/sandevistan_kinematics/scripts/kinematics_server.py
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB2/src/sandevistan_kinematics/scripts/kinematics_server.py
