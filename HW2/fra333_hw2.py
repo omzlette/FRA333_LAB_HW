@@ -23,7 +23,25 @@ def endEffectorJacobianHW2(q):
     # R_e = H0_e Rotation Matrix of End Effector/Frame Global [3x3]
     # p_e = Position Matrix of End Effector/Frame Global [1x3]
     R,P,R_e,p_e = FKHW2(q)
-    
+
+    R1 = (R[:,:,0])
+    R2 = (R[:,:,1])
+    R3 = (R[:,:,2])
+    rotateZ = np.array([0,0,1]).reshape(3,1)
+
+    angularJ01 = np.matmul(R1,rotateZ)
+    angularJ02 = np.matmul(R2,rotateZ)
+    angularJ03 = np.matmul(R3,rotateZ)
+
+    angularJacobian = np.concatenate((angularJ01,angularJ02,angularJ03),axis = 1)
+
+    velocityJ01 = np.cross(angularJ01.reshape(1,3),(p_e-P[:,0])).reshape(3,1)
+    velocityJ02 = np.cross(angularJ02.reshape(1,3),(p_e-P[:,1])).reshape(3,1)
+    velocityJ03 = np.cross(angularJ03.reshape(1,3),(p_e-P[:,2])).reshape(3,1)
+
+    velocityJacobian = np.concatenate((velocityJ01,velocityJ02,velocityJ03),axis = 1)
+
+    return np.concatenate((angularJacobian,velocityJacobian),axis = 0)
 
     '''
         return format list 6x3
