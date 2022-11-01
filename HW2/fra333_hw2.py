@@ -139,5 +139,3 @@ def computeEffortHW2(q,w):
     '''
     # 5. Transpose the joint effort vector to make it a row vector.
     return np.transpose(tau)
-
-
