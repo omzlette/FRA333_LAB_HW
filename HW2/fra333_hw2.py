@@ -7,7 +7,7 @@ from HW2_utils import FKHW2
     Name:   Tharnarch Thoranisttakul 63340500025
             Sirawich Lousomboon 63340500066
     Date:   10/29/2022
-    Description:
+    Description: HW2
 '''
 
 # Question 1
