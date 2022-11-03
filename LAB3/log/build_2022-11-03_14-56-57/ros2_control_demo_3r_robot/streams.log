@@ -1,0 +1,53 @@
+[0.014s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot
+[0.022s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.022s] -- Found ament_cmake_core: 0.9.11 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[0.037s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.171s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.173s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.176s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[2.673s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.690s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[2.744s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[2.772s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.773s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.876s] -- Found rclpy: 1.0.11 (/opt/ros/foxy/share/rclpy/cmake)
+[2.924s] -- Configuring done
+[2.926s] -- Generating done
+[2.927s] -- Build files have been written to: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot
+[2.933s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot
+[2.936s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot -- -j12 -l12
+[2.963s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot -- -j12 -l12
+[2.985s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot
+[2.990s] -- Install configuration: ""
+[2.991s] -- Execute custom install script
+[2.991s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/environment/pythonpath.sh
+[2.992s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/environment/pythonpath.dsv
+[2.992s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/lib/python3.8/site-packages/ros2_control_demo_3r_robot/__init__.py
+[2.992s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/lib/ros2_control_demo_3r_robot/trajectory_gen.py
+[2.993s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/description/example_gazebo.xacro
+[2.993s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/description/example_include.xacro
+[2.993s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/description/example_robot.urdf.xacro
+[2.993s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/launch/dummy_gazebo.launch.py
+[2.993s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/config/myrobot_controllers.yaml
+[2.994s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/scripts/trajectory_gen.py
+[2.994s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/meshes/link_0.stl
+[2.994s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/meshes/link_1.stl
+[2.994s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/meshes/link_2.stl
+[2.995s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/meshes/link_3.stl
+[2.995s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ament_index/resource_index/package_run_dependencies/ros2_control_demo_3r_robot
+[2.995s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ament_index/resource_index/parent_prefix_path/ros2_control_demo_3r_robot
+[2.995s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/environment/ament_prefix_path.sh
+[2.995s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/environment/ament_prefix_path.dsv
+[2.995s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/environment/path.sh
+[2.996s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/environment/path.dsv
+[2.996s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/local_setup.bash
+[2.996s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/local_setup.sh
+[2.996s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/local_setup.zsh
+[2.996s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/local_setup.dsv
+[2.997s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/package.dsv
+[3.003s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ament_index/resource_index/packages/ros2_control_demo_3r_robot
+[3.003s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/cmake/ros2_control_demo_3r_robotConfig.cmake
+[3.003s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/cmake/ros2_control_demo_3r_robotConfig-version.cmake
+[3.003s] -- Up-to-date symlink: /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/package.xml
+[3.024s] Listing '/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/lib/python3.8/site-packages/ros2_control_demo_3r_robot'...
+[3.028s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot
