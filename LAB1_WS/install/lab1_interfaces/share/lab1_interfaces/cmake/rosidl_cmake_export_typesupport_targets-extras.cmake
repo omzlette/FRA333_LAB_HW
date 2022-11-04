@@ -1,1 +1,0 @@
-/home/omzlette/gitRos/LAB1_WS/build/lab1_interfaces/rosidl_cmake/rosidl_cmake_export_typesupport_targets-extras.cmake

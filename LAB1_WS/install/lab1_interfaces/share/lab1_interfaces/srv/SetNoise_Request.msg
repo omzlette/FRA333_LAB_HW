@@ -1,1 +1,0 @@
-/home/omzlette/gitRos/LAB1_WS/build/lab1_interfaces/rosidl_cmake/srv/SetNoise_Request.msg

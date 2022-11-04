@@ -1,0 +1,1 @@
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake

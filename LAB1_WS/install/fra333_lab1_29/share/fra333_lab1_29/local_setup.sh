@@ -1,1 +1,0 @@
-/home/omzlette/gitRos/LAB1_WS/build/fra333_lab1_29/ament_cmake_environment_hooks/local_setup.sh

@@ -1,0 +1,70 @@
+[0.027s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/fra333_lab1_29 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29
+[0.117s] -- The C compiler identification is GNU 9.4.0
+[0.235s] -- The CXX compiler identification is GNU 9.4.0
+[0.288s] -- Check for working C compiler: /usr/bin/cc
+[0.390s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.391s] -- Detecting C compiler ABI info
+[0.483s] -- Detecting C compiler ABI info - done
+[0.495s] -- Detecting C compile features
+[0.495s] -- Detecting C compile features - done
+[0.498s] -- Check for working CXX compiler: /usr/bin/c++
+[0.596s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.597s] -- Detecting CXX compiler ABI info
+[0.701s] -- Detecting CXX compiler ABI info - done
+[0.718s] -- Detecting CXX compile features
+[0.719s] -- Detecting CXX compile features - done
+[0.721s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.752s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.752s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.930s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.953s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.112s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.119s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.832s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[2.314s] -- Found FastRTPS: /opt/ros/foxy/include  
+[3.151s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.211s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[3.212s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.213s] -- Looking for pthread.h
+[3.335s] -- Looking for pthread.h - found
+[3.336s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.461s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[3.461s] -- Looking for pthread_create in pthreads
+[3.567s] -- Looking for pthread_create in pthreads - not found
+[3.567s] -- Looking for pthread_create in pthread
+[3.675s] -- Looking for pthread_create in pthread - found
+[3.676s] -- Found Threads: TRUE  
+[3.864s] -- Found rclpy: 1.0.11 (/opt/ros/foxy/share/rclpy/cmake)
+[3.953s] -- Configuring done
+[3.957s] -- Generating done
+[3.959s] -- Build files have been written to: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29
+[3.968s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/fra333_lab1_29 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29
+[3.972s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29 -- -j12 -l12
+[4.020s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29 -- -j12 -l12
+[4.049s] Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29
+[4.056s] -- Install configuration: ""
+[4.057s] -- Execute custom install script
+[4.057s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/environment/pythonpath.sh
+[4.066s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/environment/pythonpath.dsv
+[4.074s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib/python3.8/site-packages/fra333_lab1_29/__init__.py
+[4.083s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib/fra333_lab1_29/noise_generator.py
+[4.091s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib/fra333_lab1_29/velocity_mux.py
+[4.099s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/launch/random_walk.launch.py
+[4.107s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/ament_index/resource_index/package_run_dependencies/fra333_lab1_29
+[4.118s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/ament_index/resource_index/parent_prefix_path/fra333_lab1_29
+[4.127s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/environment/ament_prefix_path.sh
+[4.135s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/environment/ament_prefix_path.dsv
+[4.145s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/environment/path.sh
+[4.154s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/environment/path.dsv
+[4.164s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/local_setup.bash
+[4.175s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/local_setup.sh
+[4.185s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/local_setup.zsh
+[4.194s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/local_setup.dsv
+[4.205s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.dsv
+[4.216s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/ament_index/resource_index/packages/fra333_lab1_29
+[4.226s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/cmake/fra333_lab1_29Config.cmake
+[4.234s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/cmake/fra333_lab1_29Config-version.cmake
+[4.243s] -- Symlinking: /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.xml
+[4.292s] Listing '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib/python3.8/site-packages/fra333_lab1_29'...
+[4.292s] Compiling '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib/python3.8/site-packages/fra333_lab1_29/__init__.py'...
+[4.299s] Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29

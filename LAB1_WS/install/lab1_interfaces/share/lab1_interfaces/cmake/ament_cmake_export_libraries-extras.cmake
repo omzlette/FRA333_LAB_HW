@@ -1,1 +1,0 @@
-/home/omzlette/gitRos/LAB1_WS/build/lab1_interfaces/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake

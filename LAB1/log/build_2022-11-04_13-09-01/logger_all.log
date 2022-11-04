@@ -1,0 +1,266 @@
+[0.187s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.187s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fd1a3f2d1f0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=12, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fd1a3f2d1f0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fd1a3f2d730>)
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.213s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.213s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'ignore_ament_install'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['colcon_pkg']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'colcon_pkg'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['colcon_meta']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'colcon_meta'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['ros']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'ros'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['cmake', 'python']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'cmake'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'python'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extensions ['python_setup_py']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc) by extension 'python_setup_py'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['ignore', 'ignore_ament_install']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'ignore'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'ignore_ament_install'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['colcon_pkg']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'colcon_pkg'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['colcon_meta']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'colcon_meta'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'ros'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['cmake', 'python']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'cmake'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'python'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extensions ['python_setup_py']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/doc/pic) by extension 'python_setup_py'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/fra333_lab1_29) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/fra333_lab1_29) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/fra333_lab1_29) by extension 'ignore_ament_install'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/fra333_lab1_29) by extensions ['colcon_pkg']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src/fra333_lab1_29) by extension 'colcon_pkg'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/fra333_lab1_29) by extensions ['colcon_meta']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/fra333_lab1_29) by extension 'colcon_meta'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/fra333_lab1_29) by extensions ['ros']
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/fra333_lab1_29) by extension 'ros'
+[0.229s] DEBUG:colcon.colcon_core.package_identification:Package 'src/fra333_lab1_29' with type 'ros.ament_cmake' and name 'fra333_lab1_29'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_interfaces) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_interfaces) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_interfaces) by extensions ['colcon_pkg']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_interfaces) by extension 'colcon_pkg'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_interfaces) by extensions ['colcon_meta']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_interfaces) by extension 'colcon_meta'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_interfaces) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/lab1_interfaces) by extension 'ros'
+[0.230s] DEBUG:colcon.colcon_core.package_identification:Package 'src/lab1_interfaces' with type 'ros.ament_cmake' and name 'lab1_interfaces'
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.257s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/omzlette/gitROS/FRA333_LAB_HW/Xicro_GH/install
+[0.257s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install
+[0.258s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/omzlette/gitROS/FRA333_LAB_HW/LAB2/install
+[0.260s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 280 installed packages in /opt/ros/foxy
+[0.261s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'fra333_lab1_29' build argument 'cmake_args' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'fra333_lab1_29' build argument 'cmake_target' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'fra333_lab1_29' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'fra333_lab1_29' build argument 'cmake_clean_cache' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'fra333_lab1_29' build argument 'cmake_clean_first' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'fra333_lab1_29' build argument 'cmake_force_configure' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'fra333_lab1_29' build argument 'ament_cmake_args' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'fra333_lab1_29' build argument 'catkin_cmake_args' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'fra333_lab1_29' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.321s] DEBUG:colcon.colcon_core.verb:Building package 'fra333_lab1_29' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29', 'merge_install': False, 'path': '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/fra333_lab1_29', 'symlink_install': True, 'test_result_base': None}
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'lab1_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'lab1_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'lab1_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'lab1_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'lab1_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.323s] Level 5:colcon.colcon_core.verb:set package 'lab1_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.323s] Level 5:colcon.colcon_core.verb:set package 'lab1_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.323s] Level 5:colcon.colcon_core.verb:set package 'lab1_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.323s] Level 5:colcon.colcon_core.verb:set package 'lab1_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.323s] DEBUG:colcon.colcon_core.verb:Building package 'lab1_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces', 'merge_install': False, 'path': '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/lab1_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.323s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.327s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.328s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/fra333_lab1_29' with build type 'ament_cmake'
+[0.328s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/fra333_lab1_29'
+[0.333s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.333s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.333s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.339s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/lab1_interfaces' with build type 'ament_cmake'
+[0.340s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/lab1_interfaces'
+[0.341s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.341s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.357s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/fra333_lab1_29 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29
+[0.361s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/lab1_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces
+[4.300s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/fra333_lab1_29 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29
+[4.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29 -- -j12 -l12
+[4.350s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29 -- -j12 -l12
+[4.380s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29
+[4.628s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fra333_lab1_29)
+[4.631s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/fra333_lab1_29
+[4.636s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29' for CMake module files
+[4.637s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29' for CMake config files
+[4.638s] Level 1:colcon.colcon_core.shell:create_environment_hook('fra333_lab1_29', 'cmake_prefix_path')
+[4.639s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/cmake_prefix_path.ps1'
+[4.640s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/cmake_prefix_path.dsv'
+[4.641s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/cmake_prefix_path.sh'
+[4.642s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib'
+[4.642s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/bin'
+[4.642s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib/pkgconfig/fra333_lab1_29.pc'
+[4.642s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib/python3.8/site-packages'
+[4.642s] Level 1:colcon.colcon_core.shell:create_environment_hook('fra333_lab1_29', 'pythonpath')
+[4.644s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/pythonpath.ps1'
+[4.644s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/pythonpath.dsv'
+[4.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/pythonpath.sh'
+[4.645s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/bin'
+[4.647s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.ps1'
+[4.648s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.dsv'
+[4.649s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.sh'
+[4.650s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.bash'
+[4.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.zsh'
+[4.651s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/colcon-core/packages/fra333_lab1_29)
+[4.672s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fra333_lab1_29)
+[4.674s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29' for CMake module files
+[4.675s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29' for CMake config files
+[4.675s] Level 1:colcon.colcon_core.shell:create_environment_hook('fra333_lab1_29', 'cmake_prefix_path')
+[4.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/cmake_prefix_path.ps1'
+[4.677s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/cmake_prefix_path.dsv'
+[4.678s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/cmake_prefix_path.sh'
+[4.679s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib'
+[4.679s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/bin'
+[4.679s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib/pkgconfig/fra333_lab1_29.pc'
+[4.679s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/lib/python3.8/site-packages'
+[4.679s] Level 1:colcon.colcon_core.shell:create_environment_hook('fra333_lab1_29', 'pythonpath')
+[4.680s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/pythonpath.ps1'
+[4.681s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/pythonpath.dsv'
+[4.681s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/hook/pythonpath.sh'
+[4.682s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/bin'
+[4.683s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.ps1'
+[4.684s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.dsv'
+[4.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.sh'
+[4.685s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.bash'
+[4.685s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/fra333_lab1_29/package.zsh'
+[4.686s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/fra333_lab1_29/share/colcon-core/packages/fra333_lab1_29)
+[7.360s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/src/lab1_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces
+[7.362s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces -- -j12 -l12
+[10.662s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces -- -j12 -l12
+[10.705s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces
+[11.222s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab1_interfaces)
+[11.225s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces' for CMake module files
+[11.226s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/omzlette/gitROS/FRA333_LAB_HW/LAB1/build/lab1_interfaces
+[11.226s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces' for CMake config files
+[11.227s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_interfaces', 'cmake_prefix_path')
+[11.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/cmake_prefix_path.ps1'
+[11.229s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/cmake_prefix_path.dsv'
+[11.229s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/cmake_prefix_path.sh'
+[11.229s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/lib'
+[11.229s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_interfaces', 'ld_library_path_lib')
+[11.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/ld_library_path_lib.ps1'
+[11.232s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/ld_library_path_lib.dsv'
+[11.232s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/ld_library_path_lib.sh'
+[11.233s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/bin'
+[11.233s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/lib/pkgconfig/lab1_interfaces.pc'
+[11.233s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/lib/python3.8/site-packages'
+[11.233s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_interfaces', 'pythonpath')
+[11.235s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/pythonpath.ps1'
+[11.235s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/pythonpath.dsv'
+[11.235s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/pythonpath.sh'
+[11.236s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/bin'
+[11.237s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.ps1'
+[11.238s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.dsv'
+[11.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.sh'
+[11.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.bash'
+[11.240s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.zsh'
+[11.240s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/colcon-core/packages/lab1_interfaces)
+[11.283s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lab1_interfaces)
+[11.285s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces' for CMake module files
+[11.285s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces' for CMake config files
+[11.286s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_interfaces', 'cmake_prefix_path')
+[11.287s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/cmake_prefix_path.ps1'
+[11.288s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/cmake_prefix_path.dsv'
+[11.289s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/cmake_prefix_path.sh'
+[11.289s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/lib'
+[11.289s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_interfaces', 'ld_library_path_lib')
+[11.291s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/ld_library_path_lib.ps1'
+[11.291s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/ld_library_path_lib.dsv'
+[11.291s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/ld_library_path_lib.sh'
+[11.292s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/bin'
+[11.292s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/lib/pkgconfig/lab1_interfaces.pc'
+[11.293s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/lib/python3.8/site-packages'
+[11.293s] Level 1:colcon.colcon_core.shell:create_environment_hook('lab1_interfaces', 'pythonpath')
+[11.294s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/pythonpath.ps1'
+[11.295s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/pythonpath.dsv'
+[11.295s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/hook/pythonpath.sh'
+[11.295s] Level 1:colcon.colcon_core.environment:checking '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/bin'
+[11.297s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.ps1'
+[11.298s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.dsv'
+[11.298s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.sh'
+[11.299s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.bash'
+[11.299s] INFO:colcon.colcon_core.shell:Creating package script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/lab1_interfaces/package.zsh'
+[11.300s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/lab1_interfaces/share/colcon-core/packages/lab1_interfaces)
+[11.300s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[11.300s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[11.301s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[11.301s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[11.337s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[11.337s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[11.337s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[11.338s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[143.959s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally with the following error: Autolaunch error: X11 initialization failed.
+
+[143.959s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[143.961s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/local_setup.ps1'
+[143.962s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/_local_setup_util_ps1.py'
+[143.963s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/setup.ps1'
+[143.964s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/local_setup.sh'
+[143.965s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/_local_setup_util_sh.py'
+[143.965s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/setup.sh'
+[143.967s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/local_setup.bash'
+[143.967s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/setup.bash'
+[143.968s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/local_setup.zsh'
+[143.969s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/omzlette/gitROS/FRA333_LAB_HW/LAB1/install/setup.zsh'
