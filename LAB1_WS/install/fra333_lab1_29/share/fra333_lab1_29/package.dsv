@@ -4,8 +4,3 @@ source;share/fra333_lab1_29/hook/cmake_prefix_path.sh
 source;share/fra333_lab1_29/hook/pythonpath.ps1
 source;share/fra333_lab1_29/hook/pythonpath.dsv
 source;share/fra333_lab1_29/hook/pythonpath.sh
-source;share/fra333_lab1_29/local_setup.bash
-source;share/fra333_lab1_29/local_setup.dsv
-source;share/fra333_lab1_29/local_setup.ps1
-source;share/fra333_lab1_29/local_setup.sh
-source;share/fra333_lab1_29/local_setup.zsh

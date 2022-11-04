@@ -1,0 +1,1 @@
+/home/omzlette/gitROS/FRA333_LAB_HW/Xicro_GH/build/xicro_pkg/ament_cmake_environment_hooks/pythonpath.sh

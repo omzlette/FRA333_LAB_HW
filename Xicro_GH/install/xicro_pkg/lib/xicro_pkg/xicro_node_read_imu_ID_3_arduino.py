@@ -1,0 +1,1 @@
+/home/omzlette/gitROS/FRA333_LAB_HW/Xicro_GH/src/Xicro/xicro_pkg/scripts/xicro_node_read_imu_ID_3_arduino.py

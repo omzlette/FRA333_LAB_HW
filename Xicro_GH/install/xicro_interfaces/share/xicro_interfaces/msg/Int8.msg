@@ -1,0 +1,1 @@
+/home/omzlette/gitROS/FRA333_LAB_HW/Xicro_GH/src/Xicro/xicro_interfaces/msg/Int8.msg
