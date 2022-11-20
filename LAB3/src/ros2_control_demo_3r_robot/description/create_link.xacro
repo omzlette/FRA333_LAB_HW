@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+    
+    <!-- Color Macros -->
+    <xacro:macro name="addcolor" params="color rgba">
+        <material name="${color}">
+            <color rgba="${rgba}"/>
+        </material>
+    </xacro:macro>
+    
+    <!-- Mesh Macros -->
+    <xacro:macro name="addmesh" params="mesh_file">
+            <geometry>
+                <mesh filename="file:///$(find ${package})/meshes/${mesh_file}" />
+            </geometry>
+    </xacro:macro>
+
+    <xacro:macro name="addvis" params="*origin *mesh *color">
+        <visual>
+            <xacro:insert_block name="origin"/>
+            <xacro:insert_block name="mesh" />
+            <xacro:insert_block name="color" />
+        </visual>
+    </xacro:macro>
+
+    <xacro:macro name="addcollide" params="mu kp kd *origin *mesh">
+        <collision>
+            <xacro:insert_block name="origin"/>
+            <contact_coefficients mu="${mu}" kp="${kp}" kd="${kd}" />
+            <xacro:insert_block name="mesh" />
+        </collision>
+    </xacro:macro>
+
+    <xacro:macro name="addinertia" params="mass *inertia *origin">
+        <inertial>
+            <xacro:insert_block name="origin"/>
+            <mass value="${mass}" />
+            <xacro:insert_block name="inertia" />
+        </inertial>
+    </xacro:macro>
+
+    <!-- Links Macros -->
+    <xacro:macro name="addlink" params="name *visual *collision *inertia">
+        <link name="${name}">
+            <xacro:insert_block name="visual"/>
+            <xacro:insert_block name="collision"/>
+            <xacro:insert_block name="inertia"/>
+        </link>
+    </xacro:macro>
+</robot>

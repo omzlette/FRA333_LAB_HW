@@ -2,6 +2,7 @@
 /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/environment/pythonpath.dsv
 /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/lib/python3.8/site-packages/ros2_control_demo_3r_robot/__init__.py
 /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/lib/ros2_control_demo_3r_robot/trajectory_gen.py
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/description/create_link.xacro
 /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/description/example_gazebo.xacro
 /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/description/example_include.xacro
 /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot/share/ros2_control_demo_3r_robot/description/example_robot.urdf.xacro
