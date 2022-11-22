@@ -46,28 +46,28 @@ joint_trajectory_position_controller:
       goal_time: 0.0 # Defaults to 0.0 (start immediately)
 
 
-controller_manager:
-  ros__parameters:
-    update_rate: 100  # Hz
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 100  # Hz
 
-    joint_trajectory_controller:
-      type: joint_trajectory_controller/JointTrajectoryController
+#     joint_trajectory_controller:
+#       type: joint_trajectory_controller/JointTrajectoryController
     
-    joint_state_broadcaster:
-      type: joint_state_broadcaster/JointStateBroadcaster
+#     joint_state_broadcaster:
+#       type: joint_state_broadcaster/JointStateBroadcaster
 
-joint_trajectory_controller:
-  ros__parameters:
-    joints:
-      - joint_1
-      - joint_2
-      - joint_3
-    interface_name: position
-    command_interfaces:
-      - position
-    state_interfaces:
-      - position
-      - velocity
+# joint_trajectory_controller:
+#   ros__parameters:
+#     joints:
+#       - joint_1
+#       - joint_2
+#       - joint_3
+#     interface_name: position
+#     command_interfaces:
+#       - position
+#     state_interfaces:
+#       - position
+#       - velocity
 ########################################
 # controller_manager:
 #   ros__parameters:

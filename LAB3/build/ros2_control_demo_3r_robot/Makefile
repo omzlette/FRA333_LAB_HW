@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot
+CMAKE_SOURCE_DIR = /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot
+CMAKE_BINARY_DIR = /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/CMakeFiles /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/CMakeFiles /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

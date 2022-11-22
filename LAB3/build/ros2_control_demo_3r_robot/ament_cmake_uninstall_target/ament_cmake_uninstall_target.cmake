@@ -2,7 +2,7 @@
 # ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target.cmake.in
 
 function(ament_cmake_uninstall_target_remove_empty_directories path)
-  set(install_space "/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot")
+  set(install_space "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/ros2_control_demo_3r_robot")
   if(install_space STREQUAL "")
     message(FATAL_ERROR "The CMAKE_INSTALL_PREFIX variable must not be empty")
   endif()
@@ -29,7 +29,7 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
 endfunction()
 
 # uninstall files installed using the standard install() function
-set(install_manifest "/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/install_manifest.txt")
+set(install_manifest "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/install_manifest.txt")
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find install manifest: ${install_manifest}")
 endif()
@@ -57,4 +57,4 @@ message(STATUS "Execute custom uninstall script")
 # begin of custom uninstall code
 
 # uninstall files installed using the symlink install functions
-include("/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+include("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")

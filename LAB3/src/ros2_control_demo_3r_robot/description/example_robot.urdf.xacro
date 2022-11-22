@@ -32,23 +32,15 @@
             <xacro:addmesh mesh_file="link_0.stl"/>
             <xacro:addcolor color="idk" rgba="1.0 0.0 0.0 1.0"/>
         </xacro:addvis>
-        <xacro:addcollide mu="0" kp="1000.0" kd="1.0">
+        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <xacro:addmesh mesh_file="link_0.stl"/>
         </xacro:addcollide>
-        <xacro:addinertia mass="100">
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <inertia ixx="0.1" ixy="0.0" ixz="0.0" iyy="0.1" iyz="0.0" izz="0.1"/>
+        <xacro:addinertia mass="0.310887">
+            <origin xyz="0 0 0.020724" rpy="0 0 0"/>
+            <inertia ixx="0.000222" ixy="0.0" ixz="0.0" iyy="0.000222" iyz="0.0" izz="0.000341"/>
         </xacro:addinertia> 
     </xacro:addlink>
-
-    <joint name="joint_0" type="fixed">
-        <parent link="link_0"/>
-        <child link="link_1"/>
-        <origin rpy="0 0 0" xyz="0 0 0"/>
-        <axis xyz="0 0 1"/>
-        <limit lower="-3.14" upper="3.14" effort="1000" velocity="0.5"/>
-    </joint>
 
     <xacro:addlink name="link_1">
         <xacro:addvis>
@@ -56,22 +48,22 @@
             <xacro:addmesh mesh_file="link_1.stl"/>
             <xacro:addcolor color="green" rgba="0.2 1 0.2 1.0"/>
         </xacro:addvis>
-        <xacro:addcollide mu="0" kp="1000.0" kd="1.0">
+        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <xacro:addmesh mesh_file="link_1.stl"/>
         </xacro:addcollide>
-        <xacro:addinertia mass="25">
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+        <xacro:addinertia mass="0.204197">
+            <origin xyz="0 0 -0.048174" rpy="0 0 0"/>
+            <inertia ixx="0.000244" ixy="0.0" ixz="0.0" iyy="0.000238" iyz="0.0" izz="0.000082" />
         </xacro:addinertia> 
     </xacro:addlink>
 
     <joint name="joint_1" type="revolute">
         <parent link="link_0"/>
         <child link="link_1"/>
-        <origin rpy="0 0 0" xyz="0 0 0.1"/>
+        <origin rpy="0 0 0" xyz="0 0 0.15"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-3.14" upper="3.14" effort="1000" velocity="0.5"/>
+        <limit lower="${-pi}" upper="${pi}" effort="1" velocity="1"/>
         <dynamics damping="0" friction="0"/>
     </joint>
 
@@ -81,13 +73,13 @@
             <xacro:addmesh mesh_file="link_2.stl"/>
             <xacro:addcolor color="green" rgba="0.2 1 0.2 1.0"/>
         </xacro:addvis>
-        <xacro:addcollide mu="0" kp="1000.0" kd="1.0">
+        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <xacro:addmesh mesh_file="link_2.stl"/>
         </xacro:addcollide>
-        <xacro:addinertia mass="15">
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+        <xacro:addinertia mass="0.212044">
+            <origin xyz="0.0750 0 0" rpy="0 0 0"/>
+            <inertia ixx="0.000057" ixy="0.0" ixz="0.0" iyy="0.000586" iyz="0.0" izz="0.000620" />
         </xacro:addinertia> 
     </xacro:addlink>
 
@@ -96,8 +88,8 @@
         <child link="link_2"/>
         <origin rpy="${pi/2} 0 0" xyz="0 0 0"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-3.14" upper="3.14" effort="0.5" velocity="0.5"/>
-        <dynamics damping="10" friction="10"/>
+        <limit lower="0" upper="${pi}" effort="1" velocity="1"/>
+        <dynamics damping="0" friction="0"/>
     </joint>
 
     <xacro:addlink name="link_3">
@@ -106,13 +98,13 @@
             <xacro:addmesh mesh_file="link_3.stl"/>
             <xacro:addcolor color="green" rgba="0.2 1 0.2 1.0"/>
         </xacro:addvis>
-        <xacro:addcollide mu="0" kp="1000.0" kd="1.0">
+        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <xacro:addmesh mesh_file="link_3.stl"/>
         </xacro:addcollide>
-        <xacro:addinertia mass="5">
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001" />
+        <xacro:addinertia mass="0.199772">
+            <origin xyz="0.044973 0 0" rpy="0 0 0"/>
+            <inertia ixx="0.000088" ixy="0.0" ixz="0.0" iyy="0.000211" iyz="0.0" izz="0.000202" />
         </xacro:addinertia> 
     </xacro:addlink>
 
@@ -121,8 +113,8 @@
         <child link="link_3"/>
         <origin rpy="0 0 0" xyz="0.15 0 0"/>
         <axis xyz="0 0 1"/>
-        <limit lower="-3.14" upper="3.14" effort="1000" velocity="0.5"/>
-        <dynamics damping="10" friction="10"/>
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="1" velocity="1"/>
+        <dynamics damping="0" friction="0"/>
     </joint>
 
     <joint name="joint_eff" type="fixed">

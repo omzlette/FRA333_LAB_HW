@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot
+CMAKE_SOURCE_DIR = /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot
+CMAKE_BINARY_DIR = /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot
 
 # Utility rule file for uninstall.
 
@@ -67,6 +67,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot /home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/ros2_control_demo_3r_robot /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/ros2_control_demo_3r_robot/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

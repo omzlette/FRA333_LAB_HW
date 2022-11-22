@@ -1,9 +1,0 @@
-/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/xicro_pkg/CMakeFiles/install/strip.dir
-/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/xicro_pkg/CMakeFiles/install/local.dir
-/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/xicro_pkg/CMakeFiles/install.dir
-/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/xicro_pkg/CMakeFiles/list_install_components.dir
-/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/xicro_pkg/CMakeFiles/rebuild_cache.dir
-/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/xicro_pkg/CMakeFiles/edit_cache.dir
-/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/xicro_pkg/CMakeFiles/test.dir
-/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/xicro_pkg/CMakeFiles/xicro_pkg_uninstall.dir
-/home/omzlette/gitROS/FRA333_LAB_HW/LAB3/build/xicro_pkg/CMakeFiles/uninstall.dir
