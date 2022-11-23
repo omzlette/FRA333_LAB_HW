@@ -1,0 +1,4 @@
+source;share/sandevistan_kinematic/local_setup.bash
+source;share/sandevistan_kinematic/local_setup.dsv
+source;share/sandevistan_kinematic/local_setup.sh
+source;share/sandevistan_kinematic/local_setup.zsh

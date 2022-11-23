@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_interface/libsandevistan_interface__rosidl_typesupport_fastrtps_c.so" "TARGETS" "sandevistan_interface__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
