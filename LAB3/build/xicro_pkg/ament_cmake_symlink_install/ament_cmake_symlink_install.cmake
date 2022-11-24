@@ -319,8 +319,8 @@ ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src
 # install(DIRECTORY "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/Xicro/xicro_pkg/xicro_pkg/" "DESTINATION" "lib/python3.8/site-packages/xicro_pkg" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/Xicro/xicro_pkg" DIRECTORY "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/Xicro/xicro_pkg/xicro_pkg/" "DESTINATION" "lib/python3.8/site-packages/xicro_pkg" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install(PROGRAMS "scripts/gui_xicro.py" "scripts/generate_library.py" "scripts/generate_xicro_node.py" "scripts/fake_Imu_node.py" "DESTINATION" "lib/xicro_pkg")
-ament_cmake_symlink_install_programs("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/Xicro/xicro_pkg" PROGRAMS "scripts/gui_xicro.py" "scripts/generate_library.py" "scripts/generate_xicro_node.py" "scripts/fake_Imu_node.py" "DESTINATION" "lib/xicro_pkg")
+# install(PROGRAMS "scripts/gui_xicro.py" "scripts/generate_library.py" "scripts/generate_xicro_node.py" "scripts/fake_Imu_node.py" "scripts/xicro_node_sandevistan_imu_ID_2_arduino.py" "DESTINATION" "lib/xicro_pkg")
+ament_cmake_symlink_install_programs("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/Xicro/xicro_pkg" PROGRAMS "scripts/gui_xicro.py" "scripts/generate_library.py" "scripts/generate_xicro_node.py" "scripts/fake_Imu_node.py" "scripts/xicro_node_sandevistan_imu_ID_2_arduino.py" "DESTINATION" "lib/xicro_pkg")
 
 # install(DIRECTORY "config" "DESTINATION" "share/xicro_pkg")
 ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/Xicro/xicro_pkg" DIRECTORY "config" "DESTINATION" "share/xicro_pkg")

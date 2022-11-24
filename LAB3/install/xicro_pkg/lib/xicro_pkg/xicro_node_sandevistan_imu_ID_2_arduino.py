@@ -1,0 +1,1 @@
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/Xicro/xicro_pkg/scripts/xicro_node_sandevistan_imu_ID_2_arduino.py

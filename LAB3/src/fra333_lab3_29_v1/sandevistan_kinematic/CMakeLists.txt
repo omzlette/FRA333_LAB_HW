@@ -32,6 +32,7 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   scripts/kinematic_server.py
   scripts/trajectory_gen.py
+  scripts/calibrate.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

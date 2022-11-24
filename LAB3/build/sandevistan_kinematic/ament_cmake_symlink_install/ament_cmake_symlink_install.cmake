@@ -319,8 +319,8 @@ ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src
 # install(DIRECTORY "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/fra333_lab3_29_v1/sandevistan_kinematic/sandevistan_kinematic/" "DESTINATION" "lib/python3.8/site-packages/sandevistan_kinematic" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/fra333_lab3_29_v1/sandevistan_kinematic" DIRECTORY "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/fra333_lab3_29_v1/sandevistan_kinematic/sandevistan_kinematic/" "DESTINATION" "lib/python3.8/site-packages/sandevistan_kinematic" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install(PROGRAMS "scripts/kinematic_server.py" "scripts/trajectory_gen.py" "DESTINATION" "lib/sandevistan_kinematic")
-ament_cmake_symlink_install_programs("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/fra333_lab3_29_v1/sandevistan_kinematic" PROGRAMS "scripts/kinematic_server.py" "scripts/trajectory_gen.py" "DESTINATION" "lib/sandevistan_kinematic")
+# install(PROGRAMS "scripts/kinematic_server.py" "scripts/trajectory_gen.py" "scripts/calibrate.py" "DESTINATION" "lib/sandevistan_kinematic")
+ament_cmake_symlink_install_programs("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/fra333_lab3_29_v1/sandevistan_kinematic" PROGRAMS "scripts/kinematic_server.py" "scripts/trajectory_gen.py" "scripts/calibrate.py" "DESTINATION" "lib/sandevistan_kinematic")
 
 # install(DIRECTORY "scripts" "DESTINATION" "share/sandevistan_kinematic")
 ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/fra333_lab3_29_v1/sandevistan_kinematic" DIRECTORY "scripts" "DESTINATION" "share/sandevistan_kinematic")

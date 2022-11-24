@@ -34,7 +34,7 @@ def generate_launch_description():
 
     sande_kinematic = Node(
         package = "sandevistan_kinematic",
-        executable = "kinematic_server"
+        executable = "kinematic_server.py"
     )
 
     # Configure the node

@@ -3,6 +3,8 @@
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/lib/python3.8/site-packages/sandevistan_kinematic/__init__.py
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/lib/sandevistan_kinematic/kinematic_server.py
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/lib/sandevistan_kinematic/trajectory_gen.py
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/lib/sandevistan_kinematic/calibrate.py
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/scripts/calibrate.py
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/scripts/kinematic_server.py
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/scripts/trajectory_gen.py
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/ament_index/resource_index/package_run_dependencies/sandevistan_kinematic

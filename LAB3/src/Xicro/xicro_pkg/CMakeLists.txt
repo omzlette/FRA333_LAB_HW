@@ -32,7 +32,7 @@ install(PROGRAMS
   scripts/generate_library.py
   scripts/generate_xicro_node.py
   scripts/fake_Imu_node.py
-  scripts/xicro_node_read_imu_ID_3_arduino.py
+  scripts/xicro_node_sandevistan_imu_ID_2_arduino.py
 #orcix
   DESTINATION lib/${PROJECT_NAME}
 )

@@ -5,6 +5,7 @@
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/xicro_pkg/lib/xicro_pkg/generate_library.py
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/xicro_pkg/lib/xicro_pkg/generate_xicro_node.py
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/xicro_pkg/lib/xicro_pkg/fake_Imu_node.py
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/xicro_pkg/lib/xicro_pkg/xicro_node_sandevistan_imu_ID_2_arduino.py
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/xicro_pkg/share/xicro_pkg/config/.Xicro_node_preSetup.txt
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/xicro_pkg/share/xicro_pkg/config/.arduino_cpp_preSetup.txt
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/xicro_pkg/share/xicro_pkg/config/.arduino_h_preSetup.txt
