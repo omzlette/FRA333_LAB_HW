@@ -127,7 +127,6 @@ class SandeStatePub(Node):
             point = JointTrajectoryPoint()
             self.PositionUpdate()
             # Check JointControl Values
-            # self.qarray = [0., 0., -1.4]
             point.positions = self.qarray
             JointTrajec.joint_names = ['joint_1', 'joint_2', 'joint_3']
             point.time_from_start = Duration(sec=1)
