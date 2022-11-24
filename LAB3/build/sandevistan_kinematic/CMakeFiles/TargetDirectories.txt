@@ -1,0 +1,9 @@
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic/CMakeFiles/install/strip.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic/CMakeFiles/install/local.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic/CMakeFiles/install.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic/CMakeFiles/list_install_components.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic/CMakeFiles/rebuild_cache.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic/CMakeFiles/edit_cache.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic/CMakeFiles/test.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic/CMakeFiles/sandevistan_kinematic_uninstall.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic/CMakeFiles/uninstall.dir

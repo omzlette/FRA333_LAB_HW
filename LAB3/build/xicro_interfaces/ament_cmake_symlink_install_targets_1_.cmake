@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/xicro_interfaces/libxicro_interfaces__rosidl_typesupport_fastrtps_cpp.so" "TARGETS" "xicro_interfaces__rosidl_typesupport_fastrtps_cpp" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

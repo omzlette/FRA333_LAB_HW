@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_interface/rosidl_generator_py/sandevistan_interface/sandevistan_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "sandevistan_interface__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/sandevistan_interface")

@@ -1,0 +1,46 @@
+[0.038s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic -- -j12 -l12
+[0.072s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.073s] -- Found ament_cmake_core: 0.9.11 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[0.106s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.426s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.428s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.434s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.660s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.685s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.777s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.819s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.821s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.030s] -- Found rclpy: 1.0.11 (/opt/ros/foxy/share/rclpy/cmake)
+[1.110s] -- Configuring done
+[1.110s] -- Generating done
+[1.116s] -- Build files have been written to: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic
+[1.148s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic -- -j12 -l12
+[1.174s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic
+[1.183s] -- Install configuration: ""
+[1.184s] -- Execute custom install script
+[1.184s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/environment/pythonpath.sh
+[1.184s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/environment/pythonpath.dsv
+[1.185s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/lib/python3.8/site-packages/sandevistan_kinematic/__init__.py
+[1.186s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/lib/sandevistan_kinematic/kinematic_server.py
+[1.186s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/lib/sandevistan_kinematic/trajectory_gen.py
+[1.186s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/lib/sandevistan_kinematic/calibrate.py
+[1.197s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/scripts/calibrate.py
+[1.197s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/scripts/kinematic_server.py
+[1.197s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/scripts/trajectory_gen.py
+[1.198s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/ament_index/resource_index/package_run_dependencies/sandevistan_kinematic
+[1.198s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/ament_index/resource_index/parent_prefix_path/sandevistan_kinematic
+[1.199s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/environment/ament_prefix_path.sh
+[1.199s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/environment/ament_prefix_path.dsv
+[1.199s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/environment/path.sh
+[1.199s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/environment/path.dsv
+[1.200s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/local_setup.bash
+[1.200s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/local_setup.sh
+[1.200s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/local_setup.zsh
+[1.201s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/local_setup.dsv
+[1.201s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/package.dsv
+[1.212s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/ament_index/resource_index/packages/sandevistan_kinematic
+[1.212s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/cmake/sandevistan_kinematicConfig.cmake
+[1.212s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/cmake/sandevistan_kinematicConfig-version.cmake
+[1.213s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/share/sandevistan_kinematic/package.xml
+[1.248s] Listing '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_kinematic/lib/python3.8/site-packages/sandevistan_kinematic'...
+[1.254s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_kinematic

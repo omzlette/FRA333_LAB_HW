@@ -1,0 +1,1 @@
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_interface/rosidl_typesupport_introspection_c/sandevistan_interface/msg/detail/imu_message__rosidl_typesupport_introspection_c.h

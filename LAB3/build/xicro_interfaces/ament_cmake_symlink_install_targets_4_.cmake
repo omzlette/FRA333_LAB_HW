@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/xicro_interfaces/rosidl_generator_py/xicro_interfaces/xicro_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" "TARGETS" "xicro_interfaces__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.8/site-packages/xicro_interfaces")

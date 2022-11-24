@@ -1,0 +1,80 @@
+[0.046s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/fra333_lab3_29_v1/sandevistan_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description
+[0.182s] -- The C compiler identification is GNU 9.4.0
+[0.303s] -- The CXX compiler identification is GNU 9.4.0
+[0.311s] -- Check for working C compiler: /usr/bin/cc
+[0.402s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.403s] -- Detecting C compiler ABI info
+[0.492s] -- Detecting C compiler ABI info - done
+[0.516s] -- Detecting C compile features
+[0.517s] -- Detecting C compile features - done
+[0.522s] -- Check for working CXX compiler: /usr/bin/c++
+[0.640s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.642s] -- Detecting CXX compiler ABI info
+[0.736s] -- Detecting CXX compiler ABI info - done
+[0.751s] -- Detecting CXX compile features
+[0.751s] -- Detecting CXX compile features - done
+[0.754s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.757s] -- Found ament_cmake_core: 0.9.11 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[0.786s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.786s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.062s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.076s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.094s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.309s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.359s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.490s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.541s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.730s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.828s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.831s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.833s] -- Looking for pthread.h
+[1.937s] -- Looking for pthread.h - found
+[1.938s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.033s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.034s] -- Looking for pthread_create in pthreads
+[2.109s] -- Looking for pthread_create in pthreads - not found
+[2.109s] -- Looking for pthread_create in pthread
+[2.196s] -- Looking for pthread_create in pthread - found
+[2.198s] -- Found Threads: TRUE  
+[2.412s] -- Found rclpy: 1.0.11 (/opt/ros/foxy/share/rclpy/cmake)
+[2.552s] -- Configuring done
+[2.559s] -- Generating done
+[2.560s] -- Build files have been written to: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description
+[2.571s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/src/fra333_lab3_29_v1/sandevistan_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description
+[2.577s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description -- -j12 -l12
+[2.634s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description -- -j12 -l12
+[2.668s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description
+[2.678s] -- Install configuration: ""
+[2.679s] -- Execute custom install script
+[2.680s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/pythonpath.sh
+[2.691s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/pythonpath.dsv
+[2.708s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description/__init__.py
+[2.725s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/config/myrobot_controllers.yaml
+[2.742s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/launch/sandevistan_gazebo.launch.py
+[2.758s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/meshes/link_0.stl
+[2.775s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/meshes/link_1.stl
+[2.791s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/meshes/link_2.stl
+[2.807s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/meshes/link_3.stl
+[2.823s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/sandevistan_description/__init__.py
+[2.840s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/xacro_description/create_link.xacro
+[2.856s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/xacro_description/sandevistan_gazebo.xacro
+[2.873s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/xacro_description/sandevistan_include.xacro
+[2.890s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/xacro_description/sandevistan_robot.urdf.xacro
+[2.907s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/ament_index/resource_index/package_run_dependencies/sandevistan_description
+[2.920s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/ament_index/resource_index/parent_prefix_path/sandevistan_description
+[2.937s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/ament_prefix_path.sh
+[2.951s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/ament_prefix_path.dsv
+[2.964s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/path.sh
+[2.976s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/path.dsv
+[2.994s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/local_setup.bash
+[3.014s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/local_setup.sh
+[3.032s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/local_setup.zsh
+[3.046s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/local_setup.dsv
+[3.065s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/package.dsv
+[3.081s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/ament_index/resource_index/packages/sandevistan_description
+[3.098s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/cmake/sandevistan_descriptionConfig.cmake
+[3.120s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/cmake/sandevistan_descriptionConfig-version.cmake
+[3.132s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/package.xml
+[3.212s] Listing '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description'...
+[3.213s] Compiling '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description/__init__.py'...
+[3.230s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description

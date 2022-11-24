@@ -1,0 +1,36 @@
+[0.046s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description -- -j12 -l12
+[0.096s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description -- -j12 -l12
+[0.149s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description
+[0.163s] -- Install configuration: ""
+[0.164s] -- Execute custom install script
+[0.165s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/pythonpath.sh
+[0.166s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/pythonpath.dsv
+[0.166s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description/__init__.py
+[0.169s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/config/myrobot_controllers.yaml
+[0.169s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/launch/sandevistan_gazebo.launch.py
+[0.170s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/meshes/link_0.stl
+[0.170s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/meshes/link_1.stl
+[0.170s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/meshes/link_2.stl
+[0.171s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/meshes/link_3.stl
+[0.171s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/sandevistan_description/__init__.py
+[0.172s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/xacro_description/create_link.xacro
+[0.173s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/xacro_description/sandevistan_gazebo.xacro
+[0.174s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/xacro_description/sandevistan_include.xacro
+[0.174s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/xacro_description/sandevistan_robot.urdf.xacro
+[0.175s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/ament_index/resource_index/package_run_dependencies/sandevistan_description
+[0.177s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/ament_index/resource_index/parent_prefix_path/sandevistan_description
+[0.178s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/ament_prefix_path.sh
+[0.179s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/ament_prefix_path.dsv
+[0.179s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/path.sh
+[0.180s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/environment/path.dsv
+[0.181s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/local_setup.bash
+[0.182s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/local_setup.sh
+[0.183s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/local_setup.zsh
+[0.184s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/local_setup.dsv
+[0.185s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/package.dsv
+[0.203s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/ament_index/resource_index/packages/sandevistan_description
+[0.207s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/cmake/sandevistan_descriptionConfig.cmake
+[0.208s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/cmake/sandevistan_descriptionConfig-version.cmake
+[0.210s] -- Up-to-date symlink: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/share/sandevistan_description/package.xml
+[0.248s] Listing '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/install/sandevistan_description/lib/python3.8/site-packages/sandevistan_description'...
+[0.257s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB3/build/sandevistan_description

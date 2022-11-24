@@ -1,0 +1,9 @@
+Idmcu: 2
+Namespace: "sandevistan_imu"
+Port: "/dev/ttyACM0"
+generate_library_Path: "Arduino/libraries"
+Baudrate: 115200
+Setup_Publisher:  [         [1,"sandevistan_IMU","sandevistan_interface/IMUMessage.msg"]         ]
+Setup_Subscriber: [         ]
+Setup_Srv_client: [         ]
+
