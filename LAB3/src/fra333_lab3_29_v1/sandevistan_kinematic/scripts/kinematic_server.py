@@ -70,15 +70,12 @@ class SandeStatePub(Node):
         self.poscylin = [np.sqrt(self.pos[0]**2 + self.pos[1]**2), np.arctan2(self.pos[1], self.pos[0]), self.pos[2]]
 
         # Calculate the new position in cylindrical coordinates
-        # IMU X to  X
         if np.round(self.linear_accel[0]) != 0:
             self.poscylin[0] += 0.001*np.abs(self.linear_accel[0])/self.linear_accel[0]
 
-        # IMU Y to JointStage Y
         if np.round(self.linear_accel[1]) != 0:
             self.poscylin[1] += 0.001*np.abs(self.linear_accel[1])/self.linear_accel[1]
 
-        # IMU Z to JointStage Z
         if np.round(self.linear_accel[2]) != 0:
             self.poscylin[2] += 0.001*np.abs(self.linear_accel[2])/self.linear_accel[2]
         
@@ -97,7 +94,7 @@ class SandeStatePub(Node):
         y = float(self.pos[1])
         z = float(self.pos[2])
 
-        # Calculate q3
+        # Check if the position is reachable
         if l2-l3 <= np.sqrt(x**2 + y**2 + (z - l0)**2) <= l2+l3 and x**2 + y**2 + z**2 + l0**2 >= 2*z*l0:
             self.get_logger().info('oh hi\n\n\n')
             # Calculate q1
@@ -106,6 +103,7 @@ class SandeStatePub(Node):
             cosq3 = (x**2 + y**2 + (z - l0)**2 - l2**2 - l3**2) / (2 * l2 * l3)
             sinq3 = np.sqrt(1 - cosq3**2)
             
+            # Calculate q3
             q3 = np.arctan2(sinq3, cosq3)
 
             # Calculate q2

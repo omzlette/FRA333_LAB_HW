@@ -36,10 +36,9 @@ void read_imu_Sendros2()
       linear_acceleration[2]=gz*(-9.80665);
 
       xicro.publish_sandevistan_IMU(linear_acceleration, angular_velocity);
-                                       
   }
-
 }
+
 void loop() {
 //  Serial.println(ax);
   // put your main code here, to run repeatedly:

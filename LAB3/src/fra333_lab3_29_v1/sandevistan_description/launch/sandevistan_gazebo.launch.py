@@ -18,8 +18,7 @@ def generate_launch_description():
     # Specify the name of the package and path to xacro file within the package
     pkg_name = 'sandevistan_description'
     file_subpath = 'xacro_description/sandevistan_robot.urdf.xacro'
-
-
+    
     # Use xacro to process the file
     xacro_file = os.path.join(get_package_share_directory(pkg_name),file_subpath)
     robot_description_raw = xacro.process_file(xacro_file).toxml()
