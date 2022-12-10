@@ -6,6 +6,7 @@ from rclpy.node import Node
 from rclpy.qos import QoSProfile
 
 from sensor_msgs.msg import JointState
+from trajectory_msgs.msg import JointTrajectory
 from std_msgs.msg import Bool
 from doppelt_interfaces.srv import Enabler
 
@@ -26,7 +27,7 @@ class X2Tracker(Node):
         self.pubTimer = self.create_timer(1/self.rate, self.pubTimerCallback)
 
         self.jointSsub = self.create_subscription(JointState, 'joint_states', self.jointStateCallback, self.QoS)
-        self.refPosSub = self.create_subscription(JointState, 'joint_group_velocity_controller/state', self.jointStateCallback, self.QoS)
+        self.refPosSub = self.create_subscription(JointTrajectory, 'joint_group_velocity_controller/state', self.jointStateCallback, self.QoS)
 
     def enable_callback(self, request:Enabler.Request):
         self.enable = request.enable
