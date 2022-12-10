@@ -48,13 +48,14 @@ class X2TrajGen(Node):
         self.dur = msg.data[6]
 
     def refPosVelTimerCallback(self):
+        curTime = self.get_clock().now().to_msg().sec
         pointwVel = Float64MultiArray()
-        pointwVel.data = [self.QuinticEval(self.get_clock().now().to_msg().sec, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[0],
-                          self.QuinticEval(self.get_clock().now().to_msg().sec, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[0],
-                          self.QuinticEval(self.get_clock().now().to_msg().sec, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[0],
-                          self.QuinticEval(self.get_clock().now().to_msg().sec, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[1],
-                          self.QuinticEval(self.get_clock().now().to_msg().sec, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[1],
-                          self.QuinticEval(self.get_clock().now().to_msg().sec, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[1]]
+        pointwVel.data = [self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[0],
+                          self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[0],
+                          self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[0],
+                          self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[1],
+                          self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[1],
+                          self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[1]]
         self.refPosVel.publish(pointwVel)
         
 def main(args=None):
