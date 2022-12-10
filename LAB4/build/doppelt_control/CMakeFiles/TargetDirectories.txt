@@ -1,0 +1,9 @@
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/CMakeFiles/install/strip.dir
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/CMakeFiles/install/local.dir
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/CMakeFiles/install.dir
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/CMakeFiles/list_install_components.dir
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/CMakeFiles/rebuild_cache.dir
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/CMakeFiles/edit_cache.dir
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/CMakeFiles/test.dir
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/CMakeFiles/doppelt_control_uninstall.dir
+/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/CMakeFiles/uninstall.dir

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_generator_py/doppelt_interfaces/libdoppelt_interfaces__python.so" "TARGETS" "doppelt_interfaces__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

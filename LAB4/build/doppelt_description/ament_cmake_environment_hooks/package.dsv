@@ -1,0 +1,4 @@
+source;share/doppelt_description/local_setup.bash
+source;share/doppelt_description/local_setup.dsv
+source;share/doppelt_description/local_setup.sh
+source;share/doppelt_description/local_setup.zsh

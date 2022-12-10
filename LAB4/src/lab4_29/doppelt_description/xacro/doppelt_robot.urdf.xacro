@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+    <!-- This is an example of a URDF. -->
+    <!-- As we move through the file, new things to note will be pointed out. -->
+    <!-- It's not meant an example of GOOD design, but an example of some of the various features of URDF/xacro. -->
+
+    <!-- Package Name -->
+    <xacro:property name="package" value="doppelt_description" />
+
+    <!-- This will include all the contents of example_include.xacro first. Go check it out! -->
+    <xacro:include filename="doppelt_include.xacro" />
+    <xacro:include filename="doppelt_gazebo.xacro" />
+    <xacro:include filename="create_link.xacro" />
+
+    <!-- Variables -->
+    <xacro:property name="pi" value="3.1415926535897931" />
+
+    <!-- This first link called "world" is empty -->
+    <link name="world" />
+
+    <!-- A simple fixed joint from our empty world link, to our base. -->
+    <!-- The base origin is offset from the world origin. -->
+    <joint name="base_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="link_0"/>        
+    </joint>
+
+    <xacro:addlink name="link_0">
+        <xacro:addvis>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <xacro:addmesh mesh_file="link_0.stl"/>
+            <xacro:addcolor color="idk" rgba="1.0 0.0 0.0 1.0"/>
+        </xacro:addvis>
+        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <xacro:addmesh mesh_file="link_0.stl"/>
+        </xacro:addcollide>
+        <xacro:addinertia mass="0.310887">
+            <origin xyz="0 0 0.020724" rpy="0 0 0"/>
+            <inertia ixx="0.000222" ixy="0.0" ixz="0.0" iyy="0.000222" iyz="0.0" izz="0.000341"/>
+        </xacro:addinertia> 
+    </xacro:addlink>
+
+    <xacro:addlink name="link_1">
+        <xacro:addvis>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <xacro:addmesh mesh_file="link_1.stl"/>
+            <xacro:addcolor color="green" rgba="0.2 1 0.2 1.0"/>
+        </xacro:addvis>
+        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <xacro:addmesh mesh_file="link_1.stl"/>
+        </xacro:addcollide>
+        <xacro:addinertia mass="0.204197">
+            <origin xyz="0 0 -0.048174" rpy="0 0 0"/>
+            <inertia ixx="0.000244" ixy="0.0" ixz="0.0" iyy="0.000238" iyz="0.0" izz="0.000082" />
+        </xacro:addinertia> 
+    </xacro:addlink>
+
+    <joint name="joint_1" type="revolute">
+        <parent link="link_0"/>
+        <child link="link_1"/>
+        <origin rpy="0 0 0" xyz="0 0 0.15"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="${-pi*2}" upper="${pi*2}" effort="1" velocity="1"/>
+        <dynamics damping="0" friction="0"/>
+    </joint>
+
+    <xacro:addlink name="link_2">
+        <xacro:addvis>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <xacro:addmesh mesh_file="link_2.stl"/>
+            <xacro:addcolor color="green" rgba="0.2 1 0.2 1.0"/>
+        </xacro:addvis>
+        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <xacro:addmesh mesh_file="link_2.stl"/>
+        </xacro:addcollide>
+        <xacro:addinertia mass="0.212044">
+            <origin xyz="0.0750 0 0" rpy="0 0 0"/>
+            <inertia ixx="0.000057" ixy="0.0" ixz="0.0" iyy="0.000586" iyz="0.0" izz="0.000620" />
+        </xacro:addinertia> 
+    </xacro:addlink>
+
+    <joint name="joint_2" type="revolute">
+        <parent link="link_1"/>
+        <child link="link_2"/>
+        <origin rpy="${pi/2} 0 0" xyz="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="0" upper="${pi}" effort="1" velocity="1"/>
+        <dynamics damping="0" friction="0"/>
+    </joint>
+
+    <xacro:addlink name="link_3">
+        <xacro:addvis>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <xacro:addmesh mesh_file="link_3.stl"/>
+            <xacro:addcolor color="green" rgba="0.2 1 0.2 1.0"/>
+        </xacro:addvis>
+        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <xacro:addmesh mesh_file="link_3.stl"/>
+        </xacro:addcollide>
+        <xacro:addinertia mass="0.199772">
+            <origin xyz="0.044973 0 0" rpy="0 0 0"/>
+            <inertia ixx="0.000088" ixy="0.0" ixz="0.0" iyy="0.000211" iyz="0.0" izz="0.000202" />
+        </xacro:addinertia> 
+    </xacro:addlink>
+
+    <joint name="joint_3" type="revolute">
+        <parent link="link_2"/>
+        <child link="link_3"/>
+        <origin rpy="0 0 0" xyz="0.15 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="${-pi/2}" upper="${pi/2}" effort="1" velocity="1"/>
+        <dynamics damping="0" friction="0"/>
+    </joint>
+
+    <joint name="joint_eff" type="fixed">
+        <parent link="link_3"/>
+        <child link="end_effector"/>
+        <origin rpy="1.57 0 1.57" xyz="0.26 0 0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+    
+    <link name="end_effector" />
+
+    
+
+</robot>

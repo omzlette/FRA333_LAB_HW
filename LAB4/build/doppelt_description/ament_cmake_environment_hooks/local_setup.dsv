@@ -1,0 +1,3 @@
+source;share/doppelt_description/environment/ament_prefix_path.sh
+source;share/doppelt_description/environment/path.sh
+source;share/doppelt_description/environment/pythonpath.sh
