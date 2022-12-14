@@ -6,7 +6,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 
-from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import Float64MultiArray, Int64
 
 class X2TrajGen(Node):
     def __init__(self):
@@ -21,6 +21,9 @@ class X2TrajGen(Node):
         self.points = [0, 0, 0, 0, 0, 0]
         self.dur = 0
         self.pointsDurSub = self.create_subscription(Float64MultiArray, 'via_points', self.pointsDurCallback, self.QoS)
+
+        self.clock = self.create_subscription(Int64, 'clock', self.clockCallback, self.QoS)
+        self.currTime = 0
 
     def QuinticTrajGen(self, t0, tf, q, v):
         quinticTrajMat = np.array([[1, t0, t0**2, t0**3, t0**4, t0**5],
@@ -48,17 +51,19 @@ class X2TrajGen(Node):
         self.dur = msg.data[6]
 
     def refPosVelTimerCallback(self):
-        curTime = self.get_clock().now().to_msg().sec
+        curTime = self.currTime
         pointwVel = Float64MultiArray()
-        ###! CURRENTLY USING WRONG TIME !###
         pointwVel.data = [self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[0],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[0],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[0],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[1],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[1],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[1]]
-        #!##################################
         self.refPosVel.publish(pointwVel)
+
+    def clockCallback(self, msg):
+        self.currTime = msg.data
+
         
 def main(args=None):
     rclpy.init(args=args)

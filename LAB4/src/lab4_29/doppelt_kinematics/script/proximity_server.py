@@ -66,14 +66,28 @@ class X2ProximityServer(Node):
     def IK_sub_callback(self, msg:Float64MultiArray):
         self.IK_via_point = msg.data[0][1]
 
-    def IK(self, via_point):
-        # Calculate the joint angles to reach the via point
-        q = [0, 0, 0]
+    def IK_pos(self, x, y, z):
+        # Calculate the joint angles
+
+        # Define the lengths of the links
         l1 = l3 = 0.15
         le = 0.2
-        # q[0] = np.arctan2(via_point[1], via_point[0])
-        # q[1] = np.arctan2(via_point[2] - l1, np.sqrt(via_point[0]**2 + via_point[1]**2)) - np.arccos((le**2 + (via_point[2] - l1)**2 - l3**2)/(2*le*np.sqrt((via_point[2] - l1)**2 + via_point[0]**2 + via_point[1]**2)))
-        # q[2] = np.arccos((le**2 + l3**2 - (via_point[2] - l1)**2)/(2*le*l3)) - np.pi
+
+        # Calculate the joint angles q1
+        q1 = np.arctan2(y, x)
+
+        # Calculate the joint angles q3
+        c3 = ((z-l1)**2 + x**2 + y**2 - l3**2 - le**2)/(2*l3*le)
+        s3 = np.sqrt(1-c3**2)
+        q3 = np.arctan2(s3, c3)
+
+        # Calculate the joint angles q2
+        s2 = (-le*s3)*np.sqrt(x**2 + y**2) + (l3 + le*c3)*(z-l1)
+        c2 = (l3 + le*c3)*np.sqrt(x**2 + y**2) + (le*s3)*(z-l1)
+        q2 = np.arctan2(s2, c2)
+
+        q = [q1, q2, q3]
+        
         return q
     
     def IK_pub_timer_callback(self):
