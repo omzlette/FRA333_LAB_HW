@@ -15,12 +15,12 @@ class X2TrajGen(Node):
         self.QoS = QoSProfile(depth=10)
         self.rate = 10
 
-        self.refPosVel = self.create_publisher(Float64MultiArray, 'ref_pos_vel', self.QoS)
+        self.refPosVel = self.create_publisher(Float64MultiArray, 'reference/task_states', self.QoS)
         self.refPosVelTimer = self.create_timer(1/self.rate, self.refPosVelTimerCallback)
         
         self.points = [0, 0, 0, 0, 0, 0]
         self.dur = 0
-        self.pointsDurSub = self.create_subscription(Float64MultiArray, 'points_w_duration', self.pointsDurCallback, self.QoS)
+        self.pointsDurSub = self.create_subscription(Float64MultiArray, 'via_points', self.pointsDurCallback, self.QoS)
 
     def QuinticTrajGen(self, t0, tf, q, v):
         quinticTrajMat = np.array([[1, t0, t0**2, t0**3, t0**4, t0**5],
@@ -39,9 +39,9 @@ class X2TrajGen(Node):
         return outputParam
 
     def QuinticEval(self, t, param):
-        q = param[0] + param[1]*t + param[2]*t**2 + param[3]*t**3 + param[4]*t**4 + param[5]*t**5
-        v = param[1] + 2*param[2]*t + 3*param[3]*t**2 + 4*param[4]*t**3 + 5*param[5]*t**4
-        return q, v
+        pr = param[0] + param[1]*t + param[2]*t**2 + param[3]*t**3 + param[4]*t**4 + param[5]*t**5
+        vr = param[1] + 2*param[2]*t + 3*param[3]*t**2 + 4*param[4]*t**3 + 5*param[5]*t**4
+        return pr, vr
 
     def pointsDurCallback(self, msg):
         self.points = msg.data[0:6]
@@ -50,12 +50,14 @@ class X2TrajGen(Node):
     def refPosVelTimerCallback(self):
         curTime = self.get_clock().now().to_msg().sec
         pointwVel = Float64MultiArray()
+        ###! CURRENTLY USING WRONG TIME !###
         pointwVel.data = [self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[0],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[0],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[0],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[1],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[1],
                           self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[1]]
+        #!##################################
         self.refPosVel.publish(pointwVel)
         
 def main(args=None):

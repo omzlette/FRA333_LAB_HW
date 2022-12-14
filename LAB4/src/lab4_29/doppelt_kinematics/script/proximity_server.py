@@ -8,7 +8,7 @@ from rclpy.qos import QoSProfile
 from builtin_interfaces.msg import Duration
 
 from sensor_msgs.msg import JointState
-from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import Float64MultiArray, Int64
 
 class X2ProximityServer(Node):
     def __init__(self):
@@ -33,6 +33,9 @@ class X2ProximityServer(Node):
         # Publisher
         self.IK_joint_pub = self.create_publisher(JointState, 'via_joint_states', qos_profile)
         self.IK_pub_timer = self.create_timer(1/self.rate, self.IK_pub_timer_callback)
+
+        self.clock = self.create_publisher(Int64, 'clock', qos_profile)
+        self.clock_timer = self.create_timer(1/1000, self.clock_timer_callback)
 
         # Variable Declaration
         self.FK_q = [0, 0, 0]
@@ -78,6 +81,11 @@ class X2ProximityServer(Node):
         joint_state.header.stamp = self.get_clock().now().to_msg()
         joint_state.name = ['joint1', 'joint2', 'joint3']
         joint_state.position = self.IK(self.IK_via_point) # Get q from IK 
+
+    def clock_timer_callback(self):
+        clock = Int64()
+        clock.data += 1
+        self.clock.publish(clock)
 
 def main(args=None):
     rclpy.init(args=args)
