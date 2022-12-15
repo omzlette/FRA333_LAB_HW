@@ -103,9 +103,9 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <xacro:addmesh mesh_file="link_3.stl"/>
         </xacro:addcollide>
-        <xacro:addinertia mass="0.199772">
-            <origin xyz="0.044973 0 0" rpy="0 0 0"/>
-            <inertia ixx="0.000088" ixy="0.0" ixz="0.0" iyy="0.000211" iyz="0.0" izz="0.000202" />
+        <xacro:addinertia mass="0.314355">
+            <origin xyz="0.101895 0 0" rpy="0 0 0"/>
+            <inertia ixx="0.000155" ixy="0.0" ixz="0.0" iyy="0.001167" iyz="0.0" izz="0.001141" />
         </xacro:addinertia> 
     </xacro:addlink>
 
@@ -126,7 +126,4 @@
     </joint>
     
     <link name="end_effector" />
-
-    
-
 </robot>

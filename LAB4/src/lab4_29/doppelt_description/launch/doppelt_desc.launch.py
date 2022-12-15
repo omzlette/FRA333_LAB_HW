@@ -30,15 +30,33 @@ def generate_launch_description():
         ]
     )
 
+    # doppelt_control Node
     X2_tracker = Node(
         package = "doppelt_control",
         executable = "tracker.py"
     )
+    X2_generator = Node(
+        package = "doppelt_control",
+        executable = "generator.py"
+    )
+    X2_scheduler = Node(
+        package = "doppelt_control",
+        executable = "scheduler.py"
+    )
 
-    # X2_kinematics = Node(
-    #     package = "doppelt_kinematic",
-    #     executable = "kinematic_server.py"
-    # )
+    # doppelt_kinematic Node
+    ktype = LaunchConfiguration('kinematicsType')
+    ktype_launch_arg = DeclareLaunchArgument('kinematicsType', default_value='forward')
+
+    X2_proximity = Node(
+        package = "doppelt_kinematics",
+        executable = "proximity_server.py"
+        arguments = [ktype]
+    )
+    X2_traject_tracking = Node(
+        package = "doppelt_kinematics",
+        executable = "traject_tracking_server.py"
+    )
 
     # Configure the node
     node_robot_state_publisher = Node(
@@ -88,7 +106,11 @@ def generate_launch_description():
         robot_controller_spawner,
         control_node,
         X2_tracker,
-        # X2_kinematics
+        X2_generator,
+        X2_scheduler,
+        ktype_launch_arg,
+        X2_proximity,
+        X2_traject_tracking
     ])
 
 
