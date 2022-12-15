@@ -26,7 +26,7 @@ class X2Tracker(Node):
 
         self.trackerEnabler = self.create_service(Enabler, 'enable', self.enable_callback)
 
-        self.publishEnable = self.create_publisher(Bool, 'joint_group_velocity_controller/commands', self.QoS)
+        self.publishEnable = self.create_publisher(Float64MultiArray, 'joint_group_velocity_controller/commands', self.QoS)
         self.pubTimer = self.create_timer(1/self.rate, self.pubTimerCallback)
 
         self.jointSsub = self.create_subscription(JointState, 'joint_states', self.jointStateCallback, self.QoS)
@@ -37,7 +37,7 @@ class X2Tracker(Node):
 
         self.refpos, self.refvel = np.array([0, 0, 0]), np.array([0, 0, 0])
 
-        self.Kp, self.Ki, self.prevError = 0, 0, np.array([0, 0, 0])
+        self.Kp, self.Ki, = 0, 0
         with open(os.path.join(os.path.dirname(__file__), '../'*5, 'src', 'lab4_29', 'doppelt_control', 'config' 'tracker_config.yaml'), 'r') as f:
             config = yaml.load(f, Loader=yaml.FullLoader)
             self.Kp, self.Ki = config['Kp'], config['Ki']
@@ -46,13 +46,17 @@ class X2Tracker(Node):
         self.enable = request.enable
 
     def pubTimerCallback(self):
-        if not self.sentEnableFlag and not self.enable:
+        if not self.sentEnableFlag and self.enable:
             self.publishEnable.publish(Bool(data=self.enable))
             self.sentEnableFlag = True
 
             # * output should be a 1x3 numpy array ([x, y, z])
             # TODO: Still don't know how to continue from here
+
+            PI = Float64MultiArray()
             PI = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki, self.currTime)
+
+            self.publishEnable.publish(PI)
 
         elif self.enable:
             self.publishEnable.publish(Bool(data=self.enable))
@@ -65,14 +69,19 @@ class X2Tracker(Node):
         self.get_logger().info(f"Joint State Received: {self.jointState}")
 
     def refPosVelCallback(self, msg):
-        self.refjpos, self.refjvel = msg.data[0:3], msg.data[3:6]
+        self.refjpos, self.refjvel = np.array(msg.data[0:3]), np.array(msg.data[3:6])
         self.get_logger().info(f"Ref Pos Vel Received: {msg}")
 
     def PIControl(self, refpos, refvel, curpos, Kp, Ki, time, limitInt=None):
-        # ! not sure if this is correct
+        init = False
+        if not init:
+            I = np.array([0, 0, 0])
+            prevError = np.array([0, 0, 0])
+            init = True
+
         error = refpos - curpos
-        P = refvel + Kp * error
-        I = I + Ki * (error + self.prevError) * time
+        P = Kp * error
+        I = I + Ki * (error + prevError) * time
 
         if limitInt is not None:
             if I > limitInt[1]:
@@ -80,9 +89,9 @@ class X2Tracker(Node):
             if I < limitInt[0]:
                 I = limitInt[0]
 
-        self.prevError = error
+        prevError = error
 
-        return P + I
+        return refvel + P + I
 
     def clockCallback(self, msg):
         self.currTime = msg.data

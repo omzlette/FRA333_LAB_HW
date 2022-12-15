@@ -35,7 +35,7 @@ class X2ProximityServer(Node):
         self.clock_timer = self.create_timer(1/1000, self.clock_timer_callback)
 
         # Variable Declaration
-        self.joint_q = [0, 0, 0]
+        self.joint_q = np.array([0, 0, 0])
 
     # FORWARD KINEMATICS ----------------------------------------------------------------------------
     def joint_sub_callback(self, msg:JointState):
@@ -54,7 +54,7 @@ class X2ProximityServer(Node):
 
     # INVERSE KINEMATICS ----------------------------------------------------------------------------
     def pos_sub_callback(self, msg:Float64MultiArray):
-        self.via_point = msg.data[0][1]
+        self.via_point = msg.data[3:6]
 
     def IK_pos(self, pos):
         # Calculate the joint angles

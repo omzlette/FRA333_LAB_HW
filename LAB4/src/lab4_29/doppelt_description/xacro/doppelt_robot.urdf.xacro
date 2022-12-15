@@ -114,14 +114,14 @@
         <child link="link_3"/>
         <origin rpy="0 0 0" xyz="0.15 0 0"/>
         <axis xyz="0 0 1"/>
-        <limit lower="${-pi/2}" upper="${pi/2}" effort="1" velocity="1"/>
+        <limit lower="${-5*pi/6}" upper="${5*pi/6}" effort="1" velocity="1"/>
         <dynamics damping="0" friction="0"/>
     </joint>
 
     <joint name="joint_eff" type="fixed">
         <parent link="link_3"/>
         <child link="end_effector"/>
-        <origin rpy="1.57 0 1.57" xyz="0.26 0 0"/>
+        <origin rpy="-1.57 0 0" xyz="0.2 0 0"/>
         <axis xyz="0 0 1"/>
     </joint>
     

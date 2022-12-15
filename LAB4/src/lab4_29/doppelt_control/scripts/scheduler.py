@@ -17,7 +17,7 @@ class X2Scheduler(Node):
         QoS = QoSProfile(depth=10)
 
         # Receive via points
-        with open(os.path.join(os.path.dirname(__file__), '../'*5, 'src', 'lab4_29', 'doppelt_control', 'config', 'scheduler_config.yaml'), 'r') as f:
+        with open(os.path.join(os.path.dirname(__file__), '../'*5, 'src', 'lab4_29', 'doppelt_control', 'config', 'via_points.yaml'), 'r') as f:
             self.allviaPts = yaml.load(f, Loader=yaml.FullLoader)
 
         self.enabler = self.create_client(Enabler, 'enabler')
@@ -25,26 +25,40 @@ class X2Scheduler(Node):
 
         self.reached = self.create_subscription(Bool, 'hasReached', self.reachedCallback, QoS)
         self.idxCount = 0
+        self.finidx = len(self.allviaPts) - 1
 
-        self.hasReachedFlag = True
+        self.hasReachedFlag = False
+
+        self.viaPtsInit = [0,0,0]
 
     def reachedCallback(self, msg):
-        if msg.data and self.hasReachedFlag:
-            self.allviaPts.pop(0)
-            self.idxCount += 1
-            self.enabler.publish(Bool(data=False))
-            self.hasReachedFlag = False
+        
+        if self.idxCount <= self.finidx:
+            if msg.data and self.hasReachedFlag:
+                self.allviaPts.pop(0)
+                self.idxCount += 1
+                self.hasReachedFlag = False
 
-        elif not msg.data:
-            viaPtsInit = self.allviaPts[self.idxCount]
-            viaPtsFinal = self.allviaPts[self.idxCount+1]
+            elif not msg.data and not self.hasReachedFlag:
+                viaPtsInit = self.allviaPts[self.idxCount]['coords']
+                viaPtsFinal = self.allviaPts[self.idxCount+1]['coords']
+                timeFinal = self.computeTime(viaPtsInit, viaPtsFinal)
+                
+                self.viaPts = viaPtsInit + viaPtsFinal + [timeFinal]
+                self.viaPtsPub.publish(Float64MultiArray(data=self.viaPts))
+                self.enabler.call_async(Bool(data=True))
+
+                self.hasReachedFlag = True
+        else:
+            #stop
+            viaPtsInit = viaPtsFinal
+            viaPtsFinal = self.viaPtsInit
             timeFinal = self.computeTime(viaPtsInit, viaPtsFinal)
-            
             self.viaPts = viaPtsInit + viaPtsFinal + [timeFinal]
             self.viaPtsPub.publish(Float64MultiArray(data=self.viaPts))
-            self.enabler.publish(Bool(data=True))
-
-            self.hasReachedFlag = True
+            
+            if msg.data:
+                self.enabler.call_async(Bool(data=False))
 
     def computeTime(self, viaPtsInit, viaPtsFinal):
         Vmax = 1.0
