@@ -35,7 +35,7 @@ class X2Tracker(Node):
         self.clock = self.create_subscription(Int64, 'clock', self.clockCallback, self.QoS)
         self.currTime = 0
 
-        self.refpos, self.refvel = np.array([0, 0, 0]), np.array([0, 0, 0])
+        self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
 
         self.Kp, self.Ki, = 0, 0
         tracker_config_path = '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/config/tracker_config.yaml'
@@ -65,7 +65,7 @@ class X2Tracker(Node):
         self.get_logger().info(f"Joint State Received: {self.jointState}")
 
     def refPosVelCallback(self, msg):
-        self.refjpos, self.refjvel = np.array(msg.data[0:3]), np.array(msg.data[3:6])
+        self.refjpos, self.refjvel = msg.data[0:3], msg.data[3:6]
         self.get_logger().info(f"Ref Pos Vel Received: {msg}")
 
     def PIControl(self, refpos, refvel, curpos, Kp, Ki, time, limitInt=None):
@@ -75,7 +75,7 @@ class X2Tracker(Node):
             prevError = np.array([0, 0, 0])
             init = True
 
-        error = refpos - np.array(curpos)
+        error = np.array(refpos) - np.array(curpos)
         P = Kp * error
         I = I + Ki * (error + prevError) * time
 
