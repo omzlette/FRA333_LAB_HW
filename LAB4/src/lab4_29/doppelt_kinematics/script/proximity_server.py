@@ -29,7 +29,7 @@ class X2ProximityServer(Node):
         self.pos_sub = self.create_subscription(Float64MultiArray, 'via_points', self.pos_sub_callback, 50)
 
         # Publisher
-        self.has_reach = self.create_publisher(Bool, 'has_reach', qos_profile)
+        self.has_reach = self.create_publisher(Bool, 'hasReached', qos_profile)
 
         self.clock = self.create_publisher(Int64, 'clock', qos_profile)
         self.clock_timer = self.create_timer(1/1000, self.clock_timer_callback)
