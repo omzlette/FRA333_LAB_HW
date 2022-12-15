@@ -26,19 +26,25 @@ class X2Scheduler(Node):
         self.reached = self.create_subscription(Bool, 'hasReached', self.reachedCallback, QoS)
         self.idxCount = 0
 
+        self.hasReachedFlag = True
+
     def reachedCallback(self, msg):
-        if msg.data:
+        if msg.data and self.hasReachedFlag:
             self.allviaPts.pop(0)
             self.idxCount += 1
             self.enabler.publish(Bool(data=False))
-        else:
+            self.hasReachedFlag = False
+
+        elif not msg.data:
             viaPtsInit = self.allviaPts[self.idxCount]
             viaPtsFinal = self.allviaPts[self.idxCount+1]
             timeFinal = self.computeTime(viaPtsInit, viaPtsFinal)
-
+            
             self.viaPts = viaPtsInit + viaPtsFinal + [timeFinal]
             self.viaPtsPub.publish(Float64MultiArray(data=self.viaPts))
             self.enabler.publish(Bool(data=True))
+
+            self.hasReachedFlag = True
 
     def computeTime(self, viaPtsInit, viaPtsFinal):
         Vmax = 1.0
