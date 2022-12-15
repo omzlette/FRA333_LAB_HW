@@ -30,6 +30,17 @@ def generate_launch_description():
         ]
     )
 
+    # Create rviz2 node
+    package_path = get_package_share_directory('doppelt_description')
+    rviz_file_path = os.path.join(package_path, 'config', 'doppelt_kinematics.rviz')
+
+    rviz = Node(
+       package='rviz2',
+       executable='rviz2',
+       name='rviz',
+       arguments=['-d', rviz_file_path],
+       output='screen')
+
     # doppelt_control Node
     X2_tracker = Node(
         package = "doppelt_control",
@@ -101,6 +112,7 @@ def generate_launch_description():
     # Run the node
     return LaunchDescription([
         gazebo,
+        rviz,
         node_robot_state_publisher,
         spawn_entity,
         joint_state_broadcaster_spawner,
