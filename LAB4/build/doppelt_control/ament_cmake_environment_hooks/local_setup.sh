@@ -2,7 +2,7 @@
 
 # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
 # or fall back to the destination set at configure time
-: ${AMENT_CURRENT_PREFIX:="/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/install/doppelt_control"}
+: ${AMENT_CURRENT_PREFIX:="/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control"}
 if [ ! -d "$AMENT_CURRENT_PREFIX" ]; then
   if [ -z "$COLCON_CURRENT_PREFIX" ]; then
     echo "The compile time prefix path '$AMENT_CURRENT_PREFIX' doesn't " \

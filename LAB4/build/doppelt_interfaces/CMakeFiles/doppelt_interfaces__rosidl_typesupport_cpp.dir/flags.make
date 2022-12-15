@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -Wall -std=gnu++14
 
 CXX_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"doppelt_interfaces\" -Ddoppelt_interfaces__rosidl_typesupport_cpp_EXPORTS
 
-CXX_INCLUDES = -I/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_generator_cpp -isystem /opt/ros/foxy/include 
+CXX_INCLUDES = -I/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_generator_cpp -isystem /opt/ros/foxy/include 
 

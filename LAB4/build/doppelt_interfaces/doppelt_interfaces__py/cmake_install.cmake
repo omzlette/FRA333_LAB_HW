@@ -1,8 +1,8 @@
-# Install script for directory: /home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/doppelt_interfaces__py
+# Install script for directory: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/doppelt_interfaces__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/install/doppelt_interfaces")
+  set(CMAKE_INSTALL_PREFIX "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_interfaces")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

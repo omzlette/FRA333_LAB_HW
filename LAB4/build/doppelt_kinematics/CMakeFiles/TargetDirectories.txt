@@ -1,0 +1,9 @@
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/CMakeFiles/install/local.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/CMakeFiles/install.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/CMakeFiles/list_install_components.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/CMakeFiles/rebuild_cache.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/CMakeFiles/edit_cache.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/CMakeFiles/test.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/CMakeFiles/install/strip.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/CMakeFiles/doppelt_kinematics_uninstall.dir
+/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/CMakeFiles/uninstall.dir

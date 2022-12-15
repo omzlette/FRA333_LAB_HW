@@ -30,6 +30,8 @@ ament_python_install_package(${PROJECT_NAME})
 # Install Python executables
 install(PROGRAMS
   scripts/tracker.py
+  scripts/scheduler.py
+  scripts/generator.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

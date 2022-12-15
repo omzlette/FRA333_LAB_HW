@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/install/doppelt_control/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +123,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/install/doppelt_control/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +181,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/install/doppelt_control/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +251,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/install/doppelt_control/${destination}")
+      set(destination "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -310,59 +310,59 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/doppelt_control/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/doppelt_control/environment")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/doppelt_control/environment")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/doppelt_control/environment")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/doppelt_control/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/doppelt_control/environment")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/doppelt_control/environment")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/doppelt_control/environment")
 
-# install(DIRECTORY "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/doppelt_control/" "DESTINATION" "lib/python3.8/site-packages/doppelt_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" DIRECTORY "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/doppelt_control/" "DESTINATION" "lib/python3.8/site-packages/doppelt_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/doppelt_control/" "DESTINATION" "lib/python3.8/site-packages/doppelt_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" DIRECTORY "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/doppelt_control/" "DESTINATION" "lib/python3.8/site-packages/doppelt_control" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
-# install(PROGRAMS "scripts/tracker.py" "DESTINATION" "lib/doppelt_control")
-ament_cmake_symlink_install_programs("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" PROGRAMS "scripts/tracker.py" "DESTINATION" "lib/doppelt_control")
+# install(PROGRAMS "scripts/tracker.py" "scripts/scheduler.py" "scripts/generator.py" "DESTINATION" "lib/doppelt_control")
+ament_cmake_symlink_install_programs("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" PROGRAMS "scripts/tracker.py" "scripts/scheduler.py" "scripts/generator.py" "DESTINATION" "lib/doppelt_control")
 
-# install(DIRECTORY "scripts" "DESTINATION" "share/doppelt_control")
-ament_cmake_symlink_install_directory("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" DIRECTORY "scripts" "DESTINATION" "share/doppelt_control")
+# install(DIRECTORY "config" "scripts" "DESTINATION" "share/doppelt_control")
+ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" DIRECTORY "config" "scripts" "DESTINATION" "share/doppelt_control")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/doppelt_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/doppelt_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/doppelt_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/doppelt_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/doppelt_control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/doppelt_control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/doppelt_control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/doppelt_control" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/doppelt_control/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/doppelt_control/environment")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/doppelt_control/environment")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/doppelt_control/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/doppelt_control/environment")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/doppelt_control/environment")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/doppelt_control/environment")
 
 # install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/doppelt_control/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/doppelt_control/environment")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/doppelt_control/environment")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/doppelt_control/environment")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/doppelt_control/environment")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/doppelt_control/environment")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/doppelt_control/environment")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/doppelt_control")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/doppelt_control")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/doppelt_control")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/doppelt_control")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/doppelt_control")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/doppelt_control")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/doppelt_control")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/doppelt_control")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/doppelt_control")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/doppelt_control")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/doppelt_control")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/doppelt_control")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/doppelt_control")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/doppelt_control")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/doppelt_control")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/doppelt_control")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/doppelt_control")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/doppelt_control")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/doppelt_control")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/doppelt_control")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/packages/doppelt_control" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/packages/doppelt_control" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/packages/doppelt_control" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/packages/doppelt_control" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_core/doppelt_controlConfig.cmake" "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_core/doppelt_controlConfig-version.cmake" "DESTINATION" "share/doppelt_control/cmake")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_core/doppelt_controlConfig.cmake" "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_core/doppelt_controlConfig-version.cmake" "DESTINATION" "share/doppelt_control/cmake")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_core/doppelt_controlConfig.cmake" "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_core/doppelt_controlConfig-version.cmake" "DESTINATION" "share/doppelt_control/cmake")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_core/doppelt_controlConfig.cmake" "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_core/doppelt_controlConfig-version.cmake" "DESTINATION" "share/doppelt_control/cmake")
 
-# install(FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/package.xml" "DESTINATION" "share/doppelt_control")
-ament_cmake_symlink_install_files("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/package.xml" "DESTINATION" "share/doppelt_control")
+# install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/package.xml" "DESTINATION" "share/doppelt_control")
+ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/package.xml" "DESTINATION" "share/doppelt_control")

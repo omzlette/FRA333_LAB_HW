@@ -17,7 +17,8 @@ class X2Scheduler(Node):
         QoS = QoSProfile(depth=10)
 
         # Receive via points
-        with open(os.path.join(os.path.dirname(__file__), '../'*5, 'src', 'lab4_29', 'doppelt_control', 'config', 'via_points.yaml'), 'r') as f:
+        via_point_path = '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/config/via_points.yaml'
+        with open(via_point_path, 'r') as f:
             self.allviaPts = yaml.load(f, Loader=yaml.FullLoader)
 
         self.enabler = self.create_client(Enabler, 'enabler')

@@ -1,8 +1,8 @@
-# Install script for directory: /home/omzlette/gitROS/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_description
+# Install script for directory: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/install/doppelt_description")
+  set(CMAKE_INSTALL_PREFIX "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,14 +38,14 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_description/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/install/doppelt_description/lib/python3.8/site-packages/doppelt_description"
+        "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/lib/python3.8/site-packages/doppelt_description"
       )
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_description/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

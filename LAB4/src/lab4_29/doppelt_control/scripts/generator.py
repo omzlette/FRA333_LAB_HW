@@ -16,7 +16,6 @@ class X2TrajGen(Node):
         self.rate = 10
 
         self.refPosVel = self.create_publisher(Float64MultiArray, 'reference/task_states', self.QoS)
-        self.refPosVelTimer = self.create_timer(1/self.rate, self.refPosVelTimerCallback)
         
         self.points = [0, 0, 0, 0, 0, 0]
         self.dur = 0
@@ -49,8 +48,6 @@ class X2TrajGen(Node):
     def pointsDurCallback(self, msg):
         self.points = msg.data[0:6]
         self.dur = msg.data[6]
-
-    def refPosVelTimerCallback(self):
         curTime = self.currTime
         pointwVel = Float64MultiArray()
         pointwVel.data = [self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[0],

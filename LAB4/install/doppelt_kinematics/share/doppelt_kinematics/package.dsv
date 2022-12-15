@@ -1,0 +1,11 @@
+source;share/doppelt_kinematics/hook/cmake_prefix_path.ps1
+source;share/doppelt_kinematics/hook/cmake_prefix_path.dsv
+source;share/doppelt_kinematics/hook/cmake_prefix_path.sh
+source;share/doppelt_kinematics/hook/pythonpath.ps1
+source;share/doppelt_kinematics/hook/pythonpath.dsv
+source;share/doppelt_kinematics/hook/pythonpath.sh
+source;share/doppelt_kinematics/local_setup.bash
+source;share/doppelt_kinematics/local_setup.dsv
+source;share/doppelt_kinematics/local_setup.ps1
+source;share/doppelt_kinematics/local_setup.sh
+source;share/doppelt_kinematics/local_setup.zsh

@@ -1,9 +1,9 @@
 {
   "package_name": "doppelt_interfaces",
-  "output_dir": "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_typesupport_fastrtps_cpp/doppelt_interfaces",
+  "output_dir": "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_typesupport_fastrtps_cpp/doppelt_interfaces",
   "template_dir": "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_cpp/resource",
   "idl_tuples": [
-    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_adapter/doppelt_interfaces:srv/Enabler.idl"
+    "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_adapter/doppelt_interfaces:srv/Enabler.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/foxy/share/std_msgs/msg/Bool.idl",
@@ -48,7 +48,7 @@
     "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_cpp/resource/msg__type_support.cpp.em",
     "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_cpp/resource/srv__rosidl_typesupport_fastrtps_cpp.hpp.em",
     "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_cpp/resource/srv__type_support.cpp.em",
-    "/home/omzlette/gitROS/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_adapter/doppelt_interfaces/srv/Enabler.idl",
+    "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_adapter/doppelt_interfaces/srv/Enabler.idl",
     "/opt/ros/foxy/share/std_msgs/msg/Bool.idl",
     "/opt/ros/foxy/share/std_msgs/msg/Byte.idl",
     "/opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl",

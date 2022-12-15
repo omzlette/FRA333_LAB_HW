@@ -38,7 +38,8 @@ class X2Tracker(Node):
         self.refpos, self.refvel = np.array([0, 0, 0]), np.array([0, 0, 0])
 
         self.Kp, self.Ki, = 0, 0
-        with open(os.path.join(os.path.dirname(__file__), '../'*5, 'src', 'lab4_29', 'doppelt_control', 'config' 'tracker_config.yaml'), 'r') as f:
+        tracker_config_path = '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/config/tracker_config.yaml'
+        with open(tracker_config_path, 'r') as f:
             config = yaml.load(f, Loader=yaml.FullLoader)
             self.Kp, self.Ki = config['Kp'], config['Ki']
 
@@ -49,9 +50,6 @@ class X2Tracker(Node):
         if not self.sentEnableFlag and self.enable:
             self.publishEnable.publish(Bool(data=self.enable))
             self.sentEnableFlag = True
-
-            # * output should be a 1x3 numpy array ([x, y, z])
-            # TODO: Still don't know how to continue from here
 
             PI = Float64MultiArray()
             PI = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki, self.currTime)
