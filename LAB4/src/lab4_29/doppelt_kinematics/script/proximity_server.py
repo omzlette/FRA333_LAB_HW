@@ -8,42 +8,38 @@ from rclpy.qos import QoSProfile
 from builtin_interfaces.msg import Duration
 
 from sensor_msgs.msg import JointState
-from std_msgs.msg import Float64MultiArray, Int64
+from std_msgs.msg import Float64MultiArray, Int64, Bool
 
 class X2ProximityServer(Node):
     def __init__(self):
         super().__init__('proximity_server')
         self.rate = 10
         qos_profile = QoSProfile(depth=10)
-        if len(sys.argv) > 2:
+        if len(sys.argv) > 0:
             self.choice = float(sys.argv[1])
         else:
             self.choice = 'forward'
 
         # Forward Kinematics
         # Subscriber
-        self.FK_joint_sub = self.create_subscription(JointState, 'joint_states', self.FK_sub_callback, 50)
-        # Publisher
-        self.FK_end_pub = self.create_publisher(Float64MultiArray, 'task_states', qos_profile)
-        self.FK_pub_timer = self.create_timer(1/self.rate, self.FK_pub_timer_callback)
+        self.joint_sub = self.create_subscription(JointState, 'joint_states', self.joint_sub_callback, 50)
 
         # Inverse Kinematics
         # Subscriber
-        self.IK_end_sub = self.create_subscription(Float64MultiArray, 'via_points', self.IK_sub_callback, 50)
+        self.pos_sub = self.create_subscription(Float64MultiArray, 'via_points', self.pos_sub_callback, 50)
+
         # Publisher
-        self.IK_joint_pub = self.create_publisher(JointState, 'via_joint_states', qos_profile)
-        self.IK_pub_timer = self.create_timer(1/self.rate, self.IK_pub_timer_callback)
+        self.has_reach = self.create_publisher(Bool, 'has_reach', qos_profile)
 
         self.clock = self.create_publisher(Int64, 'clock', qos_profile)
         self.clock_timer = self.create_timer(1/1000, self.clock_timer_callback)
 
         # Variable Declaration
-        self.FK_q = [0, 0, 0]
+        self.joint_q = [0, 0, 0]
 
     # FORWARD KINEMATICS ----------------------------------------------------------------------------
-
-    def FK_sub_callback(self, msg:JointState):
-        self.FK_q = msg.position
+    def joint_sub_callback(self, msg:JointState):
+        self.joint_q = msg.position
     
     def FK(self, qin):
         # Calculate the position of the end effector
@@ -56,18 +52,16 @@ class X2ProximityServer(Node):
         end_pos = [x, y, z]
         return end_pos
 
-    def FK_pub_timer_callback(self):
-        end_pos = Float64MultiArray()
-        end_pos.data = self.FK(self.FK_q)
-        self.FK_end_pub.publish(end_pos)
-
     # INVERSE KINEMATICS ----------------------------------------------------------------------------
+    def pos_sub_callback(self, msg:Float64MultiArray):
+        self.via_point = msg.data[0][1]
 
-    def IK_sub_callback(self, msg:Float64MultiArray):
-        self.IK_via_point = msg.data[0][1]
-
-    def IK_pos(self, x, y, z):
+    def IK_pos(self, pos):
         # Calculate the joint angles
+
+        x = pos[0]
+        y = pos[1]
+        z = pos[2]
 
         # Define the lengths of the links
         l1 = l3 = 0.15
@@ -89,17 +83,34 @@ class X2ProximityServer(Node):
         q = [q1, q2, q3]
         
         return q
-    
-    def IK_pub_timer_callback(self):
-        joint_state = JointState()
-        joint_state.header.stamp = self.get_clock().now().to_msg()
-        joint_state.name = ['joint1', 'joint2', 'joint3']
-        joint_state.position = self.IK(self.IK_via_point) # Get q from IK 
 
+    def has_reach_pub(self):
+        reach = Bool()
+        if self.choice == "forward":
+            pos_FK = self.FK(self.joint_q)
+            pos_tolerance = [self.via_point[0]-pos_FK[0], self.via_point[1]-pos_FK[1], self.via_point[2]-pos_FK[2]]
+            if np.linalg.norm(pos_tolerance) < 0.001:
+                reach.data = True
+                self.has_reach.publish(reach)
+            else:
+                reach.data = False
+                self.has_reach.publish(reach)
+        
+        elif self.choice == "inverse":
+            q_IK = self.IK_pos(self.via_point)
+            q_tolerance = [q_IK[0]-self.joint_q[0], q_IK[1]-self.joint_q[1], q_IK[2]-self.joint_q[2]]
+            if np.linalg.norm(q_tolerance) < 0.001:
+                reach.data = True
+                self.has_reach.publish(reach)
+            else:
+                reach.data = False
+                self.has_reach.publish(reach)
+            
     def clock_timer_callback(self):
         clock = Int64()
         clock.data += 1
         self.clock.publish(clock)
+        self.has_reach_pub()
 
 def main(args=None):
     rclpy.init(args=args)

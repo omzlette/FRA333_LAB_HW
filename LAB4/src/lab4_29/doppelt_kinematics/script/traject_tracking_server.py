@@ -20,7 +20,7 @@ class X2TrajectTrack(Node):
         self.ref_task_sub = self.create_subscription(Float64MultiArray, 'reference/task_states', self.ref_task_sub_callback, 50)
 
         # Create publisher
-        self.ref_joint_pub = self.create_publisher(JointState, 'reference/joint_states', qos_profile)
+        self.ref_joint_pub = self.create_publisher(Float64MultiArray, 'reference/joint_states', qos_profile)
         self.ref_joint_pub_timer = self.create_timer(1/self.rate, self.ref_joint_pub_timer_callback)
 
         # Variable Declaration
@@ -97,15 +97,13 @@ class X2TrajectTrack(Node):
 
     def ref_joint_pub_timer_callback(self):
         # Publish Clock and Joint State
-        joint_state = JointState()
-        joint_state.header.stamp = self.get_clock().now().to_msg()
-        joint_state.name = ['joint1', 'joint2', 'joint3']
+        joint_state = Float64MultiArray
 
         q = self.IK_pos(self.end_pos[0], self.end_pos[1], self.end_pos[2])
-        joint_state.position = q
+        joint_state.data.append(q)
 
         q_dot = self.IK_vel(self.end_vel[0], self.end_vel[1], self.end_vel[2])
-        joint_state.velocity = q_dot
+        joint_state.data.append(q_dot)
 
         self.ref_joint_pub.publish(joint_state)
 
