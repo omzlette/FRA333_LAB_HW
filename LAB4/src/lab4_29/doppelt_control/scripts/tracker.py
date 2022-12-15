@@ -61,9 +61,7 @@ class X2Tracker(Node):
             self.sentEnableFlag = False
 
     def jointStateCallback(self, msg):
-        self.jointState.header.stamp = self.get_clock().now().to_msg()
-        self.jointState.name = msg.name
-        self.jointState.position = np.array(msg.position)
+        self.jointState = msg
         self.get_logger().info(f"Joint State Received: {self.jointState}")
 
     def refPosVelCallback(self, msg):
@@ -77,7 +75,7 @@ class X2Tracker(Node):
             prevError = np.array([0, 0, 0])
             init = True
 
-        error = refpos - curpos
+        error = refpos - np.array(curpos)
         P = Kp * error
         I = I + Ki * (error + prevError) * time
 
