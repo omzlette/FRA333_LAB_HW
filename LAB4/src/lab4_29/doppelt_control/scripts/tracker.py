@@ -25,7 +25,7 @@ class X2Tracker(Node):
         self.enable = True
         self.sentEnableFlag = False
 
-        self.trackerEnabler = self.create_service(Enabler, 'enable', self.enable_callback)
+        self.trackerEnabler = self.create_service(Enabler, 'enabler', self.enable_callback)
 
         self.publishEnable = self.create_publisher(Float64MultiArray, '/joint_group_velocity_controller/commands', self.QoS)
         # self.pubTimer = self.create_timer(1/self.rate, self.pubTimerCallback)
@@ -38,11 +38,11 @@ class X2Tracker(Node):
 
         self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
 
-        self.Kp, self.Ki, = 0, 0
+        self.Kp, self.Ki, = np.array([0, 0, 0]), np.array([0, 0, 0])
         tracker_config_path = '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/config/tracker_config.yaml'
         with open(tracker_config_path, 'r') as f:
             config = yaml.load(f, Loader=yaml.FullLoader)
-            self.Kp, self.Ki = config['Kp'], config['Ki']
+            self.Kp, self.Ki = np.array(config['Kp']), np.array(config['Ki'])
 
     def enable_callback(self, request:Enabler.Request):
         self.enable = request.enable
@@ -66,14 +66,14 @@ class X2Tracker(Node):
         
     def refPosVelCallback(self, msg):
         self.refpos, self.refvel = msg.data[0:3], msg.data[3:6]
-        self.get_logger().info(f"Pos: {self.refpos} Vel: {self.refvel}")
+        # self.get_logger().info(f"Pos: {self.refpos} Vel: {self.refvel}")
 
-        if self.enable:
-            # self.get_logger().info(f"pos: {self.refpos} cur: {type(self.jointState.position)}")
-            PI = Float64MultiArray()
-            PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki, self.currTime)
-            # self.get_logger().info(f"PI: {PI}")
-            self.publishEnable.publish(PI)
+        # if self.enable:
+        # self.get_logger().info(f"pos: {self.refpos} cur: {type(self.jointState.position)}")
+        PI = Float64MultiArray()
+        PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki, self.currTime)
+        # self.get_logger().info(f"PI: {PI}")
+        self.publishEnable.publish(PI)
 
     def PIControl(self, refpos, refvel, curpos, Kp, Ki, time, limitInt=None):
         init = False

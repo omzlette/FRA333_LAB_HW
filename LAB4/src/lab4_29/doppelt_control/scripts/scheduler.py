@@ -27,27 +27,19 @@ class X2Scheduler(Node):
 
         self.reached = self.create_subscription(Bool, 'hasReached', self.reachedCallback, QoS)
 
-        self.clock = self.create_subscription(Int64, 'doppelt_clock', self.clockCallback, self.QoS)
+        self.clock = self.create_subscription(Int64, 'doppelt_clock', self.clockCallback, QoS)
         self.currTime = 0
 
         self.hasReachedFlag = False
 
         self.viaPtsInit = [0,0,0]
 
-        self.testx = 0.2
-        self.testy = 0
-        self.testz = 0.1
-
-        self.allviaPts = [{'coords': [self.testx, self.testy, self.testz], 'marker': True}
-                        ,{'coords': [self.testx, self.testy + .1, self.testz], 'marker': True}
-                        ,{'coords': [self.testx, self.testy, self.testz + .1], 'marker': True}
-                        ,{'coords': [self.testx, self.testy + .2, self.testz], 'marker': True}
-                        ,{'coords': [self.testx, self.testy, self.testz + .2], 'marker': True}
-                        ,{'coords': [self.testx, self.testy + .3, self.testz], 'marker': True}
-                        ,{'coords': [self.testx, self.testy, self.testz + .3], 'marker': True}
-                        ,{'coords': [self.testx, self.testy + .4, self.testz], 'marker': True}
-                        ,{'coords': [self.testx, self.testy, self.testz + .4], 'marker': True}
-                        ,{'coords': [self.testx, self.testy + .5, self.testz], 'marker': True}]
+        self.startX, self.startY, self.startZ = 0.25, 0, 0.15
+        self.step = 0.1
+        
+        self.allviaPts = [{'coords': [0, 0.35, 0.15], 'marker': True}, # HOME
+                            {'coords': [0, 0.35, 0.15], 'marker':True}] # STARTING POS
+        
 
     def reachedCallback(self, msg):
         

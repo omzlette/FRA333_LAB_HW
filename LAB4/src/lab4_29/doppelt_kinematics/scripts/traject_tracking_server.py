@@ -25,6 +25,8 @@ class X2TrajectTrack(Node):
         # Variable Declaration
         self.end_pos = [0, 0, 0]
         self.end_vel = [0, 0, 0]
+        self.old_q = [0, 0, 0]
+        self.old_vel = [0, 0, 0]
 
     def IK_pos(self, x, y, z):
         # Calculate the joint angles
@@ -38,6 +40,12 @@ class X2TrajectTrack(Node):
 
         # Calculate the joint angles q3
         c3 = ((z-l1)**2 + x**2 + y**2 - l3**2 - le**2)/(2*l3*le)
+
+        # Check if the solution is impossible
+        if c3**2 > 1:
+            self.end_vel = self.old_vel
+            return self.old_q
+
         s3 = np.sqrt(1-c3**2)
         q3 = np.arctan2(s3, c3)
 
@@ -47,7 +55,9 @@ class X2TrajectTrack(Node):
         q2 = np.arctan2(s2, c2)
 
         q = [q1, q2, q3]
-        
+        self.old_q = q
+        self.old_vel = self.end_vel
+
         return q
 
     def Jacobian_Matrix(self):
@@ -96,7 +106,6 @@ class X2TrajectTrack(Node):
 
         # Publish Clock and Joint State
         joint_state = Float64MultiArray()
-
 
         q = self.IK_pos(self.end_pos[0], self.end_pos[1], self.end_pos[2])
 

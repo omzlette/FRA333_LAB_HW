@@ -38,6 +38,7 @@ class X2ProximityServer(Node):
 
         # Variable Declaration
         self.joint_q = np.array([0, 0, 0])
+        self.old_q = [0, 0, 0]
 
     # FORWARD KINEMATICS ----------------------------------------------------------------------------
     def joint_sub_callback(self, msg:JointState):
@@ -59,12 +60,8 @@ class X2ProximityServer(Node):
     def pos_sub_callback(self, msg:Float64MultiArray):
         self.via_point = msg.data[3:6]
 
-    def IK_pos(self, pos):
+    def IK_pos(self, x, y, z):
         # Calculate the joint angles
-
-        x = pos[0]
-        y = pos[1]
-        z = pos[2]
 
         # Define the lengths of the links
         l1 = l3 = 0.15
@@ -75,6 +72,11 @@ class X2ProximityServer(Node):
 
         # Calculate the joint angles q3
         c3 = ((z-l1)**2 + x**2 + y**2 - l3**2 - le**2)/(2*l3*le)
+
+        # Check if the solution is impossible
+        if c3**2 > 1:
+            return self.old_q
+
         s3 = np.sqrt(1-c3**2)
         q3 = np.arctan2(s3, c3)
 
@@ -84,7 +86,8 @@ class X2ProximityServer(Node):
         q2 = np.arctan2(s2, c2)
 
         q = [q1, q2, q3]
-        
+        self.old_q = q
+
         return q
             
     def has_reach_timer_callback(self):
