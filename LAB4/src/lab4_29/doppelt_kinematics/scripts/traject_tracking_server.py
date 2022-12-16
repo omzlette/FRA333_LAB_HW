@@ -21,7 +21,6 @@ class X2TrajectTrack(Node):
 
         # Create publisher
         self.ref_joint_pub = self.create_publisher(Float64MultiArray, 'reference/joint_states', qos_profile)
-        self.ref_joint_pub_timer = self.create_timer(1/self.rate, self.ref_joint_pub_timer_callback)
 
         # Variable Declaration
         self.end_pos = [0, 0, 0]
@@ -95,7 +94,6 @@ class X2TrajectTrack(Node):
         self.end_pos = msg.data[0:3]
         self.end_vel = msg.data[3:6]
 
-    def ref_joint_pub_timer_callback(self):
         # Publish Clock and Joint State
         joint_state = Float64MultiArray()
 
@@ -106,6 +104,7 @@ class X2TrajectTrack(Node):
         joint_state.data = q_dot
 
         self.ref_joint_pub.publish(joint_state)
+        
 
 def main(args=None):
     rclpy.init(args=args)

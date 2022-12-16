@@ -17,32 +17,44 @@ class X2Scheduler(Node):
         QoS = QoSProfile(depth=10)
 
         # Receive via points
-        via_point_path = '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/config/via_points.yaml'
-        with open(via_point_path, 'r') as f:
-            self.allviaPts = yaml.load(f, Loader=yaml.FullLoader)
+        # via_point_path = '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/config/via_points.yaml'
+        # with open(via_point_path, 'r') as f:
+        #     self.allviaPts = yaml.load(f, Loader=yaml.FullLoader)
 
         self.enabler = self.create_client(Enabler, 'enabler')
         self.viaPtsPub = self.create_publisher(Float64MultiArray, 'via_points', QoS)
 
         self.reached = self.create_subscription(Bool, 'hasReached', self.reachedCallback, QoS)
-        self.idxCount = 0
-        self.finidx = len(self.allviaPts) - 1
 
         self.hasReachedFlag = False
 
         self.viaPtsInit = [0,0,0]
 
+        self.testx = 0.2
+        self.testy = 0
+        self.testz = 0.1
+
+        self.allviaPts = [{'coords': [self.testx, self.testy, self.testz], 'marker': True}
+                        ,{'coords': [self.testx, self.testy + .1, self.testz], 'marker': True}
+                        ,{'coords': [self.testx, self.testy, self.testz + .1], 'marker': True}
+                        ,{'coords': [self.testx, self.testy + .2, self.testz], 'marker': True}
+                        ,{'coords': [self.testx, self.testy, self.testz + .2], 'marker': True}
+                        ,{'coords': [self.testx, self.testy + .3, self.testz], 'marker': True}
+                        ,{'coords': [self.testx, self.testy, self.testz + .3], 'marker': True}
+                        ,{'coords': [self.testx, self.testy + .4, self.testz], 'marker': True}
+                        ,{'coords': [self.testx, self.testy, self.testz + .4], 'marker': True}
+                        ,{'coords': [self.testx, self.testy + .5, self.testz], 'marker': True}]
+
     def reachedCallback(self, msg):
         
-        if self.idxCount <= self.finidx:
+        if len(self.allviaPts) >= 2:
             if msg.data and self.hasReachedFlag:
                 self.allviaPts.pop(0)
-                self.idxCount += 1
                 self.hasReachedFlag = False
 
             elif not msg.data and not self.hasReachedFlag:
-                viaPtsInit = self.allviaPts[self.idxCount]['coords']
-                viaPtsFinal = self.allviaPts[self.idxCount+1]['coords']
+                viaPtsInit = self.allviaPts[0]['coords']
+                viaPtsFinal = self.allviaPts[1]['coords']
                 timeFinal = self.computeTime(viaPtsInit, viaPtsFinal)
                 
                 self.viaPts = viaPtsInit + viaPtsFinal + [timeFinal]

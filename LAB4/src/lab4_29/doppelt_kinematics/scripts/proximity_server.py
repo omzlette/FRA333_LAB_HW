@@ -30,6 +30,7 @@ class X2ProximityServer(Node):
 
         # Publisher
         self.has_reach = self.create_publisher(Bool, 'hasReached', qos_profile)
+        self.has_reach_timer = self.create_timer(1/self.rate, self.has_reach_timer_callback)
 
         self.clock = self.create_publisher(Int64, 'clock', qos_profile)
         self.clock_timer = self.create_timer(1/1000, self.clock_timer_callback)
@@ -49,6 +50,7 @@ class X2ProximityServer(Node):
         x = (l3*np.cos(q[1]) + le*np.cos(q[1] + q[2]))*np.cos(q[0])
         y = (l3*np.cos(q[1]) + le*np.cos(q[1] + q[2]))*np.sin(q[0])
         z = l1 + l3*np.sin(q[1]) + le*np.sin(q[1] + q[2])
+
         end_pos = [x, y, z]
         return end_pos
 
@@ -83,8 +85,8 @@ class X2ProximityServer(Node):
         q = [q1, q2, q3]
         
         return q
-
-    def has_reach_pub(self):
+            
+    def has_reach_timer_callback(self):
         reach = Bool()
         if self.choice == "forward":
             pos_FK = self.FK(self.joint_q)
@@ -105,12 +107,11 @@ class X2ProximityServer(Node):
             else:
                 reach.data = False
                 self.has_reach.publish(reach)
-            
+
     def clock_timer_callback(self):
         clock = Int64()
         clock.data += 1
         self.clock.publish(clock)
-        self.has_reach_pub()
 
 def main(args=None):
     rclpy.init(args=args)

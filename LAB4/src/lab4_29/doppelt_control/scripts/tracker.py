@@ -21,7 +21,7 @@ class X2Tracker(Node):
         self.rate = 10
 
         self.jointState = JointState()
-        self.enable = False
+        self.enable = True
         self.sentEnableFlag = False
 
         self.trackerEnabler = self.create_service(Enabler, 'enable', self.enable_callback)
@@ -62,11 +62,11 @@ class X2Tracker(Node):
 
     def jointStateCallback(self, msg):
         self.jointState = msg
-        self.get_logger().info(f"Joint State Received: {self.jointState}")
+        # self.get_logger().info(f"Joint State Received: {self.jointState}")
 
     def refPosVelCallback(self, msg):
         self.refjpos, self.refjvel = msg.data[0:3], msg.data[3:6]
-        self.get_logger().info(f"Ref Pos Vel Received: {msg}")
+        # self.get_logger().info(f"Ref Pos Vel Received: {msg}")
 
     def PIControl(self, refpos, refvel, curpos, Kp, Ki, time, limitInt=None):
         init = False
