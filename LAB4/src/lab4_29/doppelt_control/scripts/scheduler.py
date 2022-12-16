@@ -85,7 +85,10 @@ class X2Scheduler(Node):
         relativeDist = np.linalg.norm(np.array(viaPtsFinal) - np.array(viaPtsInit))
 
         time = (Amax/Jmax) + (Vmax/Amax) + (relativeDist/Vmax)
-        return time
+        return time + self.currTime
+    
+    def clockCallback(self, msg):
+        self.currTime = msg.data / 1000
 
 def main(args=None):
     rclpy.init(args=args)
