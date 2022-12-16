@@ -17,7 +17,7 @@ class X2TrajectTrack(Node):
         qos_profile = QoSProfile(depth=10)       
 
         # Create Subscriber
-        self.ref_task_sub = self.create_subscription(Float64MultiArray, 'reference/task_states', self.ref_task_sub_callback, 50)
+        self.ref_task_sub = self.create_subscription(Float64MultiArray, 'reference/task_states', self.ref_task_sub_callback, qos_profile)
 
         # Create publisher
         self.ref_joint_pub = self.create_publisher(Float64MultiArray, 'reference/joint_states', qos_profile)
@@ -97,11 +97,11 @@ class X2TrajectTrack(Node):
         # Publish Clock and Joint State
         joint_state = Float64MultiArray()
 
+
         q = self.IK_pos(self.end_pos[0], self.end_pos[1], self.end_pos[2])
-        joint_state.data = q
 
         q_dot = self.IK_vel(self.end_vel[0], self.end_vel[1], self.end_vel[2])
-        joint_state.data = q_dot
+        joint_state.data = q + q_dot
 
         self.ref_joint_pub.publish(joint_state)
         

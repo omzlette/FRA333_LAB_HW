@@ -16,29 +16,6 @@
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace std_msgs
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const std_msgs::msg::Bool &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  std_msgs::msg::Bool &);
-size_t get_serialized_size(
-  const std_msgs::msg::Bool &,
-  size_t current_alignment);
-size_t
-max_serialized_size_Bool(
-  bool & full_bounded,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace std_msgs
-
 
 namespace doppelt_interfaces
 {
@@ -56,9 +33,7 @@ cdr_serialize(
   eprosima::fastcdr::Cdr & cdr)
 {
   // Member: enable
-  std_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.enable,
-    cdr);
+  cdr << (ros_message.enable ? true : false);
   return true;
 }
 
@@ -69,8 +44,11 @@ cdr_deserialize(
   doppelt_interfaces::srv::Enabler_Request & ros_message)
 {
   // Member: enable
-  std_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.enable);
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.enable = tmp ? true : false;
+  }
 
   return true;
 }
@@ -89,10 +67,11 @@ get_serialized_size(
   (void)wchar_size;
 
   // Member: enable
-
-  current_alignment +=
-    std_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.enable, current_alignment);
+  {
+    size_t item_size = sizeof(ros_message.enable);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -116,12 +95,7 @@ max_serialized_size_Enabler_Request(
   {
     size_t array_size = 1;
 
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        std_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_Bool(
-        full_bounded, current_alignment);
-    }
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   return current_alignment - initial_alignment;

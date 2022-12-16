@@ -40,9 +40,9 @@ void Enabler_Request_fini_function(void * message_memory)
 static const ::rosidl_typesupport_introspection_cpp::MessageMember Enabler_Request_message_member_array[1] = {
   {
     "enable",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<std_msgs::msg::Bool>(),  // members of sub message
+    nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound

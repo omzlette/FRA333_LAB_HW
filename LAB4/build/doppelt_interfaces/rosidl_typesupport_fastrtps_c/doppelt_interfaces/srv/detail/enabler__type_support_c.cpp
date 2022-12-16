@@ -34,22 +34,8 @@ extern "C"
 {
 #endif
 
-#include "std_msgs/msg/detail/bool__functions.h"  // enable
 
 // forward declare type support functions
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_doppelt_interfaces
-size_t get_serialized_size_std_msgs__msg__Bool(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_doppelt_interfaces
-size_t max_serialized_size_std_msgs__msg__Bool(
-  bool & full_bounded,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_doppelt_interfaces
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, std_msgs, msg, Bool)();
 
 
 using _Enabler_Request__ros_msg_type = doppelt_interfaces__srv__Enabler_Request;
@@ -65,16 +51,7 @@ static bool _Enabler_Request__cdr_serialize(
   const _Enabler_Request__ros_msg_type * ros_message = static_cast<const _Enabler_Request__ros_msg_type *>(untyped_ros_message);
   // Field name: enable
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, std_msgs, msg, Bool
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->enable, cdr))
-    {
-      return false;
-    }
+    cdr << (ros_message->enable ? true : false);
   }
 
   return true;
@@ -91,16 +68,9 @@ static bool _Enabler_Request__cdr_deserialize(
   _Enabler_Request__ros_msg_type * ros_message = static_cast<_Enabler_Request__ros_msg_type *>(untyped_ros_message);
   // Field name: enable
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, std_msgs, msg, Bool
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->enable))
-    {
-      return false;
-    }
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->enable = tmp ? true : false;
   }
 
   return true;
@@ -121,9 +91,11 @@ size_t get_serialized_size_doppelt_interfaces__srv__Enabler_Request(
   (void)wchar_size;
 
   // field.name enable
-
-  current_alignment += get_serialized_size_std_msgs__msg__Bool(
-    &(ros_message->enable), current_alignment);
+  {
+    size_t item_size = sizeof(ros_message->enable);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -152,12 +124,7 @@ size_t max_serialized_size_doppelt_interfaces__srv__Enabler_Request(
   {
     size_t array_size = 1;
 
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        max_serialized_size_std_msgs__msg__Bool(
-        full_bounded, current_alignment);
-    }
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
   return current_alignment - initial_alignment;

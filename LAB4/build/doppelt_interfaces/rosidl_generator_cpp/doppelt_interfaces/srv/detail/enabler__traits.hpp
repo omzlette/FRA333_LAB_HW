@@ -10,10 +10,6 @@
 #include <stdint.h>
 #include <type_traits>
 
-// Include directives for member types
-// Member 'enable'
-#include "std_msgs/msg/detail/bool__traits.hpp"
-
 namespace rosidl_generator_traits
 {
 
@@ -31,11 +27,11 @@ inline const char * name<doppelt_interfaces::srv::Enabler_Request>()
 
 template<>
 struct has_fixed_size<doppelt_interfaces::srv::Enabler_Request>
-  : std::integral_constant<bool, has_fixed_size<std_msgs::msg::Bool>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<doppelt_interfaces::srv::Enabler_Request>
-  : std::integral_constant<bool, has_bounded_size<std_msgs::msg::Bool>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<doppelt_interfaces::srv::Enabler_Request>

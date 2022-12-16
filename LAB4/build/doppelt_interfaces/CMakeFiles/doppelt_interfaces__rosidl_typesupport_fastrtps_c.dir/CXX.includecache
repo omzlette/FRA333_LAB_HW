@@ -29,8 +29,6 @@ doppelt_interfaces/srv/detail/enabler__functions.h
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_typesupport_fastrtps_c/doppelt_interfaces/srv/detail/doppelt_interfaces/srv/detail/enabler__functions.h
 fastcdr/Cdr.h
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_typesupport_fastrtps_c/doppelt_interfaces/srv/detail/fastcdr/Cdr.h
-std_msgs/msg/detail/bool__functions.h
-/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_typesupport_fastrtps_c/doppelt_interfaces/srv/detail/std_msgs/msg/detail/bool__functions.h
 rosidl_typesupport_fastrtps_cpp/service_type_support.h
 /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_interfaces/rosidl_typesupport_fastrtps_c/doppelt_interfaces/srv/detail/rosidl_typesupport_fastrtps_cpp/service_type_support.h
 rosidl_typesupport_cpp/service_type_support.hpp
@@ -450,28 +448,6 @@ rosidl_typesupport_fastrtps_cpp/message_type_support.h
 
 /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
 
-/opt/ros/foxy/include/std_msgs/msg/detail/bool__functions.h
-stdbool.h
--
-stdlib.h
--
-rosidl_runtime_c/visibility_control.h
-/opt/ros/foxy/include/std_msgs/msg/detail/rosidl_runtime_c/visibility_control.h
-std_msgs/msg/rosidl_generator_c__visibility_control.h
-/opt/ros/foxy/include/std_msgs/msg/detail/std_msgs/msg/rosidl_generator_c__visibility_control.h
-std_msgs/msg/detail/bool__struct.h
-/opt/ros/foxy/include/std_msgs/msg/detail/std_msgs/msg/detail/bool__struct.h
-
-/opt/ros/foxy/include/std_msgs/msg/detail/bool__struct.h
-stdbool.h
--
-stddef.h
--
-stdint.h
--
-
-/opt/ros/foxy/include/std_msgs/msg/rosidl_generator_c__visibility_control.h
-
 rosidl_generator_c/doppelt_interfaces/msg/rosidl_generator_c__visibility_control.h
 
 rosidl_generator_c/doppelt_interfaces/srv/detail/enabler__functions.h
@@ -493,8 +469,6 @@ stddef.h
 -
 stdint.h
 -
-std_msgs/msg/detail/bool__struct.h
-rosidl_generator_c/doppelt_interfaces/srv/detail/std_msgs/msg/detail/bool__struct.h
 
 rosidl_generator_c/doppelt_interfaces/srv/detail/enabler__type_support.h
 rosidl_typesupport_interface/macros.h

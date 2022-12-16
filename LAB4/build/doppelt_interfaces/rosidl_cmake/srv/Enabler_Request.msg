@@ -1,1 +1,1 @@
-std_msgs/Bool enable
+bool enable

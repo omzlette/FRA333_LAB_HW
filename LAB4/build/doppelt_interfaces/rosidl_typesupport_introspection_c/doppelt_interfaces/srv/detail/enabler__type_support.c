@@ -12,12 +12,6 @@
 #include "doppelt_interfaces/srv/detail/enabler__struct.h"
 
 
-// Include directives for member types
-// Member `enable`
-#include "std_msgs/msg/bool.h"
-// Member `enable`
-#include "std_msgs/msg/detail/bool__rosidl_typesupport_introspection_c.h"
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -40,9 +34,9 @@ void Enabler_Request__rosidl_typesupport_introspection_c__Enabler_Request_fini_f
 static rosidl_typesupport_introspection_c__MessageMember Enabler_Request__rosidl_typesupport_introspection_c__Enabler_Request_message_member_array[1] = {
   {
     "enable",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -76,8 +70,6 @@ static rosidl_message_type_support_t Enabler_Request__rosidl_typesupport_introsp
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_doppelt_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, doppelt_interfaces, srv, Enabler_Request)() {
-  Enabler_Request__rosidl_typesupport_introspection_c__Enabler_Request_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Bool)();
   if (!Enabler_Request__rosidl_typesupport_introspection_c__Enabler_Request_message_type_support_handle.typesupport_identifier) {
     Enabler_Request__rosidl_typesupport_introspection_c__Enabler_Request_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

@@ -59,7 +59,7 @@ class X2TrajGen(Node):
         self.refPosVel.publish(pointwVel)
 
     def clockCallback(self, msg):
-        self.currTime = msg.data
+        self.currTime = msg.data/1000
 
         
 def main(args=None):

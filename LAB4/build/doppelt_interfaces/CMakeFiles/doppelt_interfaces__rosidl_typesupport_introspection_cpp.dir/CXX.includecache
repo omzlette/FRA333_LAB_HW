@@ -140,22 +140,6 @@ rosidl_typesupport_introspection_cpp/visibility_control.h
 
 /opt/ros/foxy/include/rosidl_typesupport_introspection_cpp/visibility_control.h
 
-/opt/ros/foxy/include/std_msgs/msg/detail/bool__struct.hpp
-rosidl_runtime_cpp/bounded_vector.hpp
--
-rosidl_runtime_cpp/message_initialization.hpp
--
-algorithm
--
-array
--
-memory
--
-string
--
-vector
--
-
 rosidl_generator_cpp/doppelt_interfaces/srv/detail/enabler__struct.hpp
 rosidl_runtime_cpp/bounded_vector.hpp
 -
@@ -171,6 +155,4 @@ string
 -
 vector
 -
-std_msgs/msg/detail/bool__struct.hpp
-rosidl_generator_cpp/doppelt_interfaces/srv/detail/std_msgs/msg/detail/bool__struct.hpp
 

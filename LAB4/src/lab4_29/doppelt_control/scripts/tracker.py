@@ -21,6 +21,7 @@ class X2Tracker(Node):
         self.rate = 10
 
         self.jointState = JointState()
+        self.jointState.position = [0., 0., 0.]
         self.enable = True
         self.sentEnableFlag = False
 
@@ -62,16 +63,17 @@ class X2Tracker(Node):
         self.jointState = msg
         # self.get_logger().info(f"Joint State Received: {self.jointState}")
 
+        
+    def refPosVelCallback(self, msg):
+        self.refpos, self.refvel = msg.data[0:3], msg.data[3:6]
+        self.get_logger().info(f"Pos: {self.refpos} Vel: {self.refvel}")
+
         if self.enable:
             # self.get_logger().info(f"pos: {self.refpos} cur: {type(self.jointState.position)}")
             PI = Float64MultiArray()
             PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki, self.currTime)
             # self.get_logger().info(f"PI: {PI}")
             self.publishEnable.publish(PI)
-
-    def refPosVelCallback(self, msg):
-        self.refpos, self.refvel = msg.data[0:3], msg.data[3:6]
-        self.get_logger().info(f"Pos: {self.refpos} Vel: {self.refvel}")
 
     def PIControl(self, refpos, refvel, curpos, Kp, Ki, time, limitInt=None):
         init = False
@@ -94,7 +96,7 @@ class X2Tracker(Node):
         return list(np.array(refvel) + P + I)
 
     def clockCallback(self, msg):
-        self.currTime = msg.data
+        self.currTime = msg.data/1000
 
 def main(args=None):
     rclpy.init(args=args)

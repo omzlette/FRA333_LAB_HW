@@ -16,10 +16,6 @@
 #include "doppelt_interfaces/srv/detail/enabler__struct.h"
 #include "doppelt_interfaces/srv/detail/enabler__functions.h"
 
-ROSIDL_GENERATOR_C_IMPORT
-bool std_msgs__msg__bool__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * std_msgs__msg__bool__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool doppelt_interfaces__srv__enabler__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -59,10 +55,8 @@ bool doppelt_interfaces__srv__enabler__request__convert_from_py(PyObject * _pyms
     if (!field) {
       return false;
     }
-    if (!std_msgs__msg__bool__convert_from_py(field, &ros_message->enable)) {
-      Py_DECREF(field);
-      return false;
-    }
+    assert(PyBool_Check(field));
+    ros_message->enable = (Py_True == field);
     Py_DECREF(field);
   }
 
@@ -89,10 +83,7 @@ PyObject * doppelt_interfaces__srv__enabler__request__convert_to_py(void * raw_r
   doppelt_interfaces__srv__Enabler_Request * ros_message = (doppelt_interfaces__srv__Enabler_Request *)raw_ros_message;
   {  // enable
     PyObject * field = NULL;
-    field = std_msgs__msg__bool__convert_to_py(&ros_message->enable);
-    if (!field) {
-      return NULL;
-    }
+    field = PyBool_FromLong(ros_message->enable ? 1 : 0);
     {
       int rc = PyObject_SetAttrString(_pymessage, "enable", field);
       Py_DECREF(field);

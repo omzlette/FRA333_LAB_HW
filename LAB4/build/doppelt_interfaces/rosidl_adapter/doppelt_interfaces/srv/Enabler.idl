@@ -2,12 +2,11 @@
 // with input from doppelt_interfaces/srv/Enabler.srv
 // generated code does not contain a copyright notice
 
-#include "std_msgs/msg/Bool.idl"
 
 module doppelt_interfaces {
   module srv {
     struct Enabler_Request {
-      std_msgs::msg::Bool enable;
+      boolean enable;
     };
     struct Enabler_Response {
       uint8 structure_needs_at_least_one_member;

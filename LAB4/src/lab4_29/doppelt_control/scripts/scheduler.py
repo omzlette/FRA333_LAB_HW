@@ -6,7 +6,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 
-from std_msgs.msg import Float64MultiArray, Bool
+from std_msgs.msg import Float64MultiArray, Bool, Int64
 from doppelt_interfaces.srv import Enabler
 import yaml
 
@@ -15,6 +15,7 @@ class X2Scheduler(Node):
         super().__init__('doppelt_scheduler')
 
         QoS = QoSProfile(depth=10)
+
 
         # Receive via points
         # via_point_path = '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/config/via_points.yaml'
@@ -25,6 +26,9 @@ class X2Scheduler(Node):
         self.viaPtsPub = self.create_publisher(Float64MultiArray, 'via_points', QoS)
 
         self.reached = self.create_subscription(Bool, 'hasReached', self.reachedCallback, QoS)
+
+        self.clock = self.create_subscription(Int64, 'doppelt_clock', self.clockCallback, self.QoS)
+        self.currTime = 0
 
         self.hasReachedFlag = False
 

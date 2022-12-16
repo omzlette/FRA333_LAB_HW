@@ -17,14 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'enable'
-#include "std_msgs/msg/detail/bool__struct.h"
-
 // Struct defined in srv/Enabler in the package doppelt_interfaces.
 typedef struct doppelt_interfaces__srv__Enabler_Request
 {
-  std_msgs__msg__Bool enable;
+  bool enable;
 } doppelt_interfaces__srv__Enabler_Request;
 
 // Struct for a sequence of doppelt_interfaces__srv__Enabler_Request.

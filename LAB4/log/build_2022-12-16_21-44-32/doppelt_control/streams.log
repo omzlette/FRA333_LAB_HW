@@ -1,0 +1,76 @@
+[0.071s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control
+[0.291s] -- The C compiler identification is GNU 9.4.0
+[0.464s] -- The CXX compiler identification is GNU 9.4.0
+[0.480s] -- Check for working C compiler: /usr/bin/cc
+[0.593s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.596s] -- Detecting C compiler ABI info
+[0.714s] -- Detecting C compiler ABI info - done
+[0.737s] -- Detecting C compile features
+[0.738s] -- Detecting C compile features - done
+[0.743s] -- Check for working CXX compiler: /usr/bin/c++
+[0.877s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.880s] -- Detecting CXX compiler ABI info
+[1.021s] -- Detecting CXX compiler ABI info - done
+[1.053s] -- Detecting CXX compile features
+[1.054s] -- Detecting CXX compile features - done
+[1.060s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.064s] -- Found ament_cmake_core: 0.9.11 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[1.103s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.103s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.492s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.505s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.533s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.825s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.906s] -- Found FastRTPS: /opt/ros/foxy/include  
+[2.078s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.146s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[2.296s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.301s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.304s] -- Looking for pthread.h
+[2.454s] -- Looking for pthread.h - found
+[2.454s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.588s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.589s] -- Looking for pthread_create in pthreads
+[2.699s] -- Looking for pthread_create in pthreads - not found
+[2.700s] -- Looking for pthread_create in pthread
+[2.826s] -- Looking for pthread_create in pthread - found
+[2.828s] -- Found Threads: TRUE  
+[3.153s] -- Found rclpy: 1.0.11 (/opt/ros/foxy/share/rclpy/cmake)
+[3.337s] -- Configuring done
+[3.341s] -- Generating done
+[3.343s] -- Build files have been written to: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control
+[3.354s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control
+[3.362s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control -- -j12 -l12
+[3.436s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control -- -j12 -l12
+[3.509s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control
+[3.524s] -- Install configuration: ""
+[3.528s] -- Execute custom install script
+[3.529s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/environment/pythonpath.sh
+[3.541s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/environment/pythonpath.dsv
+[3.560s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/lib/python3.8/site-packages/doppelt_control/__init__.py
+[3.580s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/lib/doppelt_control/tracker.py
+[3.601s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/lib/doppelt_control/scheduler.py
+[3.619s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/lib/doppelt_control/generator.py
+[3.638s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/config/tracker_config.yaml
+[3.656s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/config/via_points.yaml
+[3.675s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/scripts/generator.py
+[3.693s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/scripts/scheduler.py
+[3.711s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/scripts/tracker.py
+[3.731s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/ament_index/resource_index/package_run_dependencies/doppelt_control
+[3.753s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/ament_index/resource_index/parent_prefix_path/doppelt_control
+[3.773s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/environment/ament_prefix_path.sh
+[3.790s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/environment/ament_prefix_path.dsv
+[3.807s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/environment/path.sh
+[3.826s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/environment/path.dsv
+[3.849s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/local_setup.bash
+[3.874s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/local_setup.sh
+[3.892s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/local_setup.zsh
+[3.915s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/local_setup.dsv
+[3.932s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/package.dsv
+[3.952s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/ament_index/resource_index/packages/doppelt_control
+[3.971s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/cmake/doppelt_controlConfig.cmake
+[3.991s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/cmake/doppelt_controlConfig-version.cmake
+[4.009s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/package.xml
+[4.104s] Listing '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/lib/python3.8/site-packages/doppelt_control'...
+[4.104s] Compiling '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/lib/python3.8/site-packages/doppelt_control/__init__.py'...
+[4.158s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control

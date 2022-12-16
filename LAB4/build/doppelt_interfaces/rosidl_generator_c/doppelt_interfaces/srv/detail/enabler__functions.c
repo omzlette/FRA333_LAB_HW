@@ -10,10 +10,6 @@
 
 #include "rcutils/allocator.h"
 
-// Include directives for member types
-// Member `enable`
-#include "std_msgs/msg/detail/bool__functions.h"
-
 bool
 doppelt_interfaces__srv__Enabler_Request__init(doppelt_interfaces__srv__Enabler_Request * msg)
 {
@@ -21,10 +17,6 @@ doppelt_interfaces__srv__Enabler_Request__init(doppelt_interfaces__srv__Enabler_
     return false;
   }
   // enable
-  if (!std_msgs__msg__Bool__init(&msg->enable)) {
-    doppelt_interfaces__srv__Enabler_Request__fini(msg);
-    return false;
-  }
   return true;
 }
 
@@ -35,7 +27,6 @@ doppelt_interfaces__srv__Enabler_Request__fini(doppelt_interfaces__srv__Enabler_
     return;
   }
   // enable
-  std_msgs__msg__Bool__fini(&msg->enable);
 }
 
 bool
@@ -45,9 +36,7 @@ doppelt_interfaces__srv__Enabler_Request__are_equal(const doppelt_interfaces__sr
     return false;
   }
   // enable
-  if (!std_msgs__msg__Bool__are_equal(
-      &(lhs->enable), &(rhs->enable)))
-  {
+  if (lhs->enable != rhs->enable) {
     return false;
   }
   return true;
@@ -62,11 +51,7 @@ doppelt_interfaces__srv__Enabler_Request__copy(
     return false;
   }
   // enable
-  if (!std_msgs__msg__Bool__copy(
-      &(input->enable), &(output->enable)))
-  {
-    return false;
-  }
+  output->enable = input->enable;
   return true;
 }
 

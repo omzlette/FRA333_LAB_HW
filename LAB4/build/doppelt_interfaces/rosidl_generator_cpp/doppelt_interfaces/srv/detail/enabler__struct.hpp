@@ -14,10 +14,6 @@
 #include <vector>
 
 
-// Include directives for member types
-// Member 'enable'
-#include "std_msgs/msg/detail/bool__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__doppelt_interfaces__srv__Enabler_Request __attribute__((deprecated))
 #else
@@ -37,25 +33,32 @@ struct Enabler_Request_
   using Type = Enabler_Request_<ContainerAllocator>;
 
   explicit Enabler_Request_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : enable(_init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->enable = false;
+    }
   }
 
   explicit Enabler_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : enable(_alloc, _init)
   {
-    (void)_init;
+    (void)_alloc;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->enable = false;
+    }
   }
 
   // field types and members
   using _enable_type =
-    std_msgs::msg::Bool_<ContainerAllocator>;
+    bool;
   _enable_type enable;
 
   // setters for named parameter idiom
   Type & set__enable(
-    const std_msgs::msg::Bool_<ContainerAllocator> & _arg)
+    const bool & _arg)
   {
     this->enable = _arg;
     return *this;
