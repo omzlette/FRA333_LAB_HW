@@ -88,11 +88,11 @@ class X2TrajectTrack(Node):
         lin_jacobian = self.Jacobian_Matrix()
         q_dot = np.linalg.pinv(lin_jacobian) @ np.array([vx, vy, vz]).reshape(3, 1)
 
-        return q_dot
+        return list(q_dot.reshape(3,))
 
-    def ref_task_sub_callback(self, msg:JointState):
-        self.end_pos = msg.data[0:3]
-        self.end_vel = msg.data[3:6]
+    def ref_task_sub_callback(self, msg):
+        self.end_pos = list(msg.data[0:3])
+        self.end_vel = list(msg.data[3:6])
 
         # Publish Clock and Joint State
         joint_state = Float64MultiArray()

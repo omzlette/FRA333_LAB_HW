@@ -22,17 +22,9 @@ def generate_launch_description():
     xacro_file = os.path.join(get_package_share_directory(pkg_name),file_subpath)
     robot_description_raw = xacro.process_file(xacro_file).toxml()
 
-    robot_controllers = PathJoinSubstitution(
-        [
-            FindPackageShare("doppelt_description"),
-            "config",
-            "doppelt_controllers.yaml",
-        ]
-    )
-
     # Create rviz2 node
     package_path = get_package_share_directory('doppelt_description')
-    rviz_file_path = os.path.join(package_path, 'config', 'doppelt_kinematics.rviz')
+    rviz_file_path = os.path.join(package_path, 'config', 'doppelt_description.rviz')
 
     rviz = Node(
        package='rviz2',
@@ -94,14 +86,6 @@ def generate_launch_description():
         executable="spawner.py",
         arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
     )
-
-    control_node = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[{'robot_description': robot_description_raw}, robot_controllers],
-
-        output="both",
-    )
     
     robot_controller_spawner = Node(
         package="controller_manager",
@@ -117,7 +101,6 @@ def generate_launch_description():
         spawn_entity,
         joint_state_broadcaster_spawner,
         robot_controller_spawner,
-        control_node,
         X2_tracker,
         X2_generator,
         X2_scheduler,

@@ -52,16 +52,16 @@ class X2Scheduler(Node):
                 self.allviaPts.pop(0)
                 self.hasReachedFlag = False
 
-            elif not msg.data and not self.hasReachedFlag:
-                viaPtsInit = self.allviaPts[0]['coords']
-                viaPtsFinal = self.allviaPts[1]['coords']
-                timeFinal = self.computeTime(viaPtsInit, viaPtsFinal)
-                
-                self.viaPts = viaPtsInit + viaPtsFinal + [timeFinal]
-                self.viaPtsPub.publish(Float64MultiArray(data=self.viaPts))
-                self.enabler.call_async(Bool(data=True))
+            # elif not msg.data and not self.hasReachedFlag:
+            viaPtsInit = self.allviaPts[0]['coords']
+            viaPtsFinal = self.allviaPts[1]['coords']
+            timeFinal = self.computeTime(viaPtsInit, viaPtsFinal)
+            
+            self.viaPts = viaPtsInit + viaPtsFinal + [timeFinal]
+            self.viaPtsPub.publish(Float64MultiArray(data=self.viaPts))
+            self.enabler.call_async(Enabler.Request(enable=True))
 
-                self.hasReachedFlag = True
+            self.hasReachedFlag = True
         else:
             #stop
             viaPtsInit = viaPtsFinal
@@ -71,7 +71,7 @@ class X2Scheduler(Node):
             self.viaPtsPub.publish(Float64MultiArray(data=self.viaPts))
             
             if msg.data:
-                self.enabler.call_async(Bool(data=False))
+                self.enabler.call_async(Enabler.Request(enable=False))
 
     def computeTime(self, viaPtsInit, viaPtsFinal):
         Vmax = 1.0

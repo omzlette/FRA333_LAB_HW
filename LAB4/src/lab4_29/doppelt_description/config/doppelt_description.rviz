@@ -136,7 +136,7 @@ Visualization Manager:
       Update Interval: 0
       Value: true
     - Alpha: 0.5
-      Cell Size: 0.10000000149011612
+      Cell Size: 0.05000000074505806
       Class: rviz_default_plugins/Grid
       Color: 160; 160; 164
       Enabled: true
@@ -150,7 +150,7 @@ Visualization Manager:
         Y: 0
         Z: 0
       Plane: YZ
-      Plane Cell Count: 10
+      Plane Cell Count: 20
       Reference Frame: world
       Value: true
     - Class: rviz_default_plugins/Marker
@@ -223,10 +223,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5253985524177551
+      Pitch: 0.6153984665870667
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz_default_plugins)
-      Yaw: 6.028626441955566
+      Yaw: 5.4836225509643555
     Saved: ~
 Window Geometry:
   Displays:

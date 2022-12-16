@@ -44,6 +44,7 @@
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/environment/pythonpath.dsv
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/lib/python3.8/site-packages/doppelt_description/__init__.py
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/config/doppelt_controllers.yaml
+-- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/config/doppelt_description.rviz
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/launch/doppelt_desc.launch.py
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/meshes/link_0.stl
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/meshes/link_1.stl

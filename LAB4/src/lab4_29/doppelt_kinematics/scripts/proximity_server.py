@@ -32,8 +32,9 @@ class X2ProximityServer(Node):
         self.has_reach = self.create_publisher(Bool, 'hasReached', qos_profile)
         self.has_reach_timer = self.create_timer(1/self.rate, self.has_reach_timer_callback)
 
-        self.clock = self.create_publisher(Int64, 'clock', qos_profile)
+        self.clock = self.create_publisher(Int64, 'doppelt_clock', qos_profile)
         self.clock_timer = self.create_timer(1/1000, self.clock_timer_callback)
+        self.clock_now = 0
 
         # Variable Declaration
         self.joint_q = np.array([0, 0, 0])
@@ -88,29 +89,31 @@ class X2ProximityServer(Node):
             
     def has_reach_timer_callback(self):
         reach = Bool()
+        reachflag = False
         if self.choice == "forward":
             pos_FK = self.FK(self.joint_q)
             pos_tolerance = [self.via_point[0]-pos_FK[0], self.via_point[1]-pos_FK[1], self.via_point[2]-pos_FK[2]]
             if np.linalg.norm(pos_tolerance) < 0.001:
-                reach.data = True
-                self.has_reach.publish(reach)
+                reachflag = True
             else:
-                reach.data = False
-                self.has_reach.publish(reach)
+                reachflag = False
+                
         
         elif self.choice == "inverse":
             q_IK = self.IK_pos(self.via_point)
             q_tolerance = [q_IK[0]-self.joint_q[0], q_IK[1]-self.joint_q[1], q_IK[2]-self.joint_q[2]]
             if np.linalg.norm(q_tolerance) < 0.001:
-                reach.data = True
-                self.has_reach.publish(reach)
+                reachflag = True
             else:
-                reach.data = False
-                self.has_reach.publish(reach)
+                reachflag = False
+        
+        reach.data = reachflag
+        self.has_reach.publish(reach)
 
     def clock_timer_callback(self):
         clock = Int64()
-        clock.data += 1
+        self.clock_now += 1
+        clock.data = self.clock_now
         self.clock.publish(clock)
 
 def main(args=None):

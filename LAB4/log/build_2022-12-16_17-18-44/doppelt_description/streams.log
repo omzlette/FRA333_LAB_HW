@@ -1,0 +1,79 @@
+[0.049s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description
+[0.289s] -- The C compiler identification is GNU 9.4.0
+[0.451s] -- The CXX compiler identification is GNU 9.4.0
+[0.463s] -- Check for working C compiler: /usr/bin/cc
+[0.575s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.577s] -- Detecting C compiler ABI info
+[0.689s] -- Detecting C compiler ABI info - done
+[0.710s] -- Detecting C compile features
+[0.710s] -- Detecting C compile features - done
+[0.716s] -- Check for working CXX compiler: /usr/bin/c++
+[0.843s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.845s] -- Detecting CXX compiler ABI info
+[0.976s] -- Detecting CXX compiler ABI info - done
+[0.995s] -- Detecting CXX compile features
+[0.996s] -- Detecting CXX compile features - done
+[1.001s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.004s] -- Found ament_cmake_core: 0.9.11 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[1.043s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.043s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.367s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.384s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.402s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.630s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.682s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.847s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.908s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[2.043s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.048s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.051s] -- Looking for pthread.h
+[2.183s] -- Looking for pthread.h - found
+[2.184s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.306s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.306s] -- Looking for pthread_create in pthreads
+[2.405s] -- Looking for pthread_create in pthreads - not found
+[2.405s] -- Looking for pthread_create in pthread
+[2.516s] -- Looking for pthread_create in pthread - found
+[2.518s] -- Found Threads: TRUE  
+[2.925s] -- Found rclpy: 1.0.11 (/opt/ros/foxy/share/rclpy/cmake)
+[3.090s] -- Configuring done
+[3.093s] -- Generating done
+[3.095s] -- Build files have been written to: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description
+[3.111s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description
+[3.116s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description -- -j12 -l12
+[3.204s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description -- -j12 -l12
+[3.244s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description
+[3.258s] -- Install configuration: ""
+[3.259s] -- Execute custom install script
+[3.260s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/environment/pythonpath.sh
+[3.280s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/environment/pythonpath.dsv
+[3.298s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/lib/python3.8/site-packages/doppelt_description/__init__.py
+[3.313s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/config/doppelt_controllers.yaml
+[3.327s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/config/doppelt_description.rviz
+[3.342s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/launch/doppelt_desc.launch.py
+[3.357s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/meshes/link_0.stl
+[3.372s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/meshes/link_1.stl
+[3.392s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/meshes/link_2.stl
+[3.403s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/meshes/link_3.stl
+[3.421s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/xacro/create_link.xacro
+[3.437s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/xacro/doppelt_gazebo.xacro
+[3.453s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/xacro/doppelt_include.xacro
+[3.475s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/xacro/doppelt_robot.urdf.xacro
+[3.503s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/ament_index/resource_index/package_run_dependencies/doppelt_description
+[3.525s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/ament_index/resource_index/parent_prefix_path/doppelt_description
+[3.549s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/environment/ament_prefix_path.sh
+[3.567s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/environment/ament_prefix_path.dsv
+[3.589s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/environment/path.sh
+[3.612s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/environment/path.dsv
+[3.634s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/local_setup.bash
+[3.650s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/local_setup.sh
+[3.666s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/local_setup.zsh
+[3.683s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/local_setup.dsv
+[3.700s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/package.dsv
+[3.718s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/ament_index/resource_index/packages/doppelt_description
+[3.736s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/cmake/doppelt_descriptionConfig.cmake
+[3.755s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/cmake/doppelt_descriptionConfig-version.cmake
+[3.773s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/share/doppelt_description/package.xml
+[3.858s] Listing '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/lib/python3.8/site-packages/doppelt_description'...
+[3.858s] Compiling '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_description/lib/python3.8/site-packages/doppelt_description/__init__.py'...
+[3.882s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description
