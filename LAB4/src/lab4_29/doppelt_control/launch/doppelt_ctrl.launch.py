@@ -39,6 +39,8 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        Kp_args,
+        Ki_args,
         X2_tracker,
         X2_generator,
         X2_scheduler
