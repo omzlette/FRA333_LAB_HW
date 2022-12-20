@@ -60,18 +60,20 @@ class X2TrajectTrack(Node):
 
         return q
 
-    def Jacobian_Matrix(self):
-        r01 = np.array([[1, 0, 0],
-                        [0, 1, 0],
-                        [0, 0, 1]])
+    def Jacobian_Matrix(self,q):
+        q1 = q[0]
+        q2 = q[1]
+        q3 = q[2]
+        r01 = np.array([[np.cos(q1), -np.sin(q1), 0],
+                        [np.sin(q1),  np.cos(q1), 0],
+                        [      0,        0,       1]])
+        r02 = np.array([[np.cos(q1)*np.cos(q2), -np.sin(q2)*np.cos(q1),  np.sin(q1)],
+                        [np.sin(q1)*np.cos(q2), -np.sin(q1)*np.sin(q2), -np.cos(q1)],
+                        [        np.sin(q2),          np.cos(q2),           0     ]])
 
-        r02 = np.array([[1, 0, 0],
-                        [0, 0, -1],
-                        [0, 1, 0]])
-
-        r03 = np.array([[1, 0, 0],
-                        [0, 0, -1],
-                        [0, 1, 0]])
+        r03 = np.array([[-np.sin(q2)*np.sin(q3)*np.cos(q1) + np.cos(q1)*np.cos(q2)*np.cos(q3), -np.sin(q2)*np.cos(q1)*np.cos(q3) - np.sin(q3)*np.cos(q1)*np.cos(q2),  np.sin(q1)],
+                        [-np.sin(q1)*np.sin(q2)*np.sin(q3) + np.sin(q1)*np.cos(q2)*np.cos(q3), -np.sin(q1)*np.sin(q2)*np.cos(q3) - np.sin(q1)*np.sin(q3)*np.cos(q2), -np.cos(q1)],
+                        [                 np.sin(q2)*np.cos(q3) + np.sin(q3)*np.cos(q2),                 -np.sin(q2)*np.sin(q3) + np.cos(q2)*np.cos(q3),                    0   ]])
         rotateZ = np.array([0, 0, 1]).reshape(3, 1)
 
         angular_J01 = r01 @ rotateZ
@@ -83,8 +85,8 @@ class X2TrajectTrack(Node):
 
         p01 = np.array([0, 0, l1])
         p02 = np.array([0, 0, l1])
-        p03 = np.array([l3, 0, l1])
-        p_e = np.array([l3+le, 0, l1])
+        p03 = np.array([np.sin(q1), l3*np.cos(q1)*np.cos(q2), l3*np.sin(q1)*np.cos(q2), l1 + l3*np.sin(q2)])
+        p_e = np.array([(l3*np.cos(q2) + le*np.cos(q2 + q3))*np.cos(q1), (l3*np.cos(q2) + le*np.cos(q2 + q3))*np.sin(q1), l1 + l3*np.sin(q2) + le*np.sin(q2 + q3)])
 
         linear_J01 = np.cross(angular_J01.reshape(1, 3), (p_e - p01)).reshape(3, 1)
         linear_J02 = np.cross(angular_J02.reshape(1, 3), (p_e - p02)).reshape(3, 1)
@@ -94,8 +96,8 @@ class X2TrajectTrack(Node):
 
         return linear_Jacobian
 
-    def IK_vel(self, vx, vy, vz):
-        lin_jacobian = self.Jacobian_Matrix()
+    def IK_vel(self, vx, vy, vz,q):
+        lin_jacobian = self.Jacobian_Matrix(q)
         q_dot = np.linalg.pinv(lin_jacobian) @ np.array([vx, vy, vz]).reshape(3, 1)
 
         return list(q_dot.reshape(3,))
@@ -109,7 +111,7 @@ class X2TrajectTrack(Node):
 
         q = self.IK_pos(self.end_pos[0], self.end_pos[1], self.end_pos[2])
 
-        q_dot = self.IK_vel(self.end_vel[0], self.end_vel[1], self.end_vel[2])
+        q_dot = self.IK_vel(self.end_vel[0], self.end_vel[1], self.end_vel[2],q)
         joint_state.data = q + q_dot
 
         self.ref_joint_pub.publish(joint_state)
