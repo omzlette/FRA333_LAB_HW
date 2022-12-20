@@ -18,15 +18,8 @@
 
     <!-- This first link called "world" is empty -->
     <link name="world" />
-
     <!-- A simple fixed joint from our empty world link, to our base. -->
     <!-- The base origin is offset from the world origin. -->
-    <joint name="base_joint" type="fixed">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-        <parent link="world"/>
-        <child link="link_0"/>        
-    </joint>
-
     <xacro:addlink name="link_0">
         <xacro:addvis>
             <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -42,6 +35,12 @@
             <inertia ixx="0.000222" ixy="0.0" ixz="0.0" iyy="0.000222" iyz="0.0" izz="0.000341"/>
         </xacro:addinertia> 
     </xacro:addlink>
+
+    <joint name="base_joint" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="link_0"/>        
+    </joint>
 
     <xacro:addlink name="link_1">
         <xacro:addvis>
@@ -117,6 +116,8 @@
         <limit lower="${-5*pi/6}" upper="${5*pi/6}" effort="1" velocity="1"/>
         <dynamics damping="0" friction="0"/>
     </joint>
+    
+    <link name="end_effector" />
 
     <joint name="joint_eff" type="fixed">
         <parent link="link_3"/>
@@ -125,5 +126,5 @@
         <axis xyz="0 0 1"/>
     </joint>
     
-    <link name="end_effector" />
+    
 </robot>
