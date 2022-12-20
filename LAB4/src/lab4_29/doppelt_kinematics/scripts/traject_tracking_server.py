@@ -85,7 +85,7 @@ class X2TrajectTrack(Node):
 
         p01 = np.array([0, 0, l1])
         p02 = np.array([0, 0, l1])
-        p03 = np.array([np.sin(q1), l3*np.cos(q1)*np.cos(q2), l3*np.sin(q1)*np.cos(q2), l1 + l3*np.sin(q2)])
+        p03 = np.array([l3*np.cos(q1)*np.cos(q2), l3*np.sin(q1)*np.cos(q2), l1 + l3*np.sin(q2)])
         p_e = np.array([(l3*np.cos(q2) + le*np.cos(q2 + q3))*np.cos(q1), (l3*np.cos(q2) + le*np.cos(q2 + q3))*np.sin(q1), l1 + l3*np.sin(q2) + le*np.sin(q2 + q3)])
 
         linear_J01 = np.cross(angular_J01.reshape(1, 3), (p_e - p01)).reshape(3, 1)

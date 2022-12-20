@@ -10,10 +10,10 @@ from launch_ros.actions import Node
 import yaml
 
 def generate_launch_description():
-    with open(os.path.join(get_package_share_directory('doppelt_description'), 'config', 'via_points.yaml'), 'r') as f:
+    with open(os.path.join(get_package_share_directory('doppelt_control'), 'config', 'via_points.yaml'), 'r') as f:
         allviaPts = yaml.load(f, Loader=yaml.FullLoader)
 
-    with open(os.path.join(get_package_share_directory('doppelt_description'), 'config', 'tracker_config.yaml'), 'r') as f:
+    with open(os.path.join(get_package_share_directory('doppelt_control'), 'config', 'tracker_config.yaml'), 'r') as f:
         trackerVal = yaml.load(f, Loader=yaml.FullLoader)
         Kp, Ki = trackerVal['Kp'], trackerVal['Ki']
 
@@ -30,7 +30,7 @@ def generate_launch_description():
     X2_scheduler = Node(
         package = "doppelt_control",
         executable = "scheduler.py",
-        parameters=[{'viaPts': allviaPts}]
+        # parameters=[{'viaPts': allviaPts}]
     )
 
     return LaunchDescription([

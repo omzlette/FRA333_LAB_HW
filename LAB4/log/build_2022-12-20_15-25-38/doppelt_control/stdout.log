@@ -51,6 +51,7 @@
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/scripts/generator.py
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/scripts/scheduler.py
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/scripts/tracker.py
+-- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/launch/doppelt_ctrl.launch.py
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/ament_index/resource_index/package_run_dependencies/doppelt_control
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/ament_index/resource_index/parent_prefix_path/doppelt_control
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_control/share/doppelt_control/environment/ament_prefix_path.sh

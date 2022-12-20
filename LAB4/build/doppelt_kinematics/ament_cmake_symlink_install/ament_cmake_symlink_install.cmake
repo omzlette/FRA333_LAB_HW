@@ -322,8 +322,8 @@ ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4
 # install(PROGRAMS "scripts/proximity_server.py" "scripts/traject_tracking_server.py" "DESTINATION" "lib/doppelt_kinematics")
 ament_cmake_symlink_install_programs("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_kinematics" PROGRAMS "scripts/proximity_server.py" "scripts/traject_tracking_server.py" "DESTINATION" "lib/doppelt_kinematics")
 
-# install(DIRECTORY "scripts" "DESTINATION" "share/doppelt_kinematics")
-ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_kinematics" DIRECTORY "scripts" "DESTINATION" "share/doppelt_kinematics")
+# install(DIRECTORY "scripts" "launch" "DESTINATION" "share/doppelt_kinematics")
+ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_kinematics" DIRECTORY "scripts" "launch" "DESTINATION" "share/doppelt_kinematics")
 
 # install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/doppelt_kinematics" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_kinematics" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/doppelt_kinematics" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

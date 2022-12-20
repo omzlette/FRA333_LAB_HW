@@ -48,6 +48,7 @@
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/lib/doppelt_kinematics/traject_tracking_server.py
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/scripts/proximity_server.py
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/scripts/traject_tracking_server.py
+-- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/launch/doppelt_kinematics.launch.py
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/ament_index/resource_index/package_run_dependencies/doppelt_kinematics
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/ament_index/resource_index/parent_prefix_path/doppelt_kinematics
 -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/environment/ament_prefix_path.sh

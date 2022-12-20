@@ -322,8 +322,8 @@ ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4
 # install(PROGRAMS "scripts/tracker.py" "scripts/scheduler.py" "scripts/generator.py" "DESTINATION" "lib/doppelt_control")
 ament_cmake_symlink_install_programs("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" PROGRAMS "scripts/tracker.py" "scripts/scheduler.py" "scripts/generator.py" "DESTINATION" "lib/doppelt_control")
 
-# install(DIRECTORY "config" "scripts" "DESTINATION" "share/doppelt_control")
-ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" DIRECTORY "config" "scripts" "DESTINATION" "share/doppelt_control")
+# install(DIRECTORY "config" "scripts" "launch" "DESTINATION" "share/doppelt_control")
+ament_cmake_symlink_install_directory("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" DIRECTORY "config" "scripts" "launch" "DESTINATION" "share/doppelt_control")
 
 # install(FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/doppelt_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control" FILES "/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_control/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/doppelt_control" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
