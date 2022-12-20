@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_6537f/fast && /usr/bin/make -f CMakeFiles/cmTC_6537f.dir/build.make CMakeFiles/cmTC_6537f.dir/build
+Run Build Command(s):/usr/bin/make cmTC_08dcc/fast && /usr/bin/make -f CMakeFiles/cmTC_08dcc.dir/build.make CMakeFiles/cmTC_08dcc.dir/build
 make[1]: Entering directory '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6537f.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_6537f.dir/src.c.o   -c /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_6537f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6537f.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_6537f.dir/src.c.o  -o cmTC_6537f 
-/usr/bin/ld: CMakeFiles/cmTC_6537f.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_08dcc.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_08dcc.dir/src.c.o   -c /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_08dcc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08dcc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_08dcc.dir/src.c.o  -o cmTC_08dcc 
+/usr/bin/ld: CMakeFiles/cmTC_08dcc.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_6537f.dir/build.make:87: cmTC_6537f] Error 1
+make[1]: *** [CMakeFiles/cmTC_08dcc.dir/build.make:87: cmTC_08dcc] Error 1
 make[1]: Leaving directory '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_6537f/fast] Error 2
+make: *** [Makefile:121: cmTC_08dcc/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_d953d/fast && /usr/bin/make -f CMakeFiles/cmTC_d953d.dir/build.make CMakeFiles/cmTC_d953d.dir/build
+Run Build Command(s):/usr/bin/make cmTC_634de/fast && /usr/bin/make -f CMakeFiles/cmTC_634de.dir/build.make CMakeFiles/cmTC_634de.dir/build
 make[1]: Entering directory '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d953d.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d953d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_d953d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d953d.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_d953d.dir/CheckFunctionExists.c.o  -o cmTC_d953d  -lpthreads 
+Building C object CMakeFiles/cmTC_634de.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_634de.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_634de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_634de.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_634de.dir/CheckFunctionExists.c.o  -o cmTC_634de  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_d953d.dir/build.make:87: cmTC_d953d] Error 1
+make[1]: *** [CMakeFiles/cmTC_634de.dir/build.make:87: cmTC_634de] Error 1
 make[1]: Leaving directory '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_description/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_d953d/fast] Error 2
+make: *** [Makefile:121: cmTC_634de/fast] Error 2
 
 
 

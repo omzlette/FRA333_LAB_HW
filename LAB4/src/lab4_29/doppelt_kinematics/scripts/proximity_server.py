@@ -39,6 +39,7 @@ class X2ProximityServer(Node):
         # Variable Declaration
         self.joint_q = np.array([0, 0, 0])
         self.old_q = [0, 0, 0]
+        self.via_point = [0, 0, 0]
 
     # FORWARD KINEMATICS ----------------------------------------------------------------------------
     def joint_sub_callback(self, msg:JointState):
