@@ -55,6 +55,7 @@ class X2Tracker(Node):
             self.publishEnable.publish(PI)
         else:
             self.publishEnable.publish(Float64MultiArray(data=[0, 0, 0]))
+        return response
 
     def jointStateCallback(self, msg):
         self.jointState = msg

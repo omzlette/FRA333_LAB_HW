@@ -1,0 +1,74 @@
+[0.035s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_kinematics -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics
+[0.117s] -- The C compiler identification is GNU 9.4.0
+[0.204s] -- The CXX compiler identification is GNU 9.4.0
+[0.211s] -- Check for working C compiler: /usr/bin/cc
+[0.316s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.317s] -- Detecting C compiler ABI info
+[0.446s] -- Detecting C compiler ABI info - done
+[0.473s] -- Detecting C compile features
+[0.474s] -- Detecting C compile features - done
+[0.479s] -- Check for working CXX compiler: /usr/bin/c++
+[0.643s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.645s] -- Detecting CXX compiler ABI info
+[0.786s] -- Detecting CXX compiler ABI info - done
+[0.820s] -- Detecting CXX compile features
+[0.821s] -- Detecting CXX compile features - done
+[0.826s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.829s] -- Found ament_cmake_core: 0.9.11 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[0.871s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.871s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.310s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.325s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.348s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.638s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.706s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.903s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.976s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[2.199s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[2.338s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.345s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.347s] -- Looking for pthread.h
+[2.563s] -- Looking for pthread.h - found
+[2.569s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.781s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[2.782s] -- Looking for pthread_create in pthreads
+[2.915s] -- Looking for pthread_create in pthreads - not found
+[2.915s] -- Looking for pthread_create in pthread
+[3.023s] -- Looking for pthread_create in pthread - found
+[3.025s] -- Found Threads: TRUE  
+[3.258s] -- Found rclpy: 1.0.11 (/opt/ros/foxy/share/rclpy/cmake)
+[3.403s] -- Configuring done
+[3.406s] -- Generating done
+[3.408s] -- Build files have been written to: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics
+[3.439s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_kinematics -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics
+[3.442s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics -- -j12 -l12
+[3.505s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics -- -j12 -l12
+[3.544s] Invoking command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics
+[3.558s] -- Install configuration: ""
+[3.559s] -- Execute custom install script
+[3.560s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/environment/pythonpath.sh
+[3.573s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/environment/pythonpath.dsv
+[3.587s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/lib/python3.8/site-packages/doppelt_kinematics/__init__.py
+[3.601s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/lib/doppelt_kinematics/proximity_server.py
+[3.614s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/lib/doppelt_kinematics/traject_tracking_server.py
+[3.629s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/scripts/proximity_server.py
+[3.641s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/scripts/traject_tracking_server.py
+[3.655s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/launch/doppelt_kinematics.launch.py
+[3.669s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/ament_index/resource_index/package_run_dependencies/doppelt_kinematics
+[3.683s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/ament_index/resource_index/parent_prefix_path/doppelt_kinematics
+[3.698s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/environment/ament_prefix_path.sh
+[3.713s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/environment/ament_prefix_path.dsv
+[3.729s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/environment/path.sh
+[3.742s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/environment/path.dsv
+[3.757s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/local_setup.bash
+[3.772s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/local_setup.sh
+[3.788s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/local_setup.zsh
+[3.803s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/local_setup.dsv
+[3.819s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/package.dsv
+[3.839s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/ament_index/resource_index/packages/doppelt_kinematics
+[3.855s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/cmake/doppelt_kinematicsConfig.cmake
+[3.872s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/cmake/doppelt_kinematicsConfig-version.cmake
+[3.887s] -- Symlinking: /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/share/doppelt_kinematics/package.xml
+[3.959s] Listing '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/lib/python3.8/site-packages/doppelt_kinematics'...
+[3.960s] Compiling '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/install/doppelt_kinematics/lib/python3.8/site-packages/doppelt_kinematics/__init__.py'...
+[3.984s] Invoked command in '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/build/doppelt_kinematics
