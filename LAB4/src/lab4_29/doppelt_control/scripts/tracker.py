@@ -49,35 +49,18 @@ class X2Tracker(Node):
         self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
 
     def enable_callback(self, request:Enabler.Request, response:Enabler.Response):
-        self.enable = request.enable
-
-    # def pubTimerCallback(self):
-    #     if not self.sentEnableFlag and self.enable:
-    #         self.sentEnableFlag = True
-    #         self.get_logger().info(f"pos: {self.refpos} cur: {type(self.jointState.position)}")
-
-    #         PI = Float64MultiArray()
-    #         PI = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki, self.currTime)
-    #         self.publishEnable.publish(PI)
-
-    #     elif self.enable:
-    #         self.sentEnableFlag = False
+        if request.enable:
+            PI = Float64MultiArray()
+            PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki, self.currTime)
+            self.publishEnable.publish(PI)
+        else:
+            self.publishEnable.publish(Float64MultiArray(data=[0, 0, 0]))
 
     def jointStateCallback(self, msg):
         self.jointState = msg
-        # self.get_logger().info(f"Joint State Received: {self.jointState}")
-
         
     def refPosVelCallback(self, msg):
         self.refpos, self.refvel = msg.data[0:3], msg.data[3:6]
-        # self.get_logger().info(f"Pos: {self.refpos} Vel: {self.refvel}")
-
-        # if self.enable:
-        # self.get_logger().info(f"pos: {self.refpos} cur: {type(self.jointState.position)}")
-        PI = Float64MultiArray()
-        PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki, self.currTime)
-        # self.get_logger().info(f"PI: {PI}")
-        self.publishEnable.publish(PI)
 
     def PIControl(self, refpos, refvel, curpos, Kp, Ki, time, limitInt=None):
         init = False
