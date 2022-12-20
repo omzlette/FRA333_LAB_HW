@@ -17,6 +17,14 @@ class X2Tracker(Node):
     def __init__(self):
         super().__init__('doppelt_tracker')
 
+        if len(sys.argv) > 2: 
+            self.Kp = float(sys.argv[1])
+            self.Ki = float(sys.argv[2])
+        else:
+            self.get_logger().info("No Kp and Ki values given, using default values")
+            self.Kp = 1
+            self.Ki = 0
+
         self.QoS = QoSProfile(depth=10)
         self.rate = 10
 
@@ -37,9 +45,6 @@ class X2Tracker(Node):
         self.currTime = 0
 
         self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
-
-        self.Kp = self.declare_parameter('Kp').value
-        self.Ki = self.declare_parameter('Ki').value
 
     def enable_callback(self, request:Enabler.Request):
         self.enable = request.enable

@@ -21,7 +21,7 @@ def generate_launch_description():
     X2_tracker = Node(
         package = "doppelt_control",
         executable = "tracker.py",
-        parameters=[{'Kp': Kp, 'Ki': Ki}]
+        arguments=[Kp, Ki]
     )
     X2_generator = Node(
         package = "doppelt_control",
