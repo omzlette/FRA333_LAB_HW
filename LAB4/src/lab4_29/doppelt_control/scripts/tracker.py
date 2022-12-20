@@ -48,6 +48,9 @@ class X2Tracker(Node):
 
         self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
 
+        self.prevError = np.array([0, 0, 0])
+        self.prevI = np.array([0, 0, 0])
+
     def enable_callback(self, request:Enabler.Request, response:Enabler.Response):
         if request.enable:
             PI = Float64MultiArray()
@@ -64,14 +67,9 @@ class X2Tracker(Node):
         self.refpos, self.refvel = msg.data[0:3], msg.data[3:6]
 
     def PIControl(self, refpos, refvel, curpos, Kp, Ki, time, limitInt=None):
-        init = False
-        if not init:
-            I = np.array([0, 0, 0])
-            prevError = np.array([0, 0, 0])
-            init = True
         error = np.array(refpos) - np.array(curpos)
         P = Kp * error
-        I = I + Ki * (error + prevError) * time
+        I = self.prevI + Ki * (error + self.prevError) * time
 
         if limitInt is not None:
             if I > limitInt[1]:
@@ -79,7 +77,8 @@ class X2Tracker(Node):
             if I < limitInt[0]:
                 I = limitInt[0]
 
-        prevError = error
+        self.prevI = I
+        self.prevError = error
 
         return list(np.array(refvel) + P + I)
 
