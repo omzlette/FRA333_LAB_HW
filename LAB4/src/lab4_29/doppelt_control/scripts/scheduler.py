@@ -37,9 +37,10 @@ class X2Scheduler(Node):
         self.startX, self.startY, self.startZ = 0.25, 0, 0.15
         self.step = 0.1
         
-        self.allviaPts = [{'coords': [0, 0.35, 0.15], 'marker': True}, # HOME
-                            {'coords': [0, 0.35, 0.15], 'marker':True}] # STARTING POS
-        
+        # self.allviaPts = [{'coords': [0, 0.35, 0.15], 'marker': True}, # HOME
+        #                     {'coords': [0, 0.35, 0.15], 'marker':True}] # STARTING POS
+
+        self.allviaPts = self.get_parameter('viaPts')
 
     def reachedCallback(self, msg):
         

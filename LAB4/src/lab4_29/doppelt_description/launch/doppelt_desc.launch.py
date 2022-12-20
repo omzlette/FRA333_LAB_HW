@@ -1,16 +1,15 @@
 import os
+import sys
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-
-from launch.actions import IncludeLaunchDescription
-
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-import xacro
-from launch.substitutions import PathJoinSubstitution, LaunchConfiguration
 
-from launch_ros.substitutions import FindPackageShare
+import xacro
+import yaml
+import rclpy
 
 def generate_launch_description():
 
@@ -32,35 +31,6 @@ def generate_launch_description():
        name='rviz',
        arguments=['-d', rviz_file_path],
        output='screen')
-
-    # doppelt_control Node
-    X2_tracker = Node(
-        package = "doppelt_control",
-        executable = "tracker.py"
-    )
-    X2_generator = Node(
-        package = "doppelt_control",
-        executable = "generator.py"
-    )
-    X2_scheduler = Node(
-        package = "doppelt_control",
-        executable = "scheduler.py"
-    )
-
-    # doppelt_kinematic Node
-    ktype = LaunchConfiguration('kinematicsType')
-    ktype_launch_arg = DeclareLaunchArgument('kinematicsType', default_value='forward')
-
-    X2_proximity = Node(
-        package = "doppelt_kinematics",
-        executable = "proximity_server.py",
-        arguments = [ktype]
-    )
-
-    X2_traject_tracking = Node(
-        package = "doppelt_kinematics",
-        executable = "traject_tracking_server.py"
-    )
 
     # Configure the node
     node_robot_state_publisher = Node(
@@ -101,12 +71,14 @@ def generate_launch_description():
         spawn_entity,
         joint_state_broadcaster_spawner,
         robot_controller_spawner,
-        X2_tracker,
-        X2_generator,
-        X2_scheduler,
-        ktype_launch_arg,
-        X2_proximity,
-        X2_traject_tracking
     ])
 
+def main(args=None):
+    try:
+        generate_launch_description()
+    except KeyboardInterrupt:
+        # quit
+        sys.exit()
 
+if __name__ == '__main__':
+    main()

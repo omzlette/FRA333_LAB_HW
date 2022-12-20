@@ -38,11 +38,8 @@ class X2Tracker(Node):
 
         self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
 
-        self.Kp, self.Ki, = np.array([0, 0, 0]), np.array([0, 0, 0])
-        tracker_config_path = '/home/valdeus1151/Y3T1/FRA333_LAB_HW/LAB4/src/lab4_29/doppelt_control/config/tracker_config.yaml'
-        with open(tracker_config_path, 'r') as f:
-            config = yaml.load(f, Loader=yaml.FullLoader)
-            self.Kp, self.Ki = np.array(config['Kp']), np.array(config['Ki'])
+        self.Kp = self.get_parameter('Kp')
+        self.Ki = self.get_parameter('Ki')
 
     def enable_callback(self, request:Enabler.Request):
         self.enable = request.enable

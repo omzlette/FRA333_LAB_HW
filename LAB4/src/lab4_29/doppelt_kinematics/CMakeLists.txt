@@ -56,6 +56,7 @@ install(PROGRAMS
 install(
   DIRECTORY 
   scripts
+  launch
   DESTINATION share/${PROJECT_NAME}
 )
 
