@@ -38,8 +38,8 @@ class X2Tracker(Node):
 
         self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
 
-        self.Kp = self.get_parameter('Kp')
-        self.Ki = self.get_parameter('Ki')
+        self.Kp = self.declare_parameter('Kp').value
+        self.Ki = self.declare_parameter('Ki').value
 
     def enable_callback(self, request:Enabler.Request):
         self.enable = request.enable
