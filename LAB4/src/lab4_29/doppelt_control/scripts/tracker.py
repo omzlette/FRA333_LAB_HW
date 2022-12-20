@@ -18,6 +18,8 @@ class X2Tracker(Node):
         super().__init__('doppelt_tracker')
 
         if len(sys.argv) > 2: 
+            self.get_logger().info(f"Kp: {sys.argv[1],type(sys.argv[1])} Ki: {sys.argv[2],type(sys.argv[2])}")
+            self.get_logger().info(str(sys.argv))
             self.Kp = float(sys.argv[1])
             self.Ki = float(sys.argv[2])
         else:
