@@ -15,8 +15,8 @@ class X2ProximityServer(Node):
         super().__init__('proximity_server')
         self.rate = 10
         qos_profile = QoSProfile(depth=10)
-        if len(sys.argv) > 0:
-            self.choice = sys.argv[0]
+        if len(sys.argv) > 2:
+            self.choice = sys.argv[1]
         else:
             self.choice = 'forward'
 
