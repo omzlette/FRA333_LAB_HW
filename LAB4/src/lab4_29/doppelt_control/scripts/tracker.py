@@ -49,12 +49,12 @@ class X2Tracker(Node):
         self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
 
         self.prevError = np.array([0, 0, 0])
-        self.prevI = np.array([0, 0, 0])
+        self.I = np.array([0, 0, 0])
 
     def enable_callback(self, request:Enabler.Request, response:Enabler.Response):
         if request.enable:
             PI = Float64MultiArray()
-            PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki, self.currTime)
+            PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki)
             self.publishEnable.publish(PI)
         else:
             self.publishEnable.publish(Float64MultiArray(data=[0, 0, 0]))
@@ -65,10 +65,10 @@ class X2Tracker(Node):
     def refPosVelCallback(self, msg):
         self.refpos, self.refvel = msg.data[0:3], msg.data[3:6]
 
-    def PIControl(self, refpos, refvel, curpos, Kp, Ki, time, limitInt=None):
+    def PIControl(self, refpos, refvel, curpos, Kp, Ki, limitInt=None):
         error = np.array(refpos) - np.array(curpos)
         P = Kp * error
-        I = self.prevI + Ki * (error + self.prevError) * time
+        self.I += Ki * error
 
         if limitInt is not None:
             if I > limitInt[1]:
@@ -76,10 +76,9 @@ class X2Tracker(Node):
             if I < limitInt[0]:
                 I = limitInt[0]
 
-        self.prevI = I
         self.prevError = error
 
-        return list(np.array(refvel) + P + I)
+        return list(np.array(refvel) + P + self.I)
 
     def clockCallback(self, msg):
         self.currTime = msg.data/1000
