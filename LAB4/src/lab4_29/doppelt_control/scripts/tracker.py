@@ -46,7 +46,7 @@ class X2Tracker(Node):
 
         self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
 
-    def enable_callback(self, request:Enabler.Request):
+    def enable_callback(self, request:Enabler.Request, response:Enabler.Response):
         self.enable = request.enable
 
     # def pubTimerCallback(self):

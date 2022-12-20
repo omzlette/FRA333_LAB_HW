@@ -17,23 +17,11 @@ def generate_launch_description():
         trackerVal = yaml.load(f, Loader=yaml.FullLoader)
         Kp, Ki = trackerVal['Kp'], trackerVal['Ki']
 
-    tKp = LaunchConfiguration('Kp')
-    tKi = LaunchConfiguration('Ki')
-
-    argsKp = DeclareLaunchArgument(
-        'Kp',
-        default_value=str(Kp),
-        description='Kp value for PI controller')
-    argsKi = DeclareLaunchArgument(
-        'Ki',
-        default_value=str(Ki),
-        description='Ki value for PI controller')
-
     # doppelt_control Node
     X2_tracker = Node(
         package = "doppelt_control",
         executable = "tracker.py",
-        arguments=[tKp, tKi]
+        arguments=[str(Kp), str(Ki)]
     )
     X2_generator = Node(
         package = "doppelt_control",
@@ -46,8 +34,6 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        argsKp,
-        argsKi,
         X2_tracker,
         X2_generator,
         X2_scheduler
