@@ -15,10 +15,7 @@ def generate_launch_description():
 
     with open(os.path.join(get_package_share_directory('doppelt_control'), 'config', 'tracker_config.yaml'), 'r') as f:
         trackerVal = yaml.load(f, Loader=yaml.FullLoader)
-        trackerKp, trackerKi = trackerVal['Kp'], trackerVal['Ki']
-
-    Kp = LaunchConfiguration('Kp', default=trackerKp)
-    Ki = LaunchConfiguration('Ki', default=trackerKi)
+        Kp, Ki = trackerVal['Kp'], trackerVal['Ki']
 
     # doppelt_control Node
     X2_tracker = Node(
@@ -37,8 +34,6 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        Kp_args,
-        Ki_args,
         X2_tracker,
         X2_generator,
         X2_scheduler
