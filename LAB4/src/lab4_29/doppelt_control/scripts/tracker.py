@@ -36,6 +36,7 @@ class X2Tracker(Node):
         self.sentEnableFlag = False
 
         self.trackerEnabler = self.create_service(Enabler, 'enabler', self.enable_callback)
+        self.enable_pub =  self.create_publisher(Bool, 'enable_debug', self.QoS)
 
         self.publishEnable = self.create_publisher(Float64MultiArray, '/joint_group_velocity_controller/commands', self.QoS)
         # self.pubTimer = self.create_timer(1/self.rate, self.pubTimerCallback)
@@ -48,17 +49,19 @@ class X2Tracker(Node):
 
         self.refpos, self.refvel = [0, 0, 0], [0, 0, 0]
 
-        self.prevTime = 0
-        self.I = np.array([0, 0, 0])
+        self.I = np.array([0., 0., 0.])
         self.prevOut = [0, 0, 0]
 
     def enable_callback(self, request:Enabler.Request, response:Enabler.Response):
         if request.enable:
             PI = Float64MultiArray()
-            PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.currTime, self.Kp, self.Ki)
+            PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki)
+
             self.publishEnable.publish(PI)
         else:
             self.publishEnable.publish(Float64MultiArray(data=[0, 0, 0]))
+        
+        self.enable_pub.publish(Bool(data=request.enable))
         return response
 
     def jointStateCallback(self, msg):
@@ -67,18 +70,16 @@ class X2Tracker(Node):
     def refPosVelCallback(self, msg):
         self.refpos, self.refvel = msg.data[0:3], msg.data[3:6]
 
-    def PIControl(self, refpos, refvel, curpos, Kp, Ki, currTime, limitOut=None):
+    def PIControl(self, refpos, refvel, curpos, Kp, Ki, limitOut=None):
         error = np.array(refpos) - np.array(curpos)
-        dt = currTime - self.prevTime
 
         P = Kp * error
-        self.I += Ki * error * dt
+        self.I += Ki * error
         
         output = list(np.array(refvel) + P + self.I)
         if limitOut:
             output = np.clip(output, -limitOut, limitOut)
 
-        self.prevTime = currTime
         self.prevOut = output
 
         return output

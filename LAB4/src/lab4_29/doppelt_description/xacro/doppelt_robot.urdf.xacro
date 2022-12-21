@@ -26,7 +26,7 @@
             <xacro:addmesh mesh_file="link_0.stl"/>
             <xacro:addcolor color="idk" rgba="1.0 0.0 0.0 1.0"/>
         </xacro:addvis>
-        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
+        <xacro:addcollide mu="0" kp="1000.0" kd="1.0">
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <xacro:addmesh mesh_file="link_0.stl"/>
         </xacro:addcollide>
@@ -48,7 +48,7 @@
             <xacro:addmesh mesh_file="link_1.stl"/>
             <xacro:addcolor color="green" rgba="0.2 1 0.2 1.0"/>
         </xacro:addvis>
-        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
+        <xacro:addcollide mu="0" kp="1000.0" kd="1.0">
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <xacro:addmesh mesh_file="link_1.stl"/>
         </xacro:addcollide>
@@ -73,7 +73,7 @@
             <xacro:addmesh mesh_file="link_2.stl"/>
             <xacro:addcolor color="green" rgba="0.2 1 0.2 1.0"/>
         </xacro:addvis>
-        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
+        <xacro:addcollide mu="0" kp="1000.0" kd="1.0">
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <xacro:addmesh mesh_file="link_2.stl"/>
         </xacro:addcollide>
@@ -98,7 +98,7 @@
             <xacro:addmesh mesh_file="link_3.stl"/>
             <xacro:addcolor color="green" rgba="0.2 1 0.2 1.0"/>
         </xacro:addvis>
-        <xacro:addcollide mu="0" kp="10.0" kd="1.0">
+        <xacro:addcollide mu="0" kp="1000.0" kd="1.0">
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <xacro:addmesh mesh_file="link_3.stl"/>
         </xacro:addcollide>
