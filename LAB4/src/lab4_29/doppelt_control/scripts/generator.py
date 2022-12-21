@@ -59,8 +59,12 @@ class X2TrajGen(Node):
     def linearInterpolation(self, quinticParam):
         a_t = np.array(quinticParam[0:3])
         adot_t = np.array(quinticParam[3:6])
-        pref = (1 - a_t) * self.points[0:3] + a_t * self.points[3:6]
-        vref = adot_t * (self.points[3:6] - self.points[0:3])
+
+        initPos = np.array(self.points[0:3])
+        finalPos = np.array(self.points[3:6])
+
+        pref = (1 - a_t) * initPos + a_t * finalPos
+        vref = adot_t * (finalPos - initPos)
         return list(pref) + list(vref)
 
     def quinticEvalCallback(self):
