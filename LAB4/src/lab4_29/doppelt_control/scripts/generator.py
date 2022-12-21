@@ -45,9 +45,9 @@ class X2TrajGen(Node):
         return outputParam
 
     def QuinticEval(self, t, param):
-        pr = param[0] + param[1]*t + param[2]*t**2 + param[3]*t**3 + param[4]*t**4 + param[5]*t**5
-        vr = param[1] + 2*param[2]*t + 3*param[3]*t**2 + 4*param[4]*t**3 + 5*param[5]*t**4
-        return float(pr), float(vr)
+        a_t = param[0] + param[1]*t + param[2]*t**2 + param[3]*t**3 + param[4]*t**4 + param[5]*t**5
+        adot_t = param[1] + 2*param[2]*t + 3*param[3]*t**2 + 4*param[4]*t**3 + 5*param[5]*t**4
+        return float(a_t), float(adot_t)
 
     def pointsDurCallback(self, msg):
         self.points = msg.data[0:6]
@@ -56,6 +56,13 @@ class X2TrajGen(Node):
             self.quinticStart = self.currTime
             self.evalFlag = True
 
+    def linearInterpolation(self, quinticParam):
+        a_t = np.array(quinticParam[0:3])
+        adot_t = np.array(quinticParam[3:6])
+        pref = (1 - a_t) * self.points[0:3] + a_t * self.points[3:6]
+        vref = adot_t * (self.points[3:6] - self.points[0:3])
+        return list(pref) + list(vref)
+
     def quinticEvalCallback(self):
         if self.evalFlag:
             curTime = self.currTime - self.quinticStart
@@ -63,12 +70,13 @@ class X2TrajGen(Node):
                 self.evalFlag = False
             else:
                 pointwVel = Float64MultiArray()
-                pointwVel.data = [self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[0],
+                quinticParam = [self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[0],
                                 self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[0],
                                 self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[0],
                                 self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[0], self.points[3]], [0, 0]))[1],
                                 self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[1],
                                 self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[1]]
+                pointwVel.data = self.linearInterpolation(quinticParam)
                 self.refPosVel.publish(pointwVel)
 
     def clockCallback(self, msg):
