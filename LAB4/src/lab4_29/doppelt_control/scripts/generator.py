@@ -28,6 +28,13 @@ class X2TrajGen(Node):
 
         self.quinticEvalTimer = self.create_timer(1/self.rate, self.quinticEvalCallback)
 
+    def pointsDurCallback(self, msg):
+        self.points = msg.data[0:6]
+        self.dur = msg.data[6]
+        if not self.evalFlag:
+            self.quinticStart = self.currTime
+            self.evalFlag = True
+
     def QuinticTrajGen(self, t0, tf, q, v):
         quinticTrajMat = np.array([[1, t0, t0**2, t0**3, t0**4, t0**5],
                                    [0, 1, 2*t0, 3*t0**2, 4*t0**3, 5*t0**4],
@@ -48,13 +55,6 @@ class X2TrajGen(Node):
         a_t = param[0] + param[1]*t + param[2]*t**2 + param[3]*t**3 + param[4]*t**4 + param[5]*t**5
         adot_t = param[1] + 2*param[2]*t + 3*param[3]*t**2 + 4*param[4]*t**3 + 5*param[5]*t**4
         return float(a_t), float(adot_t)
-
-    def pointsDurCallback(self, msg):
-        self.points = msg.data[0:6]
-        self.dur = msg.data[6]
-        if not self.evalFlag:
-            self.quinticStart = self.currTime
-            self.evalFlag = True
 
     def linearInterpolation(self, quinticParam):
         a_t = np.array(quinticParam[0:3])
