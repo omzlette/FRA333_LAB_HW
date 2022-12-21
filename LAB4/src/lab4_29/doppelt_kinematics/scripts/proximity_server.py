@@ -37,9 +37,9 @@ class X2ProximityServer(Node):
         self.clock_now = 0
 
         # Variable Declaration
-        self.joint_q = np.array([0, 0, 0])
-        self.old_q = [0, 0, 0]
-        self.via_point = [0, 0, 0]
+        self.joint_q = np.array([0., 0., 0.])
+        self.old_q = np.array([0., 0., 0.])
+        self.via_point = np.array([0., 0., 0.])
 
     # FORWARD KINEMATICS ----------------------------------------------------------------------------
     def joint_sub_callback(self, msg:JointState):
@@ -54,7 +54,7 @@ class X2ProximityServer(Node):
         y = (l3*np.cos(q[1]) + le*np.cos(q[1] + q[2]))*np.sin(q[0])
         z = l1 + l3*np.sin(q[1]) + le*np.sin(q[1] + q[2])
 
-        end_pos = [x, y, z]
+        end_pos = np.array([x, y, z])
         return end_pos
 
     # INVERSE KINEMATICS ----------------------------------------------------------------------------
@@ -86,7 +86,7 @@ class X2ProximityServer(Node):
         c2 = (l3 + le*c3)*np.sqrt(x**2 + y**2) + (le*s3)*(z-l1)
         q2 = np.arctan2(s2, c2)
 
-        q = [q1, q2, q3]
+        q = np.array([q1, q2, q3])
         self.old_q = q
 
         return q
@@ -96,8 +96,9 @@ class X2ProximityServer(Node):
         reachflag = False
         if self.choice == "forward":
             pos_FK = self.FK(self.joint_q)
-            pos_tolerance = [self.via_point[0]-pos_FK[0], self.via_point[1]-pos_FK[1], self.via_point[2]-pos_FK[2]]
-            if np.linalg.norm(pos_tolerance) < 0.001:
+            # pos_tolerance = [self.via_point[0]-pos_FK[0], self.via_point[1]-pos_FK[1], self.via_point[2]-pos_FK[2]]
+            pos_tolerance = self.via_point - pos_FK
+            if np.linalg.norm(pos_tolerance) <= 0.001:
                 reachflag = True
             else:
                 reachflag = False
@@ -105,8 +106,9 @@ class X2ProximityServer(Node):
         
         elif self.choice == "inverse":
             q_IK = self.IK_pos(self.via_point)
-            q_tolerance = [q_IK[0]-self.joint_q[0], q_IK[1]-self.joint_q[1], q_IK[2]-self.joint_q[2]]
-            if np.linalg.norm(q_tolerance) < 0.001:
+            # q_tolerance = [q_IK[0]-self.joint_q[0], q_IK[1]-self.joint_q[1], q_IK[2]-self.joint_q[2]]
+            q_tolerance = q_IK - self.joint_q
+            if np.linalg.norm(q_tolerance) <= 0.001:
                 reachflag = True
             else:
                 reachflag = False
