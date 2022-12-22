@@ -28,7 +28,7 @@ class X2Tracker(Node):
             self.Ki = 0
 
         self.QoS = QoSProfile(depth=10)
-        self.rate = 10
+        self.rate = 50
 
         self.jointState = JointState()
         self.jointState.position = [0., 0., 0.]
@@ -53,15 +53,16 @@ class X2Tracker(Node):
         self.prevOut = [0, 0, 0]
 
     def enable_callback(self, request:Enabler.Request, response:Enabler.Response):
-        if request.enable:
-            PI = Float64MultiArray()
-            PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki)
+        self.enable = request.enable
+        # if request.enable:
+        #     PI = Float64MultiArray()
+        #     PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki)
 
-            self.publishEnable.publish(PI)
-        else:
-            self.publishEnable.publish(Float64MultiArray(data=[0, 0, 0]))
+        #     self.publishEnable.publish(PI)
+        # else:
+        #     self.publishEnable.publish(Float64MultiArray(data=[0, 0, 0]))
         
-        self.enable_pub.publish(Bool(data=request.enable))
+        # self.enable_pub.publish(Bool(data=request.enable))
         return response
 
     def jointStateCallback(self, msg):
@@ -69,6 +70,15 @@ class X2Tracker(Node):
         
     def refPosVelCallback(self, msg):
         self.refpos, self.refvel = msg.data[0:3], msg.data[3:6]
+        if self.enable:
+            PI = Float64MultiArray()
+            PI.data = self.PIControl(self.refpos, self.refvel, self.jointState.position, self.Kp, self.Ki)
+
+            self.publishEnable.publish(PI)
+        else:
+            self.publishEnable.publish(Float64MultiArray(data=[0, 0, 0]))
+        
+        self.enable_pub.publish(Bool(data=self.enable))
 
     def PIControl(self, refpos, refvel, curpos, Kp, Ki, limitOut=None):
         error = np.array(refpos) - np.array(curpos)

@@ -13,7 +13,7 @@ from std_msgs.msg import Float64MultiArray, Int64, Bool
 class X2ProximityServer(Node):
     def __init__(self):
         super().__init__('proximity_server')
-        self.rate = 10
+        self.rate = 50
         qos_profile = QoSProfile(depth=10)
         if len(sys.argv) > 2:
             self.choice = sys.argv[1]
@@ -98,7 +98,7 @@ class X2ProximityServer(Node):
             pos_FK = self.FK(self.joint_q)
             # pos_tolerance = [self.via_point[0]-pos_FK[0], self.via_point[1]-pos_FK[1], self.via_point[2]-pos_FK[2]]
             pos_tolerance = self.via_point - pos_FK
-            if np.linalg.norm(pos_tolerance) <= 0.001:
+            if np.linalg.norm(pos_tolerance) <= 0.1:
                 reachflag = True
             else:
                 reachflag = False
@@ -108,7 +108,7 @@ class X2ProximityServer(Node):
             q_IK = self.IK_pos(self.via_point)
             # q_tolerance = [q_IK[0]-self.joint_q[0], q_IK[1]-self.joint_q[1], q_IK[2]-self.joint_q[2]]
             q_tolerance = q_IK - self.joint_q
-            if np.linalg.norm(q_tolerance) <= 0.001:
+            if np.linalg.norm(q_tolerance) <= 0.1:
                 reachflag = True
             else:
                 reachflag = False

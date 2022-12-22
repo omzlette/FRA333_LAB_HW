@@ -13,7 +13,7 @@ class X2TrajGen(Node):
         super().__init__('doppelt_generator')
 
         self.QoS = QoSProfile(depth=10)
-        self.rate = 10
+        self.rate = 50
 
         self.refPosVel = self.create_publisher(Float64MultiArray, 'reference/task_states', self.QoS)
         
@@ -42,10 +42,16 @@ class X2TrajGen(Node):
                                    [1, tf, tf**2, tf**3, tf**4, tf**5],
                                    [0, 1, 2*tf, 3*tf**2, 4*tf**3, 5*tf**4],
                                    [0, 0, 2, 6*tf, 12*tf**2, 20*tf**3]])
-        inputParam = np.array([[q[0]],
+        # inputParam = np.array([[q[0]],
+        #                        [v[0]],
+        #                        [0],
+        #                        [q[1]],
+        #                        [v[1]],
+        #                        [0]])
+        inputParam = np.array([[0],
                                [v[0]],
                                [0],
-                               [q[1]],
+                               [1],
                                [v[1]],
                                [0]])
         outputParam = np.linalg.inv(quinticTrajMat) @ inputParam

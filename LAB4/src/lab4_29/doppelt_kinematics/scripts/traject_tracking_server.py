@@ -13,7 +13,7 @@ from std_msgs.msg import Float64MultiArray
 class X2TrajectTrack(Node):
     def __init__(self):
         super().__init__('traject_tracking_server')
-        self.rate = 10
+        self.rate = 50
         qos_profile = QoSProfile(depth=10)       
 
         # Create Subscriber
@@ -27,6 +27,7 @@ class X2TrajectTrack(Node):
         self.end_vel = [0, 0, 0]
         self.old_q = [0, 0, 0]
         self.old_vel = [0, 0, 0]
+        self.old_qdot = [0, 0, 0]
 
     def IK_pos(self, x, y, z):
         # Calculate the joint angles
@@ -93,7 +94,12 @@ class X2TrajectTrack(Node):
         linear_J03 = np.cross(angular_J03.reshape(1, 3), (p_e - p03)).reshape(3, 1)
 
         linear_Jacobian = np.concatenate((linear_J01, linear_J02, linear_J03), axis=1)
+        # if np.abs(np.linalg.det(linear_jacobian)) < 0.001:
+        #     self.end_vel = self.old_vel
+        #     return self.old_qdot
 
+
+        self.old_qdot = linear_Jacobian
         return linear_Jacobian
 
     def IK_vel(self, vx, vy, vz,q):

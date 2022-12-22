@@ -6,6 +6,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 
+from sensor_msgs.msg import JointState
 from std_msgs.msg import Float64MultiArray, Bool, Int64
 from doppelt_interfaces.srv import Enabler
 import yaml
@@ -33,38 +34,47 @@ class X2Scheduler(Node):
         self.clock = self.create_subscription(Int64, 'doppelt_clock', self.clockCallback, QoS)
         self.currTime = 0
 
+        # self.start_joint = self.create_subscription(JointState, '/joint_states',self.joint_states_sub , QoS)
+
         self.hasReachedFlag = False
 
         self.viaPtsInit = [0,0,0]
+        self.start_joint_value = [0,0,0]
+        self.start_pos = [0,0,0]
 
         self.startX, self.startY, self.startZ = 0.25, 0, 0.15
         self.step = 0.1
         
-        self.allviaPts = [{'coords': [0.35, 0, 0.15], 'marker': True}, # HOME
-                            {'coords': [0, 0, 0.3], 'marker': False},
+        self.allviaPts = [{'coords': [0.31169, 0., 0.032283], 'marker': True}, # START POS
+                            {'coords': [0, 0.35, 0.15], 'marker': False},
                             {'coords': [0.25, 0, 0.15], 'marker':True}] # STARTING POS
 
         # self.allviaPts = self.get_parameter('viaPts')
+    # def joint_states_sub(self, msg: JointState):
+    #     self.start_joint_value = msg.position
+    #     self.start_pos = self.FK(self.start_joint_value)
+        
+
 
     def reachedCallback(self, msg):
         self.currtime = self.get_clock().now().to_msg().sec
         if self.currtime - self.node_starttime > 10:
-        
+            # self.get_logger().info('start_pos: {}'.format(self.start_pos))
             if len(self.allviaPts) >= 2:
                 if msg.data and self.hasReachedFlag:
                     self.allviaPts.pop(0)
                     self.hasReachedFlag = False
 
-                # elif not msg.data and not self.hasReachedFlag:
-                viaPtsInit = self.allviaPts[0]['coords']
-                viaPtsFinal = self.allviaPts[1]['coords']
-                timeFinal = self.computeTime(viaPtsInit, viaPtsFinal)
-                
-                self.viaPts = viaPtsInit + viaPtsFinal + [timeFinal]
-                self.viaPtsPub.publish(Float64MultiArray(data=self.viaPts))
-                self.enabler.call_async(Enabler.Request(enable=True))
+                elif not msg.data and not self.hasReachedFlag:
+                    viaPtsInit = self.allviaPts[0]['coords']
+                    viaPtsFinal = self.allviaPts[1]['coords']
+                    timeFinal = self.computeTime(viaPtsInit, viaPtsFinal)
+                    
+                    self.viaPts = viaPtsInit + viaPtsFinal + [timeFinal]
+                    self.viaPtsPub.publish(Float64MultiArray(data=self.viaPts))
+                    self.enabler.call_async(Enabler.Request(enable=True))
 
-                self.hasReachedFlag = True
+                    self.hasReachedFlag = True
             else:
                 #stop
                 viaPtsInit = viaPtsFinal
@@ -75,19 +85,32 @@ class X2Scheduler(Node):
                 
                 if msg.data:
                     self.enabler.call_async(Enabler.Request(enable=False))
+            
 
     def computeTime(self, viaPtsInit, viaPtsFinal):
-        Vmax = 1.0
-        Amax = 0.5
-        Jmax = 0.5
+        Vmax = 2.0
+        Amax = 1.0
+        Jmax = 1.0
 
         relativeDist = np.linalg.norm(np.array(viaPtsFinal) - np.array(viaPtsInit))
 
         time = (Amax/Jmax) + (Vmax/Amax) + (relativeDist/Vmax)
-        return time + self.currTime
+        return time 
     
     def clockCallback(self, msg):
         self.currTime = msg.data / 1000
+
+    def FK(self, qin):
+        # Calculate the position of the end effector
+        q = qin
+        l1 = l3 = 0.15
+        le = 0.2
+        x = (l3*np.cos(q[1]) + le*np.cos(q[1] + q[2]))*np.cos(q[0])
+        y = (l3*np.cos(q[1]) + le*np.cos(q[1] + q[2]))*np.sin(q[0])
+        z = l1 + l3*np.sin(q[1]) + le*np.sin(q[1] + q[2])
+
+        end_pos = np.array([x, y, z])
+        return end_pos
 
 def main(args=None):
     rclpy.init(args=args)
