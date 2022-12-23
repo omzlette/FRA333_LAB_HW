@@ -47,7 +47,9 @@ class X2Scheduler(Node):
         
         self.allviaPts = [{'coords': [0.31169, 0., 0.032283], 'marker': True}, # START POS
                             {'coords': [0, 0.35, 0.15], 'marker': False},
-                            {'coords': [0.25, 0, 0.15], 'marker':True}] # STARTING POS
+                            {'coords': [0.35, 0, 0.15], 'marker':True},
+                            {'coords': [0, 0.35, 0.15], 'marker':True},
+                            {'coords': [0.25, 0, 0.15], 'marker':True},] # STARTING POS
 
         # self.allviaPts = self.get_parameter('viaPts')
     # def joint_states_sub(self, msg: JointState):
@@ -88,9 +90,9 @@ class X2Scheduler(Node):
             
 
     def computeTime(self, viaPtsInit, viaPtsFinal):
-        Vmax = 2.0
-        Amax = 1.0
-        Jmax = 1.0
+        Vmax = 0.1
+        Amax = 0.05
+        Jmax = 0.05
 
         relativeDist = np.linalg.norm(np.array(viaPtsFinal) - np.array(viaPtsInit))
 

@@ -23,6 +23,8 @@ class X2TrajGen(Node):
         self.pointsDurSub = self.create_subscription(Float64MultiArray, 'via_points', self.pointsDurCallback, self.QoS)
         self.evalFlag = False
 
+        self.last_point = Float64MultiArray()
+
         self.clock = self.create_subscription(Int64, 'doppelt_clock', self.clockCallback, self.QoS)
         self.currTime = 0
 
@@ -87,6 +89,7 @@ class X2TrajGen(Node):
                                 self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[1], self.points[4]], [0, 0]))[1],
                                 self.QuinticEval(curTime, self.QuinticTrajGen(0, self.dur, [self.points[2], self.points[5]], [0, 0]))[1]]
                 pointwVel.data = self.linearInterpolation(quinticParam)
+                self.last_point.data = pointwVel.data
                 self.refPosVel.publish(pointwVel)
 
     def clockCallback(self, msg):
