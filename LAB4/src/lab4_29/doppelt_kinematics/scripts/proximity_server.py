@@ -96,7 +96,6 @@ class X2ProximityServer(Node):
         reachflag = False
         if self.choice == "forward":
             pos_FK = self.FK(self.joint_q)
-            # pos_tolerance = [self.via_point[0]-pos_FK[0], self.via_point[1]-pos_FK[1], self.via_point[2]-pos_FK[2]]
             pos_tolerance = self.via_point - pos_FK
             if np.linalg.norm(pos_tolerance) <= 0.1:
                 reachflag = True
@@ -106,7 +105,6 @@ class X2ProximityServer(Node):
         
         elif self.choice == "inverse":
             q_IK = self.IK_pos(self.via_point)
-            # q_tolerance = [q_IK[0]-self.joint_q[0], q_IK[1]-self.joint_q[1], q_IK[2]-self.joint_q[2]]
             q_tolerance = q_IK - self.joint_q
             if np.linalg.norm(q_tolerance) <= 0.1:
                 reachflag = True
